@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
@@ -15,14 +13,12 @@ public class PlayerMove : MonoBehaviour
     public float jumpForce;
     public LayerMask floorlayerMask;
 
-    private GameObject map;
-    public float cooldownRotate = 0.5f; //cooldawn para poder volver a rotar el mapa
-    public float airSuspense = 0.5f; // tiempo que permanece en el aire miestra el mapa rota
-    private float cooldownTimer = 0f;
+   
 
 
     private bool mirandoDerecha = true;
 
+    public GameObject shooting;
 
     [Header("Controles")]
     public KeyCode k_space = KeyCode.Space;
@@ -42,13 +38,6 @@ public class PlayerMove : MonoBehaviour
         //_anim = GetComponent<Animator>();
         _rigidbody = GetComponent<Rigidbody2D>();
         _boxCollider = GetComponent<BoxCollider2D>();
-
-        map = GameObject.FindGameObjectWithTag("Map");
-
-        if (map == null)
-        {
-            Debug.LogError("No se ha encontrado un Mapa. pon el tag Map al mapa");
-        }
     }
 
     void Update()
@@ -57,7 +46,7 @@ public class PlayerMove : MonoBehaviour
 
         Moverse();
         Salto();
-        RotateMap();
+        RotateShoot();
     }
 
     void Moverse()
@@ -118,35 +107,12 @@ public class PlayerMove : MonoBehaviour
         //_anim.SetBool(anim_OnGround, TocandoSuelo());
     }
 
-    void RotateMap()
+    void RotateShoot()
     {
-        cooldownTimer -= Time.deltaTime;
-        if ((Input.GetKeyDown(KeyCode.V) || Input.GetKeyDown(KeyCode.C)) && cooldownTimer <= 0f)
+        if (Input.GetKeyDown(KeyCode.W))
         {
-            StartCoroutine(SuspendPlayer());
-
-            if (Input.GetKeyDown(KeyCode.V))
-            {
-                map.transform.Rotate(0, 0, 90);
-            }
-            else if (Input.GetKeyDown(KeyCode.C))
-            {
-                map.transform.Rotate(0, 0, -90);
-            }
-
-            cooldownTimer = cooldownRotate;
+            shooting.transform.Rotate(0,0,90);
         }
-    }
-
-    IEnumerator SuspendPlayer()
-    {
-        float originalGravity = _rigidbody.gravityScale; 
-        _rigidbody.gravityScale = 0; 
-        _rigidbody.velocity = Vector2.zero; 
-
-        yield return new WaitForSeconds(airSuspense); 
-
-        _rigidbody.gravityScale = originalGravity; 
     }
 
 

@@ -280,6 +280,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &295184487
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 295184488}
+  m_Layer: 0
+  m_Name: PosDis
+  m_TagString: Untagged
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &295184488
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 295184487}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.04, y: 1.24, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1854165125}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &485118367
 GameObject:
   m_ObjectHideFlags: 0
@@ -970,9 +1001,11 @@ GameObject:
   - component: {fileID: 800245421}
   - component: {fileID: 800245423}
   - component: {fileID: 800245424}
+  - component: {fileID: 800245425}
+  - component: {fileID: 800245426}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1134,8 +1167,7 @@ MonoBehaviour:
   floorlayerMask:
     serializedVersion: 2
     m_Bits: 8
-  cooldownRotate: 1
-  airSuspense: 0.5
+  shooting: {fileID: 1854165124}
   k_space: 32
 --- !u!114 &800245424
 MonoBehaviour:
@@ -1152,6 +1184,36 @@ MonoBehaviour:
   playerCam: {fileID: 1397887983}
   mapCam: {fileID: 485118368}
   switchKey: 9
+--- !u!114 &800245425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 800245418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4744e28adc732f46885f27704c9a2c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 4983018387622394943, guid: 402a35d662ea31f49a621ae35d2aaaa2, type: 3}
+  firePoint: {fileID: 295184488}
+  shootKey: 323
+  timeDestroy: 2
+--- !u!114 &800245426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 800245418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 097acb7bf7337984bb0c912bb91e9842, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooldownRotate: 0.5
+  airSuspense: 0.5
 --- !u!1 &1397887982
 GameObject:
   m_ObjectHideFlags: 0
@@ -1351,7 +1413,7 @@ GameObject:
   - component: {fileID: 1854165125}
   - component: {fileID: 1854165126}
   m_Layer: 0
-  m_Name: Capsule
+  m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1365,13 +1427,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1854165124}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0.71310335, w: 0.701059}
+  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0.3133, y: 0.224, z: 0}
   m_LocalScale: {x: 0.19874059, y: 0.34955302, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 295184488}
   m_Father: {fileID: 800245420}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90.976}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!212 &1854165126
 SpriteRenderer:
   m_ObjectHideFlags: 0
