@@ -109,9 +109,13 @@ public class PlayerMove : MonoBehaviour
 
     void RotateShoot()
     {
-        if (Input.GetKeyDown(KeyCode.W))
+        if (Input.GetKey(KeyCode.W))
         {
-            shooting.transform.Rotate(0,0,90);
+            shooting.transform.rotation = Quaternion.Euler(0, 0, 0);
+        }
+        else
+        {
+            shooting.transform.rotation = Quaternion.Euler(0, 0, -90);
         }
     }
 
