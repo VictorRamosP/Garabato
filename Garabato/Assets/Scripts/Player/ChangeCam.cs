@@ -1,15 +1,15 @@
 using Cinemachine;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ChangeCam : MonoBehaviour
 {
     public CinemachineVirtualCamera playerCam;
     public CinemachineVirtualCamera mapCam;
-    public KeyCode switchKey = KeyCode.Tab;
 
-    private CinemachineVirtualCamera activeCamera;
+    [Header("Controles")]
+    public KeyCode k_SwitchJump = KeyCode.Tab;
+
+    public static bool isMapActive = false;
 
     void Start()
     {
@@ -19,15 +19,14 @@ public class ChangeCam : MonoBehaviour
             return;
         }
 
-
-        activeCamera = playerCam;
         playerCam.Priority = 10;
         mapCam.Priority = 0;
+        isMapActive = false;
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(switchKey))
+        if (Input.GetKeyDown(k_SwitchJump))
         {
             SwitchCamera();
         }
@@ -35,17 +34,17 @@ public class ChangeCam : MonoBehaviour
 
     void SwitchCamera()
     {
-        if (activeCamera == playerCam)
+        if (!isMapActive)
         {
             playerCam.Priority = 0;
             mapCam.Priority = 10;
-            activeCamera = mapCam;
+            isMapActive = true;
         }
         else
         {
             playerCam.Priority = 10;
             mapCam.Priority = 0;
-            activeCamera = playerCam;
+            isMapActive = false;
         }
     }
 }

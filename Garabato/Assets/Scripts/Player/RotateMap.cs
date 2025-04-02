@@ -3,16 +3,20 @@ using UnityEngine;
 
 public class RotateMap : MonoBehaviour
 {
-    private Rigidbody2D _rigidbody;
     private GameObject map;
     public float cooldownRotate = 0.5f;
     public float airSuspense = 0.5f;
     private float cooldownTimer = 0f;
+    private Rigidbody2D _rigidbody;
+
+    [Header("Controles")]
+    public KeyCode k_Rotatemap = KeyCode.A;
+    public KeyCode k_Rotatemap2 = KeyCode.D;
 
     void Start()
     {
-        _rigidbody = GetComponent<Rigidbody2D>();
         map = GameObject.FindGameObjectWithTag("Map");
+        _rigidbody = GetComponent<Rigidbody2D>();
 
         if (map == null)
         {
@@ -22,19 +26,21 @@ public class RotateMap : MonoBehaviour
 
     void Update()
     {
-        Rotate();
+        if (ChangeCam.isMapActive) 
+        {
+            Rotate();
+        }
     }
 
     void Rotate()
     {
         cooldownTimer -= Time.deltaTime;
-        if ((Input.GetKeyDown(KeyCode.V) || Input.GetKeyDown(KeyCode.C)) && cooldownTimer <= 0f)
+        if ((Input.GetKeyDown(k_Rotatemap) || Input.GetKeyDown(k_Rotatemap2)) && cooldownTimer <= 0f)
         {
             StartCoroutine(SuspendPlayer());
 
             float angle = (Input.GetKeyDown(KeyCode.V)) ? 90f : -90f;
             RotateAroundPlayer(map, transform.position, angle);
-
             cooldownTimer = cooldownRotate;
         }
     }

@@ -23,4 +23,16 @@ public class PlayerBullet : MonoBehaviour
             //pasar damage a la vida de enemigo
         }
     }
+    /*public float damage;
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        /*if (collision.collider.TryGetComponent(out EnemyLife enemyLife))
+        {
+            enemyLife.TakeDamage(damage);
+            Destroy(this.gameObject);
+        }
+        Destroy(this.gameObject);
+
+    }*/
 }
