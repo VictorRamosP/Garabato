@@ -115,7 +115,14 @@ public class PlayerMove : MonoBehaviour
         }
         else
         {
-            shooting.transform.rotation = Quaternion.Euler(0, 0, -90);
+            if (mirandoDerecha)
+            {
+                shooting.transform.rotation = Quaternion.Euler(0, 0, -90);
+            }
+            else
+            {
+                shooting.transform.rotation = Quaternion.Euler(0, 0, 90);
+            }
         }
     }
 
