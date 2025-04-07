@@ -60,7 +60,7 @@ public class SpiderPatrolState : IState
         RaycastHit2D hit = Physics2D.Raycast(EdgedetectionPoint.position, direction, 1.5f, enemy.WhatIsGround);
 
         //Gizmos
-        Debug.DrawLine(EdgedetectionPoint.position, EdgedetectionPoint.position + direction * 1.5f, Color.green); 
+        //Debug.DrawLine(EdgedetectionPoint.position, EdgedetectionPoint.position + direction * 1.5f, Color.green); 
 
         return (hit.collider == null);
     }

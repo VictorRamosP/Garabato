@@ -2,20 +2,19 @@ using UnityEngine;
 
 public class BatEnemy : MonoBehaviour
 {
-    public float PatrolRadius = 10f;
+    public Transform parent;
     public float ChaseDistance = 5f;
-    public float MoveSpeed = 2f;
+    public float MoveSpeed = 5f;
+    public float ChaseSpeed = 3f;
     public LayerMask ObstacleLayer;
     public Transform Player;
     public Rigidbody2D Rigidbody;
-    public Vector3 PatrolCenter { get; private set; }
     private StateMachine stateMachine;
 
     void Start()
     {
-        PatrolCenter = transform.position;
         stateMachine = new StateMachine();
-        stateMachine.ChangeState(new PatrolState(this, stateMachine, 2f));
+        stateMachine.ChangeState(new PatrolState(this, stateMachine));
     }
 
     void Update()
@@ -23,10 +22,17 @@ public class BatEnemy : MonoBehaviour
         stateMachine.OnUpdate();
     }
 
-    public Vector3 ClampPositionToArea(Vector3 position)
+    public bool CanSeePlayer()
     {
-        float clampedX = Mathf.Clamp(position.x, PatrolCenter.x - PatrolRadius, PatrolCenter.x + PatrolRadius);
-        float clampedY = Mathf.Clamp(position.y, PatrolCenter.y - PatrolRadius, PatrolCenter.y + PatrolRadius);
-        return new Vector3(clampedX, clampedY, position.z);
+        if (Player == null) return false;
+
+        Vector2 direction = (Player.position - transform.position).normalized;
+        float distance = Vector2.Distance(transform.position, Player.position);
+
+        if (distance > ChaseDistance) return false;
+
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, distance, ObstacleLayer);
+        return hit.collider == null;
     }
+
 }

@@ -4,74 +4,45 @@ public class PatrolState : IState
 {
     private BatEnemy enemy;
     private StateMachine stateMachine;
-    private bool isWaiting = false;
-    private float waitCounter = 0f;
-    private float waitTime;
-    private Vector3 targetPosition;
-    private float stuckTimer = 0f;
-    private const float stuckThreshold = 5f;
+    private Vector2 targetPosition;
 
-    public PatrolState(BatEnemy enemy, StateMachine stateMachine, float waitTime)
+    public PatrolState(BatEnemy enemy, StateMachine stateMachine)
     {
         this.enemy = enemy;
         this.stateMachine = stateMachine;
-        this.waitTime = waitTime;
-        SetNewTarget();
     }
 
-    public void OnEnter() { }
+    public void OnEnter()
+    {
+        SetNewTargetPosition();
+    }
+
     public void OnExit() { }
 
     public void OnUpdate()
+{
+    if (enemy.CanSeePlayer())
     {
-        if (Vector3.Distance(enemy.transform.position, enemy.Player.position) <= enemy.ChaseDistance)
-        {
-            stateMachine.ChangeState(new ChaseState(enemy, stateMachine));
-            return;
-        }
-        if (isWaiting)
-        {
-            waitCounter -= Time.deltaTime;
-            if (waitCounter <= 0f)
-            {
-                isWaiting = false;
-                SetNewTarget();
-            }
-        }
-        else
-        {
-            Vector3 dir = (targetPosition - enemy.transform.position).normalized;
-            RaycastHit2D hit = Physics2D.Raycast(enemy.transform.position, dir, 0.5f, enemy.ObstacleLayer);
-            if (hit.collider == null)
-            {
-                Vector3 newPos = enemy.transform.position + dir * enemy.MoveSpeed * Time.deltaTime;
-                newPos = enemy.ClampPositionToArea(newPos);
-                enemy.Rigidbody.MovePosition(newPos);
-                stuckTimer = 0f;
-            }
-            else
-            {
-                SetNewTarget();
-                stuckTimer = 0f;
-            }
-            if (Vector3.Distance(enemy.transform.position, targetPosition) < 0.1f)
-            {
-                isWaiting = true;
-                waitCounter = waitTime;
-            }
-            stuckTimer += Time.deltaTime;
-            if (stuckTimer >= stuckThreshold)
-            {
-                SetNewTarget();
-                stuckTimer = 0f;
-            }
-        }
+        stateMachine.ChangeState(new ChaseState(enemy, stateMachine));
+        return;
     }
 
-    private void SetNewTarget()
+    enemy.transform.position = Vector2.MoveTowards(enemy.transform.position, targetPosition, enemy.MoveSpeed * Time.deltaTime);
+
+    if (Vector2.Distance(enemy.transform.position, targetPosition) < 0.05f)
     {
-        float offsetX = Random.Range(-enemy.PatrolRadius, enemy.PatrolRadius);
-        float offsetY = Random.Range(-enemy.PatrolRadius, enemy.PatrolRadius);
-        targetPosition = enemy.PatrolCenter + new Vector3(offsetX, offsetY, 0);
+        SetNewTargetPosition();
+    }
+}
+
+
+    void SetNewTargetPosition()
+    {
+        CircleCollider2D circle = enemy.parent.GetComponent<CircleCollider2D>();
+        if (circle == null) return;
+
+        float worldRadius = circle.radius * enemy.parent.lossyScale.x;
+        Vector2 randomPoint = Random.insideUnitCircle * worldRadius;
+        targetPosition = (Vector2)enemy.parent.position + randomPoint;
     }
 }
