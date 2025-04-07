@@ -8,6 +8,7 @@ TagManager:
   - PlayerCam
   - MapCam
   - Enemy
+  - Obstacle
   layers:
   - Default
   - TransparentFX

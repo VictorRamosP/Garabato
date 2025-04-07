@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -8,6 +9,9 @@ public class RotateMap : MonoBehaviour
     public float airSuspense = 0.5f;
     private float cooldownTimer = 0f;
     private Rigidbody2D _rigidbody;
+    public string WhereIsDown;
+    private int currentRotationState = 0;
+    public Action OnMapRotated;
 
     [Header("Controles")]
     public KeyCode k_Rotatemap = KeyCode.A;
@@ -35,6 +39,7 @@ public class RotateMap : MonoBehaviour
     void Rotate()
     {
         cooldownTimer -= Time.deltaTime;
+
         if ((Input.GetKeyDown(k_Rotatemap) || Input.GetKeyDown(k_Rotatemap2)) && cooldownTimer <= 0f)
         {
             StartCoroutine(SuspendPlayer());
@@ -42,6 +47,21 @@ public class RotateMap : MonoBehaviour
             float angle = (Input.GetKeyDown(KeyCode.V)) ? 90f : -90f;
             RotateAroundPlayer(map, transform.position, angle);
             cooldownTimer = cooldownRotate;
+
+            if (angle > 0)
+                currentRotationState = (currentRotationState + 1) % 4;
+            else
+                currentRotationState = (currentRotationState + 3) % 4;
+
+            switch (currentRotationState)
+            {
+                case 0: WhereIsDown = "down"; break;
+                case 1: WhereIsDown = "right"; break;
+                case 2: WhereIsDown = "up"; break;
+                case 3: WhereIsDown = "left"; break;
+            }
+
+            OnMapRotated?.Invoke();
         }
     }
 

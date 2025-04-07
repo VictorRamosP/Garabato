@@ -20,7 +20,8 @@ public class PlayerBullet : MonoBehaviour
     {
         if (collision.CompareTag("Enemy"))
         {
-            //pasar damage a la vida de enemigo
+            collision.GetComponent<EnemyLife>().TakeDamage(damage);
+            Destroy(this);
         }
     }
     /*public float damage;
