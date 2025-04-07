@@ -1486,7 +1486,7 @@ MonoBehaviour:
     m_Bits: 8
   mirandoDerecha: 1
   shooting: {fileID: 1854165124}
-  k_space: 32
+  k_Jump: 32
 --- !u!114 &800245424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1501,7 +1501,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerCam: {fileID: 1397887983}
   mapCam: {fileID: 485118368}
-  switchKey: 9
+  k_SwitchJump: 9
 --- !u!114 &800245425
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1532,6 +1532,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cooldownRotate: 0.5
   airSuspense: 0.5
+  k_Rotatemap: 97
+  k_Rotatemap2: 100
 --- !u!114 &800245427
 MonoBehaviour:
   m_ObjectHideFlags: 0
