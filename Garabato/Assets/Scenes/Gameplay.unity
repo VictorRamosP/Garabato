@@ -371,7 +371,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3596435939419734898, guid: 0dc374e74ed13ba47b75a267f14d3c94, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1108888423}
   m_SourcePrefab: {fileID: 100100000, guid: 0dc374e74ed13ba47b75a267f14d3c94, type: 3}
 --- !u!1 &295184487
 GameObject:
@@ -576,7 +579,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 493010231614953383, guid: 5d0b5aa4182a42448ad959d2f988e874, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 12.13
+      value: 12.17
       objectReference: {fileID: 0}
     - target: {fileID: 493010231614953383, guid: 5d0b5aa4182a42448ad959d2f988e874, type: 3}
       propertyPath: m_LocalPosition.z
@@ -806,7 +809,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 20
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -831,7 +834,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: -3.91, y: -2.72, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1345,6 +1348,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &685263033 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3596435939419734898, guid: 0dc374e74ed13ba47b75a267f14d3c94, type: 3}
+  m_PrefabInstance: {fileID: 198346827}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &733902466 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 493010231614953383, guid: 5d0b5aa4182a42448ad959d2f988e874, type: 3}
@@ -1886,6 +1894,19 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 345968619802835564, guid: 0dc374e74ed13ba47b75a267f14d3c94, type: 3}
   m_PrefabInstance: {fileID: 198346827}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1108888423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 685263033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f24d32f2cb86e3a4a8d52d24d0f3c8a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
 --- !u!1 &1197284378
 GameObject:
   m_ObjectHideFlags: 0

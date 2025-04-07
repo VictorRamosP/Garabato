@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMove : MonoBehaviour
 {
@@ -22,7 +23,7 @@ public class PlayerMove : MonoBehaviour
 
     void Update()
     {
-        if (!ChangeCam.isMapActive) // Solo permite moverse si la cámara del jugador está activa
+        if (!ChangeCam.isMapActive) // Solo permite moverse si la cï¿½mara del jugador estï¿½ activa
         {
             Moverse();
             Salto();
@@ -72,6 +73,13 @@ public class PlayerMove : MonoBehaviour
         else
         {
             shooting.transform.rotation = mirandoDerecha ? Quaternion.Euler(0, 0, -90) : Quaternion.Euler(0, 0, 90);
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.CompareTag("Enemy")) {
+            SceneManager.LoadScene("Gameplay");
         }
     }
 }
