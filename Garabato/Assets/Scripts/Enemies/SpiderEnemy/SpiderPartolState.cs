@@ -67,8 +67,9 @@ public class SpiderPatrolState : IState
 
     private bool WallDetected()
     {
-        RaycastHit2D hit = Physics2D.Raycast(EdgedetectionPoint.position, Vector2.right, 1.5f, enemy.WhatIsGround);
+        RaycastHit2D hit = Physics2D.Raycast(EdgedetectionPoint.position, enemy.transform.right, 0.1f, enemy.WhatIsGround);
 
+        //Debug.DrawLine(EdgedetectionPoint.position, EdgedetectionPoint.position + enemy.transform.right * 0.1f, Color.red);
         return (hit.collider != null);
     }
     private void Flip()
