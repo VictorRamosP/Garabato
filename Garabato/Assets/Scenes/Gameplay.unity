@@ -3142,7 +3142,7 @@ GameObject:
   - component: {fileID: 432760839}
   - component: {fileID: 432760838}
   - component: {fileID: 432760837}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: Square (8)
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -4158,7 +4158,7 @@ GameObject:
   - component: {fileID: 626435250}
   - component: {fileID: 626435249}
   - component: {fileID: 626435248}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: Square (4)
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -6073,7 +6073,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldownRotate: 0.5
-  airSuspense: 0.5
   WhereIsDown: 
   k_Rotatemap: 97
   k_Rotatemap2: 100

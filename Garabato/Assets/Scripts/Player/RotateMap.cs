@@ -6,7 +6,7 @@ public class RotateMap : MonoBehaviour
 {
     private GameObject map;
     public float cooldownRotate = 0.5f;
-    public float airSuspense = 0.5f;
+    //public float airSuspense = 0.5f;
     private float cooldownTimer = 0f;
     private Rigidbody2D _rigidbody;
     public string WhereIsDown;
@@ -39,10 +39,13 @@ public class RotateMap : MonoBehaviour
     void Rotate()
     {
         cooldownTimer -= Time.deltaTime;
+        float originalGravity = _rigidbody.gravityScale;
 
         if ((Input.GetKeyDown(k_Rotatemap) || Input.GetKeyDown(k_Rotatemap2)) && cooldownTimer <= 0f)
         {
-            StartCoroutine(SuspendPlayer());
+
+            _rigidbody.gravityScale = 0;
+            _rigidbody.velocity = Vector2.zero;
 
             float angle = (Input.GetKeyDown(k_Rotatemap2)) ? 90f : -90f;
             RotateAroundPlayer(map, transform.position, angle);
@@ -63,6 +66,8 @@ public class RotateMap : MonoBehaviour
 
             OnMapRotated?.Invoke();
         }
+        _rigidbody.gravityScale = originalGravity;
+
     }
 
     void RotateAroundPlayer(GameObject obj, Vector3 point, float angle)
@@ -75,14 +80,4 @@ public class RotateMap : MonoBehaviour
         obj.transform.Rotate(0, 0, angle);
     }
 
-    IEnumerator SuspendPlayer()
-    {
-        float originalGravity = _rigidbody.gravityScale;
-        _rigidbody.gravityScale = 0;
-        _rigidbody.velocity = Vector2.zero;
-
-        yield return new WaitForSeconds(airSuspense);
-
-        _rigidbody.gravityScale = originalGravity;
-    }
 }
