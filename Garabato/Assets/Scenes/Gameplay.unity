@@ -1693,6 +1693,7 @@ GameObject:
   - component: {fileID: 800245425}
   - component: {fileID: 800245426}
   - component: {fileID: 800245427}
+  - component: {fileID: 800245428}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1928,6 +1929,38 @@ MonoBehaviour:
   cooldawnShoot: 0.5
   ball: {fileID: 4983018387622394943, guid: 402a35d662ea31f49a621ae35d2aaaa2, type: 3}
   k_mouse0: 323
+--- !u!114 &800245428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 800245418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f519eb814ec65a41a8381c7961c3901, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  JumpHeight: 10
+  DistanceToMaxHeight: 5
+  SpeedHorizontal: 5
+  PressTimeToMaxJump: 0
+  WallSlideSpeed: 0
+  filter:
+    useTriggers: 0
+    useLayerMask: 0
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 0
+    useOutsideNormalAngle: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 0
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: 0
+    maxNormalAngle: 0
+  JumpKey: 32
 --- !u!4 &922498101 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 493010231614953383, guid: 5d0b5aa4182a42448ad959d2f988e874, type: 3}

@@ -26,7 +26,7 @@ public class PlayerMove : MonoBehaviour
         if (!ChangeCam.isMapActive) // Solo permite moverse si la c�mara del jugador est� activa
         {
             Moverse();
-            Salto();
+            //Salto();
             RotateShoot();
         }
     }
