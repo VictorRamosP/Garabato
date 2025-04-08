@@ -16,21 +16,23 @@ public class PlayerJumper : MonoBehaviour
     private float _lastVelocityY;
     private float _jumpStartedTime;
     private bool _jumpHeld;
-
+    private BoxCollider2D _boxCollider;
+    public LayerMask floorlayerMask;
     //bool IsWallSliding => _collisionDetection.IsTouchingFront;
 
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
+        _boxCollider = GetComponent<BoxCollider2D>();
         //_collisionDetection = GetComponent<CollisionDetection>();
     }
 
     void Update()
     {
         if (ChangeCam.isMapActive) return;
-        if (Input.GetKeyDown(JumpKey))
+        if (Input.GetKeyDown(JumpKey) && TocandoSuelo())
         {
-            JumpStarted();
+                JumpStarted();
             _jumpHeld = true;
         }
 
@@ -106,5 +108,12 @@ public class PlayerJumper : MonoBehaviour
         Vector3 end = transform.position + new Vector3(1, h, 0);
         Gizmos.DrawLine(start, end);
         Gizmos.color = Color.white;
+    }
+
+    bool TocandoSuelo()
+    {
+        Vector2 size = new Vector2(_boxCollider.bounds.size.x, _boxCollider.bounds.size.y);
+        RaycastHit2D raycastbox = Physics2D.BoxCast(_boxCollider.bounds.center, size, 0f, Vector2.down, 0.2f, floorlayerMask);
+        return raycastbox.collider != null;
     }
 }

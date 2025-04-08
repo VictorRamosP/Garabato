@@ -6129,6 +6129,9 @@ MonoBehaviour:
     minNormalAngle: 0
     maxNormalAngle: 0
   JumpKey: 32
+  floorlayerMask:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!1 &834209956
 GameObject:
   m_ObjectHideFlags: 0
