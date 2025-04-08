@@ -44,7 +44,7 @@ public class RotateMap : MonoBehaviour
         {
             StartCoroutine(SuspendPlayer());
 
-            float angle = (Input.GetKeyDown(KeyCode.V)) ? 90f : -90f;
+            float angle = (Input.GetKeyDown(k_Rotatemap2)) ? 90f : -90f;
             RotateAroundPlayer(map, transform.position, angle);
             cooldownTimer = cooldownRotate;
 
