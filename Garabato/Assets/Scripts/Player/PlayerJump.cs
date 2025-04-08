@@ -27,6 +27,7 @@ public class PlayerJumper : MonoBehaviour
 
     void Update()
     {
+        if (ChangeCam.isMapActive) return;
         if (Input.GetKeyDown(JumpKey))
         {
             JumpStarted();
