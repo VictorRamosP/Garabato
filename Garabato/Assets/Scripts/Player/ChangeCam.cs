@@ -31,7 +31,7 @@ public class ChangeCam : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(k_SwitchJump) && IsGrounded())
+        if (Input.GetKeyDown(k_SwitchJump) && (IsGrounded() || isMapActive))
         {
             SwitchCamera();
         }

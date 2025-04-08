@@ -25,8 +25,18 @@ public class Patrol : MonoBehaviour
     }
     private void Update()
     {
-        if (ChangeCam.isMapActive) return;
+        if (ChangeCam.isMapActive) 
+        {
+            _rb.velocity = Vector2.zero;
+            _rb.isKinematic = true;
+            return;
+        } 
+        if (_rb.isKinematic)
+        {
+            _rb.isKinematic = false;
+        }
         Patrolfunc();
+        
     }
     public void Patrolfunc()
     {
