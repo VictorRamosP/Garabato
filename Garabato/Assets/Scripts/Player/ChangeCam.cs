@@ -5,6 +5,7 @@ public class ChangeCam : MonoBehaviour
 {
     public CinemachineVirtualCamera playerCam;
     public CinemachineVirtualCamera mapCam;
+    private float gravityScale;
 
     [Header("Controles")]
     public KeyCode k_SwitchJump = KeyCode.Tab;
@@ -22,6 +23,7 @@ public class ChangeCam : MonoBehaviour
         playerCam.Priority = 10;
         mapCam.Priority = 0;
         isMapActive = false;
+        gravityScale = gameObject.GetComponent<Rigidbody2D>().gravityScale;
     }
 
     void Update()
@@ -39,12 +41,14 @@ public class ChangeCam : MonoBehaviour
             playerCam.Priority = 0;
             mapCam.Priority = 10;
             isMapActive = true;
+            gameObject.GetComponent<Rigidbody2D>().gravityScale = 0;
         }
         else
         {
             playerCam.Priority = 10;
             mapCam.Priority = 0;
             isMapActive = false;
+            gameObject.GetComponent<Rigidbody2D>().gravityScale = gravityScale;
         }
     }
 }
