@@ -6,6 +6,9 @@ public class ChangeCam : MonoBehaviour
     public CinemachineVirtualCamera playerCam;
     public CinemachineVirtualCamera mapCam;
     private float gravityScale;
+    public LayerMask groundLayer;
+    public Transform groundCheck;
+    public float groundCheckRadius = 0.1f;
 
     [Header("Controles")]
     public KeyCode k_SwitchJump = KeyCode.Tab;
@@ -28,7 +31,7 @@ public class ChangeCam : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(k_SwitchJump))
+        if (Input.GetKeyDown(k_SwitchJump) && IsGrounded())
         {
             SwitchCamera();
         }
@@ -51,4 +54,9 @@ public class ChangeCam : MonoBehaviour
             gameObject.GetComponent<Rigidbody2D>().gravityScale = gravityScale;
         }
     }
+bool IsGrounded()
+{
+    return Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+}
+
 }
