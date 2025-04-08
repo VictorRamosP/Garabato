@@ -25,6 +25,7 @@ public class Patrol : MonoBehaviour
     }
     private void Update()
     {
+        if (ChangeCam.isMapActive) return;
         Patrolfunc();
     }
     public void Patrolfunc()

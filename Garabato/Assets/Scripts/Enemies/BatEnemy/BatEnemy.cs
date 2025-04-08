@@ -19,6 +19,7 @@ public class BatEnemy : MonoBehaviour
 
     void Update()
     {
+        if (ChangeCam.isMapActive) return;
         stateMachine.OnUpdate();
     }
 

@@ -23,6 +23,7 @@ public class SpiderEnemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (ChangeCam.isMapActive) return;
         stateMachine.OnUpdate();
     }
 }
