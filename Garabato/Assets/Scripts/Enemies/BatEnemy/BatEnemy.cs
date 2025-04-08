@@ -10,6 +10,7 @@ public class BatEnemy : MonoBehaviour
     public Transform Player;
     public Rigidbody2D Rigidbody;
     private StateMachine stateMachine;
+    public RotateMap Map;
 
     void Start()
     {

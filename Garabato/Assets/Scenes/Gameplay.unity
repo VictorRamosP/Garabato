@@ -175,6 +175,10 @@ PrefabInstance:
       value: Area (2)
       objectReference: {fileID: 0}
     - target: {fileID: 3626719406505743051, guid: 32ccb90c13da2e749a88bf7f6a973e51, type: 3}
+      propertyPath: Map
+      value: 
+      objectReference: {fileID: 800245426}
+    - target: {fileID: 3626719406505743051, guid: 32ccb90c13da2e749a88bf7f6a973e51, type: 3}
       propertyPath: Player
       value: 
       objectReference: {fileID: 800245420}
@@ -682,6 +686,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Area (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3626719406505743051, guid: 32ccb90c13da2e749a88bf7f6a973e51, type: 3}
+      propertyPath: Map
+      value: 
+      objectReference: {fileID: 800245426}
     - target: {fileID: 3626719406505743051, guid: 32ccb90c13da2e749a88bf7f6a973e51, type: 3}
       propertyPath: Player
       value: 
@@ -1445,6 +1453,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Area (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 3626719406505743051, guid: 32ccb90c13da2e749a88bf7f6a973e51, type: 3}
+      propertyPath: Map
+      value: 
+      objectReference: {fileID: 800245426}
     - target: {fileID: 3626719406505743051, guid: 32ccb90c13da2e749a88bf7f6a973e51, type: 3}
       propertyPath: Player
       value: 
@@ -4686,6 +4698,10 @@ PrefabInstance:
       value: Area (6)
       objectReference: {fileID: 0}
     - target: {fileID: 3626719406505743051, guid: 32ccb90c13da2e749a88bf7f6a973e51, type: 3}
+      propertyPath: Map
+      value: 
+      objectReference: {fileID: 800245426}
+    - target: {fileID: 3626719406505743051, guid: 32ccb90c13da2e749a88bf7f6a973e51, type: 3}
       propertyPath: Player
       value: 
       objectReference: {fileID: 800245420}
@@ -6341,6 +6357,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Area (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 3626719406505743051, guid: 32ccb90c13da2e749a88bf7f6a973e51, type: 3}
+      propertyPath: Map
+      value: 
+      objectReference: {fileID: 800245426}
     - target: {fileID: 3626719406505743051, guid: 32ccb90c13da2e749a88bf7f6a973e51, type: 3}
       propertyPath: Player
       value: 
@@ -8455,6 +8475,10 @@ PrefabInstance:
       value: Area (3)
       objectReference: {fileID: 0}
     - target: {fileID: 3626719406505743051, guid: 32ccb90c13da2e749a88bf7f6a973e51, type: 3}
+      propertyPath: Map
+      value: 
+      objectReference: {fileID: 800245426}
+    - target: {fileID: 3626719406505743051, guid: 32ccb90c13da2e749a88bf7f6a973e51, type: 3}
       propertyPath: Player
       value: 
       objectReference: {fileID: 800245420}
@@ -9002,6 +9026,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Area (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 3626719406505743051, guid: 32ccb90c13da2e749a88bf7f6a973e51, type: 3}
+      propertyPath: Map
+      value: 
+      objectReference: {fileID: 800245426}
     - target: {fileID: 3626719406505743051, guid: 32ccb90c13da2e749a88bf7f6a973e51, type: 3}
       propertyPath: Player
       value: 
@@ -13592,6 +13620,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Area
       objectReference: {fileID: 0}
+    - target: {fileID: 3626719406505743051, guid: 32ccb90c13da2e749a88bf7f6a973e51, type: 3}
+      propertyPath: Map
+      value: 
+      objectReference: {fileID: 800245426}
     - target: {fileID: 3626719406505743051, guid: 32ccb90c13da2e749a88bf7f6a973e51, type: 3}
       propertyPath: Player
       value: 

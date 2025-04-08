@@ -31,7 +31,7 @@ public class ChangeCam : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(k_SwitchJump) && (IsGrounded() || isMapActive))
+        if (Input.GetKeyDown(k_SwitchJump) && (gameObject.GetComponent<PlayerMove>().TocandoSuelo() || isMapActive))
         {
             SwitchCamera();
         }
@@ -54,9 +54,4 @@ public class ChangeCam : MonoBehaviour
             gameObject.GetComponent<Rigidbody2D>().gravityScale = gravityScale;
         }
     }
-bool IsGrounded()
-{
-    return Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
-}
-
 }

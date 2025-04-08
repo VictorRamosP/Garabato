@@ -5,11 +5,13 @@ public class PatrolState : IState
     private BatEnemy enemy;
     private StateMachine stateMachine;
     private Vector2 targetPosition;
+    
 
     public PatrolState(BatEnemy enemy, StateMachine stateMachine)
     {
         this.enemy = enemy;
         this.stateMachine = stateMachine;
+        enemy.Map.OnMapRotated += SetNewTargetPosition;
     }
 
     public void OnEnter()

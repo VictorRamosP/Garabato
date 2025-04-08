@@ -49,7 +49,7 @@ public class PlayerMove : MonoBehaviour
         }
     }
 
-    bool TocandoSuelo()
+    public bool TocandoSuelo()
     {
         Vector2 size = new Vector2(_boxCollider.bounds.size.x, _boxCollider.bounds.size.y);
         RaycastHit2D raycastbox = Physics2D.BoxCast(_boxCollider.bounds.center, size, 0f, Vector2.down, 0.2f, floorlayerMask);
