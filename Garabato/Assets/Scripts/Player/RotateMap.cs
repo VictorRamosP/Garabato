@@ -9,7 +9,8 @@ public class RotateMap : MonoBehaviour
     //public float airSuspense = 0.5f;
     private float cooldownTimer = 0f;
     private Rigidbody2D _rigidbody;
-    public string WhereIsDown;
+    private string _WhereIsDown;
+    public string WhereIsDown {get { return _WhereIsDown; }}
     private int currentRotationState = 0;
     public Action OnMapRotated;
 
@@ -58,10 +59,10 @@ public class RotateMap : MonoBehaviour
 
             switch (currentRotationState)
             {
-                case 0: WhereIsDown = "down"; break;
-                case 1: WhereIsDown = "right"; break;
-                case 2: WhereIsDown = "up"; break;
-                case 3: WhereIsDown = "left"; break;
+                case 0: _WhereIsDown = "down"; break;
+                case 1: _WhereIsDown = "right"; break;
+                case 2: _WhereIsDown = "up"; break;
+                case 3: _WhereIsDown = "left"; break;
             }
 
             OnMapRotated?.Invoke();

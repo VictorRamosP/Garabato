@@ -1,14 +1,13 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class PlayerMove : MonoBehaviour
 {
     private Rigidbody2D _rigidbody;
+    private CollisionDetection _collisionDetection;
     public float speed;
     public float jumpForce;
     public LayerMask floorlayerMask;
 
-    private BoxCollider2D _boxCollider;
     public bool mirandoDerecha = true;
     public GameObject shooting;
 
@@ -18,15 +17,14 @@ public class PlayerMove : MonoBehaviour
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
-        _boxCollider = GetComponent<BoxCollider2D>();
+        _collisionDetection = gameObject.GetComponent<CollisionDetection>();
     }
 
     void Update()
     {
         if (!ChangeCam.isMapActive) // Solo permite moverse si la c�mara del jugador est� activa
-        {
+        { 
             Moverse();
-            //Salto();
             RotateShoot();
         }
     }
@@ -48,22 +46,6 @@ public class PlayerMove : MonoBehaviour
             transform.localScale = escala;
         }
     }
-
-    public bool TocandoSuelo()
-    {
-        Vector2 size = new Vector2(_boxCollider.bounds.size.x, _boxCollider.bounds.size.y);
-        RaycastHit2D raycastbox = Physics2D.BoxCast(_boxCollider.bounds.center, size, 0f, Vector2.down, 0.2f, floorlayerMask);
-        return raycastbox.collider != null;
-    }
-
-    void Salto()
-    {
-        if (Input.GetKeyDown(k_Jump) && TocandoSuelo())
-        {
-            _rigidbody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-        }
-    }
-
     void RotateShoot()
     {
         if (Input.GetKey(KeyCode.W))
@@ -73,13 +55,6 @@ public class PlayerMove : MonoBehaviour
         else
         {
             shooting.transform.rotation = mirandoDerecha ? Quaternion.Euler(0, 0, -90) : Quaternion.Euler(0, 0, 90);
-        }
-    }
-
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.collider.CompareTag("Enemy")) {
-            SceneManager.LoadScene("Gameplay");
         }
     }
 }
