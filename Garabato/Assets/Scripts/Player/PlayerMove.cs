@@ -22,7 +22,7 @@ public class PlayerMove : MonoBehaviour
 
     void Update()
     {
-        if (!ChangeCam.isMapActive) // Solo permite moverse si la c�mara del jugador est� activa
+        if (!ChangeCam.isMapActive) 
         { 
             Moverse();
             RotateShoot();
@@ -48,13 +48,21 @@ public class PlayerMove : MonoBehaviour
     }
     void RotateShoot()
     {
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.D))
+        {
+            shooting.transform.rotation = Quaternion.Euler(0, 0, -45);
+        }
+        else if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.A))
+        {
+            shooting.transform.rotation = Quaternion.Euler(0, 0, 45); 
+        }
+        else if (Input.GetKey(KeyCode.W))
         {
             shooting.transform.rotation = Quaternion.Euler(0, 0, 0);
         }
         else
         {
-            shooting.transform.rotation = mirandoDerecha ? Quaternion.Euler(0, 0, -90) : Quaternion.Euler(0, 0, 90);
+            shooting.transform.rotation = mirandoDerecha ? Quaternion.Euler(0, 0, -90) : Quaternion.Euler(0, 0, 90); // Horizontal según orientación
         }
     }
 }
