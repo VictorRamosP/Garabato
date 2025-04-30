@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FlameThrower : MonoBehaviour
 {
+    public bool infinite;
     public GameObject flame;
     private float cooldownTimer = 0f;
     public float reactiveFlame = 3f;
@@ -13,18 +14,25 @@ public class FlameThrower : MonoBehaviour
         flame.SetActive(false);
     }
 
-    // Update is called once per frame
     void Update()
     {
         cooldownTimer += Time.deltaTime;
-        if (cooldownTimer >= reactiveFlame)
+
+        if (!infinite)
+        {
+            if (cooldownTimer >= reactiveFlame)
+            {
+                flame.SetActive(true);
+            }
+            if (cooldownTimer >= desactiveFlame)
+            {
+                flame.SetActive(false);
+                cooldownTimer = 0f;
+            }
+        }
+        else 
         {
             flame.SetActive(true);
-        }
-        if (cooldownTimer >= desactiveFlame)  
-        {
-            flame.SetActive(false);
-            cooldownTimer = 0f;
         }
     }
 }
