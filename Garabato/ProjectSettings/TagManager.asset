@@ -9,6 +9,7 @@ TagManager:
   - MapCam
   - Enemy
   - Obstacle
+  - Breakable
   layers:
   - Default
   - TransparentFX
