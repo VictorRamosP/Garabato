@@ -6101,7 +6101,8 @@ MonoBehaviour:
   bulletPrefab: {fileID: 4983018387622394943, guid: 402a35d662ea31f49a621ae35d2aaaa2, type: 3}
   firePoint: {fileID: 295184488}
   shootKey: 323
-  timeDestroy: 1
+  coolDawnShoot: 1
+  bulletTimeDestroy: 2
 --- !u!114 &800245426
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6117,6 +6118,7 @@ MonoBehaviour:
   cooldownRotate: 0.5
   k_Rotatemap: 97
   k_Rotatemap2: 100
+  rotationDuration: 0.5
 --- !u!114 &800245427
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6149,8 +6151,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f519eb814ec65a41a8381c7961c3901, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  JumpHeight: 4
-  DistanceToMaxHeight: 5
+  JumpHeight: 3
+  DistanceToMaxHeight: 3
   SpeedHorizontal: 5
   PressTimeToMaxJump: 0.3
   WallSlideSpeed: 100
