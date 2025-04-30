@@ -33,6 +33,11 @@ public class ChangeCam : MonoBehaviour
 
     void Update()
     {
+        // Evita que cambie la camara si el mapa esta rotando
+        RotateMap rotateMap = FindObjectOfType<RotateMap>();
+        if (rotateMap != null && rotateMap.IsRotating)
+            return;
+
         if (Input.GetKeyDown(k_SwitchJump) && (_collisionDetection.IsGrounded || isMapActive))
         {
             SwitchCamera();

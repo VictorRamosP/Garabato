@@ -8,10 +8,8 @@ public class RotateMap : MonoBehaviour
     public float cooldownRotate = 0.5f;
     private float cooldownTimer = 0f;
     private Rigidbody2D _rigidbody;
-    private string _WhereIsDown;
     private Collider2D _collider;
-
-    public string WhereIsDown { get { return _WhereIsDown; } }
+    private string _WhereIsDown;
     private int currentRotationState = 0;
     public Action OnMapRotated;
 
@@ -22,6 +20,10 @@ public class RotateMap : MonoBehaviour
     [Header("Rotación suave")]
     public float rotationDuration = 0.5f;
     private bool isRotating = false;
+    public bool IsRotating => isRotating; // <- Propiedad pública
+
+    public string WhereIsDown { get { return _WhereIsDown; } }
+
     void Start()
     {
         map = GameObject.FindGameObjectWithTag("Map");
@@ -49,7 +51,6 @@ public class RotateMap : MonoBehaviour
 
         if ((Input.GetKeyDown(k_Rotatemap) || Input.GetKeyDown(k_Rotatemap2)) && cooldownTimer <= 0f)
         {
-
             _rigidbody.gravityScale = 0;
             _rigidbody.velocity = Vector2.zero;
 
@@ -57,10 +58,7 @@ public class RotateMap : MonoBehaviour
             StartCoroutine(SmoothRotate(angle));
             cooldownTimer = cooldownRotate;
 
-            if (angle > 0)
-                currentRotationState = (currentRotationState + 1) % 4;
-            else
-                currentRotationState = (currentRotationState + 3) % 4;
+            currentRotationState = (angle > 0) ? (currentRotationState + 1) % 4 : (currentRotationState + 3) % 4;
 
             switch (currentRotationState)
             {
@@ -72,8 +70,8 @@ public class RotateMap : MonoBehaviour
 
             OnMapRotated?.Invoke();
         }
-        _rigidbody.gravityScale = originalGravity;
 
+        _rigidbody.gravityScale = originalGravity;
     }
 
     void RotateAroundPlayer(GameObject obj, Vector3 point, float angle)
@@ -85,6 +83,7 @@ public class RotateMap : MonoBehaviour
         obj.transform.position = newPos;
         obj.transform.Rotate(0, 0, angle);
     }
+
     IEnumerator SmoothRotate(float angle)
     {
         isRotating = true;
@@ -95,7 +94,6 @@ public class RotateMap : MonoBehaviour
         Quaternion startRotation = map.transform.rotation;
         Quaternion endRotation = startRotation * Quaternion.Euler(0, 0, angle);
         RotateAroundPlayer(map, transform.position, angle);
-
 
         float elapsed = 0f;
 
@@ -109,10 +107,9 @@ public class RotateMap : MonoBehaviour
 
         map.transform.rotation = endRotation;
 
-        isRotating = false;
-
         if (_collider != null)
             _collider.enabled = true;
 
+        isRotating = false;
     }
 }
