@@ -7,10 +7,7 @@ public class PlayerBullet : MonoBehaviour
     public float speed;
     public float damage;
 
-    void Start()
-    {
-     // Destroy(this, 2f);
-    }
+   
     void Update()
     {
         transform.Translate(Vector2.up * speed * Time.deltaTime);
@@ -18,22 +15,11 @@ public class PlayerBullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Enemy"))
+        if (collision.CompareTag("Enemy") || collision.CompareTag("Breakable"))
         {
             collision.GetComponent<EnemyLife>().TakeDamage(damage);
             Destroy(this);
         }
     }
-    /*public float damage;
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        /*if (collision.collider.TryGetComponent(out EnemyLife enemyLife))
-        {
-            enemyLife.TakeDamage(damage);
-            Destroy(this.gameObject);
-        }
-        Destroy(this.gameObject);
-
-    }*/
+   
 }

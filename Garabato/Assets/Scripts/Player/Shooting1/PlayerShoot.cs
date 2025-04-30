@@ -8,12 +8,16 @@ public class PlayerShoot : MonoBehaviour
     public Transform firePoint; 
     public KeyCode shootKey = KeyCode.Mouse0;
     private GameObject activeBullet; // Referencia al proyectil activo
-    public float timeDestroy = 2f; //tiempo que tarda en destruirse una bala. Hasta que no se destruya no puedes volver a disparar
+    public float coolDawnShoot = 1f;
+    private float coolDawnTimer = 0f;
+    public float bulletTimeDestroy = 2f; 
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) && activeBullet == null) 
+        coolDawnTimer -= Time.deltaTime;
+        if (Input.GetMouseButtonDown(0) && coolDawnTimer <= 0f) 
         {
+            coolDawnTimer = coolDawnShoot;
             Shoot();
         }
     }
@@ -24,6 +28,6 @@ public class PlayerShoot : MonoBehaviour
         Rigidbody2D rb = activeBullet.GetComponent<Rigidbody2D>();
         
 
-        Destroy(activeBullet, timeDestroy);
+        Destroy(activeBullet, bulletTimeDestroy);
     }
 }
