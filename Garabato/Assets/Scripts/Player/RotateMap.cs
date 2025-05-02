@@ -17,10 +17,10 @@ public class RotateMap : MonoBehaviour
     public KeyCode k_Rotatemap = KeyCode.A;
     public KeyCode k_Rotatemap2 = KeyCode.D;
 
-    [Header("Rotación suave")]
+    [Header("Rotaciï¿½n suave")]
     public float rotationDuration = 0.5f;
     private bool isRotating = false;
-    public bool IsRotating => isRotating; // <- Propiedad pública
+    public bool IsRotating => isRotating; // <- Propiedad pï¿½blica
 
     public string WhereIsDown { get { return _WhereIsDown; } }
 
@@ -40,8 +40,18 @@ public class RotateMap : MonoBehaviour
     {
         if (ChangeCam.isMapActive)
         {
+            transform.SetParent(map.transform);
             Rotate();
         }
+        else
+        {
+            //transform.SetParent(null);
+        }
+    }
+
+    void LateUpdate()
+    {
+        transform.rotation = Quaternion.identity;
     }
 
     void Rotate()
@@ -93,14 +103,13 @@ public class RotateMap : MonoBehaviour
 
         Quaternion startRotation = map.transform.rotation;
         Quaternion endRotation = startRotation * Quaternion.Euler(0, 0, angle);
-        RotateAroundPlayer(map, transform.position, angle);
 
         float elapsed = 0f;
 
         while (elapsed < rotationDuration)
         {
             elapsed += Time.deltaTime;
-            float t = Mathf.Clamp01(elapsed / rotationDuration);
+            float t = Mathf.SmoothStep(0, 1, elapsed / rotationDuration); // â† mÃ¡s suave aÃºn
             map.transform.rotation = Quaternion.Lerp(startRotation, endRotation, t);
             yield return null;
         }
