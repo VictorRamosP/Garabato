@@ -43,10 +43,6 @@ public class RotateMap : MonoBehaviour
             transform.SetParent(map.transform);
             Rotate();
         }
-        else
-        {
-            //transform.SetParent(null);
-        }
     }
 
     void LateUpdate()
@@ -77,8 +73,6 @@ public class RotateMap : MonoBehaviour
                 case 2: _WhereIsDown = "up"; break;
                 case 3: _WhereIsDown = "left"; break;
             }
-
-            OnMapRotated?.Invoke();
         }
 
         _rigidbody.gravityScale = originalGravity;
@@ -120,5 +114,6 @@ public class RotateMap : MonoBehaviour
             _collider.enabled = true;
 
         isRotating = false;
+        OnMapRotated?.Invoke();
     }
 }
