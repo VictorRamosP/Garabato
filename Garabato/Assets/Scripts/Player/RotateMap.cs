@@ -14,8 +14,8 @@ public class RotateMap : MonoBehaviour
     public Action OnMapRotated;
 
     [Header("Controles")]
-    public KeyCode k_Rotatemap = KeyCode.A;
-    public KeyCode k_Rotatemap2 = KeyCode.D;
+    public KeyCode k_Rotatemap = KeyCode.D;
+    public KeyCode k_Rotatemap2 = KeyCode.A;
 
     [Header("Rotaci�n suave")]
     public float rotationDuration = 0.5f;
