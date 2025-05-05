@@ -2511,6 +2511,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3849141901718476025, guid: 3cfa1a50fff0b7a4d98e3ed7c0f82c3e, type: 3}
+      propertyPath: pauseKey
+      value: 27
+      objectReference: {fileID: 0}
+    - target: {fileID: 3849141901718476025, guid: 3cfa1a50fff0b7a4d98e3ed7c0f82c3e, type: 3}
       propertyPath: pauseMenuUI
       value: 
       objectReference: {fileID: 869206139}
@@ -14447,6 +14451,10 @@ PrefabInstance:
     - target: {fileID: 7755168351606946705, guid: 98d421ee2232bfc4aaf4888bb64d9089, type: 3}
       propertyPath: k_Rotatemap2
       value: 97
+      objectReference: {fileID: 0}
+    - target: {fileID: 7755168351606946705, guid: 98d421ee2232bfc4aaf4888bb64d9089, type: 3}
+      propertyPath: rotationDuration
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
