@@ -9,7 +9,7 @@ public class DeadFloor : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            SceneManager.LoadScene("Gameplay");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 }
