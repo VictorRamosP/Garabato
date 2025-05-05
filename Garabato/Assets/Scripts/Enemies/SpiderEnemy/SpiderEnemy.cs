@@ -10,12 +10,14 @@ public class SpiderEnemy : MonoBehaviour
     public LayerMask WhatIsGround;
     public RotateMap Map;
     public Rigidbody2D rb;
+    
 
     [Header("Position")]
     public bool isUpsideDown;
     // Start is called before the first frame update
     void Start()
     {
+        
         stateMachine = new StateMachine();
         stateMachine.ChangeState(new SpiderPatrolState(this, stateMachine, EdgedetectionPoint));
     }
