@@ -8,10 +8,18 @@ public class MainMenuController : MonoBehaviour
         SceneManager.LoadScene("Gameplay"); 
     }
 
+    public void LevelSelector()
+    {
+        SceneManager.LoadScene("LevelSelector");
+    }
     public void QuitGame()
     {
         Application.Quit();
         Debug.Log("Game Closed"); 
-    }    
+    }
+    public void LoadLevel(string levelName)
+    {
+        SceneManager.LoadScene(levelName);
+    }
 
 }
