@@ -19,6 +19,8 @@ public class PlayerBullet : MonoBehaviour
         {
             collision.GetComponent<EnemyLife>().TakeDamage(damage);
             Destroy(this.gameObject);
+        }else if (collision.CompareTag("Obstacle")) {
+            Destroy(this.gameObject);
         }
     }
    

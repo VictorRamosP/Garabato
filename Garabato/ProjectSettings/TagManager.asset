@@ -11,6 +11,7 @@ TagManager:
   - Obstacle
   - Breakable
   - Box
+  - Weapon
   layers:
   - Default
   - TransparentFX

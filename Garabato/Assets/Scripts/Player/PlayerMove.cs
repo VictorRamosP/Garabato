@@ -9,7 +9,6 @@ public class PlayerMove : MonoBehaviour
     public LayerMask floorlayerMask;
 
     public bool mirandoDerecha = true;
-    public GameObject shooting;
 
     [Header("Controles")]
     public KeyCode k_Jump = KeyCode.Space;
@@ -25,7 +24,6 @@ public class PlayerMove : MonoBehaviour
         if (!ChangeCam.isMapActive) 
         { 
             Moverse();
-            RotateShoot();
         }
     }
 
@@ -44,25 +42,6 @@ public class PlayerMove : MonoBehaviour
             Vector3 escala = transform.localScale;
             escala.x *= -1;
             transform.localScale = escala;
-        }
-    }
-    void RotateShoot()
-    {
-        if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.D))
-        {
-            shooting.transform.rotation = Quaternion.Euler(0, 0, -45);
-        }
-        else if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.A))
-        {
-            shooting.transform.rotation = Quaternion.Euler(0, 0, 45); 
-        }
-        else if (Input.GetKey(KeyCode.W))
-        {
-            shooting.transform.rotation = Quaternion.Euler(0, 0, 0);
-        }
-        else
-        {
-            shooting.transform.rotation = mirandoDerecha ? Quaternion.Euler(0, 0, -90) : Quaternion.Euler(0, 0, 90); // Horizontal según orientación
         }
     }
 }
