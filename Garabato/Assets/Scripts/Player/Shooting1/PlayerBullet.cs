@@ -18,7 +18,7 @@ public class PlayerBullet : MonoBehaviour
         if (collision.CompareTag("Enemy") || collision.CompareTag("Breakable"))
         {
             collision.GetComponent<EnemyLife>().TakeDamage(damage);
-            Destroy(this);
+            Destroy(this.gameObject);
         }
     }
    

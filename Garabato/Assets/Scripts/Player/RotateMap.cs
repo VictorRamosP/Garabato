@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Data;
 using UnityEngine;
 
 public class RotateMap : MonoBehaviour
@@ -34,6 +35,15 @@ public class RotateMap : MonoBehaviour
         {
             Debug.LogError("No se ha encontrado un Mapa. Pon el tag 'Map' al mapa.");
         }
+
+        if (map != null)
+        {
+            Debug.Log("El Map de RotateMap es: " + map.name);
+        }
+        else
+        {
+            Debug.LogError("Map no está asignado en RotateMap.");
+        }
     }
 
     void Update()
@@ -55,7 +65,7 @@ public class RotateMap : MonoBehaviour
         cooldownTimer -= Time.deltaTime;
         float originalGravity = _rigidbody.gravityScale;
 
-        if ((Input.GetKeyDown(k_Rotatemap) || Input.GetKeyDown(k_Rotatemap2)) && cooldownTimer <= 0f)
+        if ((Input.GetKeyDown(k_Rotatemap) || Input.GetKeyDown(k_Rotatemap2)) && cooldownTimer <= 0f && !isRotating)
         {
             _rigidbody.gravityScale = 0;
             _rigidbody.velocity = Vector2.zero;
@@ -63,16 +73,6 @@ public class RotateMap : MonoBehaviour
             float angle = (Input.GetKeyDown(k_Rotatemap2)) ? 90f : -90f;
             StartCoroutine(SmoothRotate(angle));
             cooldownTimer = cooldownRotate;
-
-            currentRotationState = (angle > 0) ? (currentRotationState + 1) % 4 : (currentRotationState + 3) % 4;
-
-            switch (currentRotationState)
-            {
-                case 0: _WhereIsDown = "down"; break;
-                case 1: _WhereIsDown = "right"; break;
-                case 2: _WhereIsDown = "up"; break;
-                case 3: _WhereIsDown = "left"; break;
-            }
         }
 
         _rigidbody.gravityScale = originalGravity;
@@ -111,9 +111,20 @@ public class RotateMap : MonoBehaviour
         map.transform.rotation = endRotation;
 
         if (_collider != null)
+        {
             _collider.enabled = true;
+        }
 
         isRotating = false;
+        currentRotationState = (angle > 0) ? (currentRotationState + 1) % 4 : (currentRotationState + 3) % 4;
+
+        switch (currentRotationState)
+        {
+            case 0: _WhereIsDown = "down"; break;
+            case 1: _WhereIsDown = "right"; break;
+            case 2: _WhereIsDown = "up"; break;
+            case 3: _WhereIsDown = "left"; break;
+        }
         OnMapRotated?.Invoke();
     }
 }

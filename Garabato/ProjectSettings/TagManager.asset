@@ -10,6 +10,7 @@ TagManager:
   - Enemy
   - Obstacle
   - Breakable
+  - Box
   layers:
   - Default
   - TransparentFX

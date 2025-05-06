@@ -15,11 +15,16 @@ public class SpiderPatrolState : IState
         this.stateMachine = stateMachine;
         this.EdgedetectionPoint = EdgedetectionPoint;
         this.isRotated = false;
-        enemy.Map.OnMapRotated += MapRotated;
     }
     public void OnEnter()
     {
-        Debug.Log("Spider entering patrolling State.");
+        if (enemy.Map == null)
+        {
+            Debug.LogError("Map no está asignado en el SpiderEnemy.");
+            return;
+        }
+
+        enemy.Map.OnMapRotated += MapRotated;
     }
     public void OnUpdate()
     {
@@ -29,7 +34,7 @@ public class SpiderPatrolState : IState
     }
     public void OnExit()
     {
-        Debug.Log("Spider exiting patrolling State.");
+        //Debug.Log("Spider exiting patrolling State.");
     }
     private void Move()
     {
@@ -60,16 +65,16 @@ public class SpiderPatrolState : IState
         RaycastHit2D hit = Physics2D.Raycast(EdgedetectionPoint.position, direction, 1.5f, enemy.WhatIsGround);
 
         //Gizmos
-        //Debug.DrawLine(EdgedetectionPoint.position, EdgedetectionPoint.position + direction * 1.5f, Color.green); 
+        Debug.DrawLine(EdgedetectionPoint.position, EdgedetectionPoint.position + direction * 1.5f, Color.green); 
 
         return (hit.collider == null);
     }
 
     private bool WallDetected()
     {
-        RaycastHit2D hit = Physics2D.Raycast(EdgedetectionPoint.position, enemy.transform.right, 0.1f, enemy.WhatIsGround);
+        RaycastHit2D hit = Physics2D.Raycast(EdgedetectionPoint.position, enemy.transform.right, 0.5f, enemy.WhatIsGround);
 
-        //Debug.DrawLine(EdgedetectionPoint.position, EdgedetectionPoint.position + enemy.transform.right * 0.1f, Color.red);
+        Debug.DrawLine(EdgedetectionPoint.position, EdgedetectionPoint.position + enemy.transform.right * 0.5f, Color.red);
         return (hit.collider != null);
     }
     private void Flip()

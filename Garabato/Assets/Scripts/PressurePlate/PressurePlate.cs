@@ -10,7 +10,7 @@ public class PressurePlate : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Box"))
         {
             if (keepOpen && !hasActivated)
             {

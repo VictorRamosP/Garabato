@@ -10,14 +10,21 @@ public class SpiderEnemy : MonoBehaviour
     public LayerMask WhatIsGround;
     public RotateMap Map;
     public Rigidbody2D rb;
-    
+
 
     [Header("Position")]
     public bool isUpsideDown;
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (Map != null)
+        {
+            Debug.Log("El Map de SpiderEnemy es: " + Map.name);
+        }
+        else
+        {
+            Debug.LogError("Map no está asignado en SpiderEnemy.");
+        }
         stateMachine = new StateMachine();
         stateMachine.ChangeState(new SpiderPatrolState(this, stateMachine, EdgedetectionPoint));
     }
