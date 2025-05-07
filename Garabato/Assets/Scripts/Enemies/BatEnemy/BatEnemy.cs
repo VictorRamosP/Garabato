@@ -37,4 +37,14 @@ public class BatEnemy : MonoBehaviour
         return hit.collider == null;
     }
 
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Obstacle"))
+        {
+            if (stateMachine.currentState is PatrolState patrol)
+            {
+                patrol.SetNewTargetFromCollision();
+            }
+        }
+    }
 }

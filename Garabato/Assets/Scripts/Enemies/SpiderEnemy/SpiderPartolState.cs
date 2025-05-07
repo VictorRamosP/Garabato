@@ -28,8 +28,9 @@ public class SpiderPatrolState : IState
     }
     public void OnUpdate()
     {
-        if (EdgeDetected() || WallDetected()) Flip();
-
+        if (EdgeDetected() || WallDetected()) {
+            Flip();
+        }
         Move();
     }
     public void OnExit()
@@ -42,30 +43,11 @@ public class SpiderPatrolState : IState
     }
     private bool EdgeDetected()
     {
-        Vector3 direction = Vector3.down;
-        switch (enemy.Map.WhereIsDown)
-        {
-            case "up":
-                direction = Vector3.up;
-                break;
-            case "down":
-                direction = Vector3.down;
-                break;
-            case "right":
-                direction = Vector3.right;
-                break;
-            case "left":
-                direction = Vector3.left;
-                break;
-        }
-        if (enemy.isUpsideDown)
-        {
-            direction = -direction;
-        }
-        RaycastHit2D hit = Physics2D.Raycast(EdgedetectionPoint.position, direction, 1.5f, enemy.WhatIsGround);
+
+        RaycastHit2D hit = Physics2D.Raycast(EdgedetectionPoint.position, (-enemy.transform.up), 1.5f, enemy.WhatIsGround);
 
         //Gizmos
-        Debug.DrawLine(EdgedetectionPoint.position, EdgedetectionPoint.position + direction * 1.5f, Color.green); 
+        Debug.DrawLine(EdgedetectionPoint.position, EdgedetectionPoint.position + (-enemy.transform.up) * 1.5f, Color.green); 
 
         return (hit.collider == null);
     }

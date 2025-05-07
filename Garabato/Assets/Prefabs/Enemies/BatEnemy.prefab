@@ -223,7 +223,7 @@ MonoBehaviour:
     m_Bits: 8
   Player: {fileID: 0}
   Rigidbody: {fileID: 8969080666084208646}
-  Map: {fileID: 0}
+  Map: {fileID: 7755168351606946705, guid: 98d421ee2232bfc4aaf4888bb64d9089, type: 3}
 --- !u!50 &8969080666084208646
 Rigidbody2D:
   serializedVersion: 4

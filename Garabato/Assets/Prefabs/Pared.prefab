@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 623254918823249599}
   - component: {fileID: 4554187165242101368}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Textura
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,9 +94,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2256115043482930505}
   - component: {fileID: 7499731644065669951}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Pared
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

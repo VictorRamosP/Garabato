@@ -1,6 +1,7 @@
 public class StateMachine
 {
-    private IState currentState;
+    public IState currentState { get; private set; }
+
     public void ChangeState(IState newState)
     {
         if (currentState != null) currentState.OnExit();

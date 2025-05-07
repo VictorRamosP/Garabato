@@ -35,7 +35,7 @@ public class RotateMap : MonoBehaviour
         {
             Debug.LogError("No se ha encontrado un Mapa. Pon el tag 'Map' al mapa.");
         }
-
+        /*
         if (map != null)
         {
             Debug.Log("El Map de RotateMap es: " + map.name);
@@ -44,6 +44,7 @@ public class RotateMap : MonoBehaviour
         {
             Debug.LogError("Map no está asignado en RotateMap.");
         }
+        */
     }
 
     void Update()
