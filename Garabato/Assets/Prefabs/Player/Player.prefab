@@ -105,7 +105,7 @@ GameObject:
   - component: {fileID: 6534434731700895472}
   m_Layer: 0
   m_Name: Weapon
-  m_TagString: Untagged
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -242,7 +242,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6933798395593781726}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.62, y: 5.12, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -395,7 +395,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   mirandoDerecha: 1
-  shooting: {fileID: 5402392561987612215}
   k_Jump: 32
 --- !u!114 &4720523441102825042
 MonoBehaviour:
@@ -431,8 +430,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 4983018387622394943, guid: 402a35d662ea31f49a621ae35d2aaaa2, type: 3}
   firePoint: {fileID: 2371314325973124355}
-  shootKey: 323
-  coolDawnShoot: 1
+  coolDownShoot: 0.5
   bulletTimeDestroy: 2
 --- !u!114 &7755168351606946705
 MonoBehaviour:
@@ -447,9 +445,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldownRotate: 0.5
-  k_Rotatemap: 97
-  k_Rotatemap2: 100
-  rotationDuration: 0.5
+  k_Rotatemap: 100
+  k_Rotatemap2: 97
+  rotationDuration: 1
 --- !u!114 &5421062744043363362
 MonoBehaviour:
   m_ObjectHideFlags: 0

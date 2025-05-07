@@ -1073,11 +1073,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9160989705661700701, guid: 8010e6c6f66ac044a8f5b8766869f9e2, type: 3}
   m_PrefabInstance: {fileID: 1261670873}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &253769031 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5402392561987612215, guid: 98d421ee2232bfc4aaf4888bb64d9089, type: 3}
-  m_PrefabInstance: {fileID: 5698198308574778893}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &262411224
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9386,20 +9381,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3571669120507308728, guid: 98d421ee2232bfc4aaf4888bb64d9089, type: 3}
-      propertyPath: shooting
-      value: 
-      objectReference: {fileID: 253769031}
-    - target: {fileID: 3571669120507308728, guid: 98d421ee2232bfc4aaf4888bb64d9089, type: 3}
-      propertyPath: coolDawnShoot
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3571669120507308728, guid: 98d421ee2232bfc4aaf4888bb64d9089, type: 3}
       propertyPath: coolDownShoot
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3571669120507308728, guid: 98d421ee2232bfc4aaf4888bb64d9089, type: 3}
-      propertyPath: bulletTimeDestroy
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4720523441102825042, guid: 98d421ee2232bfc4aaf4888bb64d9089, type: 3}
       propertyPath: mapCam
