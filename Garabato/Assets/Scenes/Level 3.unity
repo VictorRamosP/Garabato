@@ -835,6 +835,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WinZone
       objectReference: {fileID: 0}
+    - target: {fileID: 8565449403088399647, guid: b5633c05435834249af099948f8fa798, type: 3}
+      propertyPath: LevelToLoad
+      value: MainMenu
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
