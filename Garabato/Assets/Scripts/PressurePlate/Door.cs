@@ -16,8 +16,7 @@ public class Door : MonoBehaviour
 
     public void Open()
     {
-        color.color = Color.green;
-        //this.gameObject.SetActive(false);
+        this.gameObject.SetActive(false);
         //animator.SetBool("IsOpen", true);
     }
 
