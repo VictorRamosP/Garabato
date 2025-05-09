@@ -12,6 +12,7 @@ TagManager:
   - Breakable
   - Box
   - Weapon
+  - CreationMap
   layers:
   - Default
   - TransparentFX

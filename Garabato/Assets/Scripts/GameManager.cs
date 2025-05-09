@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
         if (Instance == null) Instance = this;
         else Destroy(gameObject);
     }
+  
 
     void Update()
     {
@@ -27,4 +28,6 @@ public class GameManager : MonoBehaviour
         // Detener el tiempo general
         //Time.timeScale = IsPaused ? 0f : 1f;
     }
+
+    
 }

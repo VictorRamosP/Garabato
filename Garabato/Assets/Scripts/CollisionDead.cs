@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class DeadFloor : MonoBehaviour
+public class CollisionDead : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
