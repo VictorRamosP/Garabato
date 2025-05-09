@@ -14,7 +14,7 @@ public class ChangeCam : MonoBehaviour
     [Header("Controles")]
     public KeyCode k_SwitchJump = KeyCode.Tab;
 
-    public static bool isMapActive = true;
+    public static bool isMapActive = false;
 
     void Start()
     {
@@ -26,7 +26,7 @@ public class ChangeCam : MonoBehaviour
 
         playerCam.Priority = 0;
         mapCam.Priority = 10;
-        isMapActive = true;
+        isMapActive = false;
         gravityScale = gameObject.GetComponent<Rigidbody2D>().gravityScale;
         _collisionDetection = gameObject.GetComponent<CollisionDetection>();
     }
