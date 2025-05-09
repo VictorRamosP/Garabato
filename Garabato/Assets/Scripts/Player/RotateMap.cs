@@ -21,7 +21,7 @@ public class RotateMap : MonoBehaviour
     [Header("Rotaci�n suave")]
     public float rotationDuration = 0.5f;
     private bool isRotating = false;
-    public bool IsRotating => isRotating; // <- Propiedad p�blica
+    public bool IsRotating => isRotating; 
 
     public string WhereIsDown { get { return _WhereIsDown; } }
 
@@ -35,16 +35,7 @@ public class RotateMap : MonoBehaviour
         {
             Debug.LogError("No se ha encontrado un Mapa. Pon el tag 'Map' al mapa.");
         }
-        /*
-        if (map != null)
-        {
-            Debug.Log("El Map de RotateMap es: " + map.name);
-        }
-        else
-        {
-            Debug.LogError("Map no está asignado en RotateMap.");
-        }
-        */
+      
     }
 
     void Update()
@@ -77,16 +68,6 @@ public class RotateMap : MonoBehaviour
         }
 
         _rigidbody.gravityScale = originalGravity;
-    }
-
-    void RotateAroundPlayer(GameObject obj, Vector3 point, float angle)
-    {
-        Vector3 dir = obj.transform.position - point;
-        Quaternion rotation = Quaternion.Euler(0, 0, angle);
-        Vector3 newPos = point + rotation * dir;
-
-        obj.transform.position = newPos;
-        obj.transform.Rotate(0, 0, angle);
     }
 
     IEnumerator SmoothRotate(float angle)

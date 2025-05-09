@@ -3,7 +3,6 @@ using UnityEngine;
 public class PlayerMove : MonoBehaviour
 {
     private Rigidbody2D _rigidbody;
-    private CollisionDetection _collisionDetection;
     public float speed;
     public float jumpForce;
     public LayerMask floorlayerMask;
@@ -16,7 +15,6 @@ public class PlayerMove : MonoBehaviour
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
-        _collisionDetection = gameObject.GetComponent<CollisionDetection>();
     }
 
     void Update()

@@ -33,10 +33,12 @@ public class PauseManager : MonoBehaviour
         Application.Quit();
     }
 
-    /*
+    
     public void MainMenu()    
     {        
         UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu");
         Time.timeScale = 1;
-    }*/
+        isPaused = false;
+        pauseMenuUI.SetActive(false);
+    }
 }
