@@ -5,11 +5,45 @@ using UnityEngine.SceneManagement;
 
 public class CollisionDead : MonoBehaviour
 {
+    private bool isDead = false;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player") && !ChangeCam.isMapActive)
+        if (!isDead && collision.CompareTag("Player") && !ChangeCam.isMapActive)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            isDead = true;
+
+            // Obtener Animator del jugador
+            /* Animator playerAnimator = collision.GetComponent<Animator>();
+             if (playerAnimator != null)
+             {
+                 playerAnimator.SetTrigger("Die"); // Trigger en el Animator
+             }*/
+
+            Rigidbody2D rb = collision.GetComponent<Rigidbody2D>();
+            if (rb != null)
+            {
+                rb.velocity = Vector2.zero;
+                rb.angularVelocity = 0f;
+                rb.bodyType = RigidbodyType2D.Kinematic; 
+            }
+
+            // Desactiva el control del jugador
+            MonoBehaviour[] scripts = collision.GetComponents<MonoBehaviour>();
+            foreach (MonoBehaviour script in scripts)
+            {
+                if (script != this) 
+                    script.enabled = false;
+            }
+
+            
+            StartCoroutine(ReloadAfteTheAnimation(1.5f)); // Poner Duracion Animacion
         }
+    }
+
+    private IEnumerator ReloadAfteTheAnimation(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
