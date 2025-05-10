@@ -6,6 +6,7 @@ public class MainMenuController : MonoBehaviour
     public string LevelToLoad;
     public void PlayGame()
     {
+        GameManager.Instance.mapAnimationActivated = false;
         SceneManager.LoadScene("Level 1"); 
     }
 

@@ -16,20 +16,39 @@ public class MapIntroChange : MonoBehaviour
         playerCam = playerCamObj.GetComponent<CinemachineVirtualCamera>();
         mapCam = mapCamObj.GetComponent<CinemachineVirtualCamera>();
 
-        playerCam.Priority = 0;
-        mapCam.Priority = 10;
+        // Verifica si la animación ya fue mostrada
+        if (GameManager.Instance != null && GameManager.Instance.mapAnimationActivated)
+        {
+            // Saltar animación
+            playerCam.Priority = 10;
+            mapCam.Priority = 0;
+            gameObject.SetActive(false);
+        }
+        else
+        {
+            // Ejecutar animación normalmente
+            playerCam.Priority = 0;
+            mapCam.Priority = 10;
 
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        Color color = spriteRenderer.color;
-        color.a = 1f; 
-        spriteRenderer.color = color;
+            Color color = spriteRenderer.color;
+            color.a = 1f;
+            spriteRenderer.color = color;
+        }
     }
-
-    
     public void OnMapAnimationEnd()
     {
         playerCam.Priority = 10;
         mapCam.Priority = 0;
         gameObject.SetActive(false);
+
+        // Marcar que la animación ya se mostró
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.mapAnimationActivated = true;
+        }
     }
 }
+
+
+
+
