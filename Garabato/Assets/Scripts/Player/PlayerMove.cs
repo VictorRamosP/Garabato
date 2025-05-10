@@ -2,7 +2,9 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
+    private GameObject _weapon;
     private Rigidbody2D _rigidbody;
+    private Animator _animator;
     public float speed;
     public float jumpForce;
     public LayerMask floorlayerMask;
@@ -12,9 +14,13 @@ public class PlayerMove : MonoBehaviour
     [Header("Controles")]
     public KeyCode k_Jump = KeyCode.Space;
 
+    [HideInInspector] public bool shootingActive = false;
+
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
+        _animator = GetComponent<Animator>();
+        _weapon = GameObject.FindGameObjectWithTag("Weapon");
     }
 
     void Update()
@@ -23,12 +29,20 @@ public class PlayerMove : MonoBehaviour
         { 
             Moverse();
         }
+
     }
 
     void Moverse()
     {
         float moveInput = Input.GetAxis("Horizontal");
         _rigidbody.velocity = new Vector3(moveInput * speed, _rigidbody.velocity.y);
+
+        bool isRunning = Mathf.Abs(moveInput) > 0.01f;
+        _animator.SetBool("IsRunning", isRunning);
+
+        if (!shootingActive)
+            _weapon.SetActive(isRunning);
+
         Orientacion(moveInput);
     }
 
