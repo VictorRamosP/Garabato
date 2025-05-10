@@ -7,7 +7,6 @@ public class MapIntroChange : MonoBehaviour
 {
     private CinemachineVirtualCamera playerCam;
     private CinemachineVirtualCamera mapCam;
-    private SpriteRenderer spriteRenderer;
 
     void Start()
     {
@@ -22,6 +21,7 @@ public class MapIntroChange : MonoBehaviour
             // Saltar animación
             playerCam.Priority = 10;
             mapCam.Priority = 0;
+          
             gameObject.SetActive(false);
         }
         else
@@ -29,10 +29,7 @@ public class MapIntroChange : MonoBehaviour
             // Ejecutar animación normalmente
             playerCam.Priority = 0;
             mapCam.Priority = 10;
-
-            Color color = spriteRenderer.color;
-            color.a = 1f;
-            spriteRenderer.color = color;
+            
         }
     }
     public void OnMapAnimationEnd()

@@ -24,8 +24,8 @@ public class ChangeCam : MonoBehaviour
             return;
         }
 
-        playerCam.Priority = 0;
-        mapCam.Priority = 10;
+        /*playerCam.Priority = 0;
+        mapCam.Priority = 10;*/
         isMapActive = false;
         gravityScale = gameObject.GetComponent<Rigidbody2D>().gravityScale;
         _collisionDetection = gameObject.GetComponent<CollisionDetection>();
