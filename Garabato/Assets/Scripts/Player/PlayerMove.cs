@@ -29,7 +29,9 @@ public class PlayerMove : MonoBehaviour
         { 
             Moverse();
         }
-
+        bool isIdle = Mathf.Abs(Input.GetAxis("Horizontal")) < 0.01f;
+        bool isShootingIdle = isIdle && shootingActive;
+        _animator.SetBool("isShootingIdle", isShootingIdle);
     }
 
     void Moverse()

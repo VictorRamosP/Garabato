@@ -1,0 +1,444 @@
+fileFormatVersion: 2
+guid: 0d8b035651a23cb4c93a48696a131412
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 700
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SpritesheetIdleMano_50x50_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4251.75
+        width: 1417.25
+        height: 1417.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6e022ca1441a0347b60e382310ff4ea
+      internalID: -581982139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetIdleMano_50x50_1
+      rect:
+        serializedVersion: 2
+        x: 1417
+        y: 4251.75
+        width: 1417.25
+        height: 1417.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9552c0810ca3dc845bc463c57ff44a57
+      internalID: -1779030701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetIdleMano_50x50_2
+      rect:
+        serializedVersion: 2
+        x: 2834
+        y: 4251.75
+        width: 1417.25
+        height: 1417.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d14c7c8b2d1a0542ac59442864d91b2
+      internalID: -83998599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetIdleMano_50x50_3
+      rect:
+        serializedVersion: 2
+        x: 4251
+        y: 4251.75
+        width: 1417.25
+        height: 1417.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28b714afbaa557540b0e7c6efa2cafe7
+      internalID: 630246086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetIdleMano_50x50_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2834.75
+        width: 1417.25
+        height: 1417.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c16acfb28be3c841b047ece6defabb5
+      internalID: 1509468831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetIdleMano_50x50_5
+      rect:
+        serializedVersion: 2
+        x: 1417
+        y: 2834.75
+        width: 1417.25
+        height: 1417.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a9b1203cf13a594781c37369ed218f9
+      internalID: -44681029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetIdleMano_50x50_6
+      rect:
+        serializedVersion: 2
+        x: 2834
+        y: 2834.75
+        width: 1417.25
+        height: 1417.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5773b9436f9384d45b6179d9718e90bc
+      internalID: 1117649153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetIdleMano_50x50_7
+      rect:
+        serializedVersion: 2
+        x: 4251
+        y: 2834.75
+        width: 1417.25
+        height: 1417.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adcc1e0268a277842bdd1531b4c88dca
+      internalID: 529288181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetIdleMano_50x50_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1417.75
+        width: 1417.25
+        height: 1417.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53cf286c90a468a4fb498054a5b8c31d
+      internalID: 968613601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetIdleMano_50x50_9
+      rect:
+        serializedVersion: 2
+        x: 1417
+        y: 1417.75
+        width: 1417.25
+        height: 1417.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bc65cc9913bbd944b73daa72eeebab6
+      internalID: 1408230671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetIdleMano_50x50_10
+      rect:
+        serializedVersion: 2
+        x: 2834
+        y: 1417.75
+        width: 1417.25
+        height: 1417.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1850ab47324be754aa95422a988e3137
+      internalID: 726500165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetIdleMano_50x50_11
+      rect:
+        serializedVersion: 2
+        x: 4251
+        y: 1417.75
+        width: 1417.25
+        height: 1417.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36629c1d28a5b844b802a725bd8e7461
+      internalID: -1858520551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetIdleMano_50x50_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0.75
+        width: 1417.25
+        height: 1417.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 860e9a15c1467194997a67e5282e4b61
+      internalID: -598480837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetIdleMano_50x50_13
+      rect:
+        serializedVersion: 2
+        x: 1417
+        y: 0.75
+        width: 1417.25
+        height: 1417.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da3deaa0d948bb842b25f0b5f9f3a3c1
+      internalID: -52294559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetIdleMano_50x50_14
+      rect:
+        serializedVersion: 2
+        x: 2834
+        y: 0.75
+        width: 1417.25
+        height: 1417.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb98ec642496d514d95885cc7297e6d1
+      internalID: 1115121736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      SpritesheetIdleMano_50x50_0: -581982139
+      SpritesheetIdleMano_50x50_1: -1779030701
+      SpritesheetIdleMano_50x50_10: 726500165
+      SpritesheetIdleMano_50x50_11: -1858520551
+      SpritesheetIdleMano_50x50_12: -598480837
+      SpritesheetIdleMano_50x50_13: -52294559
+      SpritesheetIdleMano_50x50_14: 1115121736
+      SpritesheetIdleMano_50x50_2: -83998599
+      SpritesheetIdleMano_50x50_3: 630246086
+      SpritesheetIdleMano_50x50_4: 1509468831
+      SpritesheetIdleMano_50x50_5: -44681029
+      SpritesheetIdleMano_50x50_6: 1117649153
+      SpritesheetIdleMano_50x50_7: 529288181
+      SpritesheetIdleMano_50x50_8: 968613601
+      SpritesheetIdleMano_50x50_9: 1408230671
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
