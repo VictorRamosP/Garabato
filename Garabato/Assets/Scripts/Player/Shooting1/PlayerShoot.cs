@@ -25,10 +25,14 @@ public class PlayerShoot : MonoBehaviour
     {
         coolDownTimer -= Time.deltaTime;
 
-        if (coolDownTimer <= 0)
+        if (!ChangeCam.isMapActive)
         {
-            RotateShoot();
+            if (coolDownTimer <= 0)
+            {
+                RotateShoot();
+            }
         }
+       
     }
 
     void Shoot()
