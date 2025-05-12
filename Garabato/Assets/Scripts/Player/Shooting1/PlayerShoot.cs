@@ -14,11 +14,15 @@ public class PlayerShoot : MonoBehaviour
     private GameObject shooting;
     public PlayerMove _playermove;
 
+    public AudioClip shootSound;
+    private AudioSource _audioSource;
+
     public float weaponVisible = 0.2f; // Tiempo que es visible el arma cuando dispara estando en Idle
 
     void Start()
     {
         shooting = GameObject.FindGameObjectWithTag("Weapon");
+        _audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -41,6 +45,11 @@ public class PlayerShoot : MonoBehaviour
         Rigidbody2D rb = activeBullet.GetComponent<Rigidbody2D>();
 
         Destroy(activeBullet, bulletTimeDestroy);
+
+        if (_audioSource && shootSound)
+        {
+            _audioSource.PlayOneShot(shootSound);
+        }
     }
 
     void RotateShoot()

@@ -11,7 +11,9 @@ public class PlayerJumper : MonoBehaviour
     public ContactFilter2D filter;
     public KeyCode JumpKey = KeyCode.Space;
     public LayerMask floorlayerMask;
+    public AudioClip jumpSound;
 
+    private AudioSource _audioSource;
     private Rigidbody2D _rigidbody;
     private CollisionDetection _collisionDetection;
     private float _lastVelocityY;
@@ -22,14 +24,19 @@ public class PlayerJumper : MonoBehaviour
     {
         _rigidbody = GetComponent<Rigidbody2D>();
         _collisionDetection = gameObject.GetComponent<CollisionDetection>();
+        _audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
     {
         if (ChangeCam.isMapActive) return;
         if (Input.GetKeyDown(JumpKey) && _collisionDetection.IsGrounded)
-        {
+        {            
             JumpStarted();
+            if (_audioSource && jumpSound)
+            {
+                _audioSource.PlayOneShot(jumpSound);
+            }
         }
 
         if (Input.GetKeyUp(JumpKey))
@@ -48,10 +55,11 @@ public class PlayerJumper : MonoBehaviour
     void JumpStarted()
     {
         Debug.Log("Empieza");
+        
 
         SetGravity();
-        var vel = new Vector2(_rigidbody.velocity.x, GetJumpForce());
-        _rigidbody.velocity = vel;
+        var vel = new Vector2(_rigidbody.velocity.x, GetJumpForce());        
+        _rigidbody.velocity = vel;        
         _jumpStartedTime = Time.time;
     }
 
