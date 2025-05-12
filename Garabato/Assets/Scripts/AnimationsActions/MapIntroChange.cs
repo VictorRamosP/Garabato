@@ -7,6 +7,7 @@ public class MapIntroChange : MonoBehaviour
 {
     private CinemachineVirtualCamera playerCam;
     private CinemachineVirtualCamera mapCam;
+    public AudioClip drawingClip;
 
     void Start()
     {
@@ -29,7 +30,12 @@ public class MapIntroChange : MonoBehaviour
             // Ejecutar animación normalmente
             playerCam.Priority = 0;
             mapCam.Priority = 10;
-            
+
+            if (drawingClip != null)
+            {
+                AudioSource.PlayClipAtPoint(drawingClip, Camera.main.transform.position);
+            }
+
         }
     }
     public void OnMapAnimationEnd()

@@ -14,6 +14,9 @@ public class RotateMap : MonoBehaviour
     private int currentRotationState = 0;
     public Action OnMapRotated;
 
+    public AudioClip rotateSound;
+    private AudioSource _audioSource;
+
     [Header("Controles")]
     public KeyCode k_Rotatemap = KeyCode.D;
     public KeyCode k_Rotatemap2 = KeyCode.A;
@@ -30,6 +33,7 @@ public class RotateMap : MonoBehaviour
         map = GameObject.FindGameObjectWithTag("Map");
         _rigidbody = GetComponent<Rigidbody2D>();
         _collider = GetComponent<Collider2D>();
+        _audioSource = GetComponent<AudioSource>();
 
         if (map == null)
         {
@@ -72,10 +76,13 @@ public class RotateMap : MonoBehaviour
 
     IEnumerator SmoothRotate(float angle)
     {
+
         isRotating = true;
 
         if (_collider != null)
             _collider.enabled = false;
+
+        _audioSource?.PlayOneShot(rotateSound);
 
         Quaternion startRotation = map.transform.rotation;
         Quaternion endRotation = startRotation * Quaternion.Euler(0, 0, angle);

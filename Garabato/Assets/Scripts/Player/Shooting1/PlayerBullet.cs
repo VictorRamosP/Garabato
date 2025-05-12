@@ -20,12 +20,12 @@ public class PlayerBullet : MonoBehaviour
     {
         if (collision.CompareTag("Enemy") || collision.CompareTag("Breakable"))
         {
-            collision.GetComponent<EnemyLife>().TakeDamage(damage);
-            Destroy(this.gameObject);
-            if (_audioSource && impactSound)
+            if (impactSound != null)
             {
-                _audioSource.PlayOneShot(impactSound);
+                AudioSource.PlayClipAtPoint(impactSound, transform.position, 0.8f);
             }
+            collision.GetComponent<EnemyLife>().TakeDamage(damage);
+            Destroy(this.gameObject);            
         }
         else if (collision.CompareTag("Obstacle")) {
             Destroy(this.gameObject);

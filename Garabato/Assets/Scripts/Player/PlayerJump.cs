@@ -11,8 +11,9 @@ public class PlayerJumper : MonoBehaviour
     public ContactFilter2D filter;
     public KeyCode JumpKey = KeyCode.Space;
     public LayerMask floorlayerMask;
-    public AudioClip jumpSound;
-
+    public AudioClip jumpSound;  
+    
+    
     private AudioSource _audioSource;
     private Rigidbody2D _rigidbody;
     private CollisionDetection _collisionDetection;
@@ -25,6 +26,7 @@ public class PlayerJumper : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody2D>();
         _collisionDetection = gameObject.GetComponent<CollisionDetection>();
         _audioSource = GetComponent<AudioSource>();
+        
     }
 
     void Update()
@@ -42,7 +44,9 @@ public class PlayerJumper : MonoBehaviour
         if (Input.GetKeyUp(JumpKey))
         {
             JumpFinished();
-        }
+        }      
+
+
     }
 
     void FixedUpdate()
