@@ -8,7 +8,7 @@ public class MapIntroChange : MonoBehaviour
     private CinemachineVirtualCamera playerCam;
     private CinemachineVirtualCamera mapCam;
     public AudioClip drawingClip;
-
+    
     void Start()
     {
         GameObject playerCamObj = GameObject.FindGameObjectWithTag("PlayerCam");
@@ -35,7 +35,7 @@ public class MapIntroChange : MonoBehaviour
             {
                 AudioSource.PlayClipAtPoint(drawingClip, Camera.main.transform.position);
             }
-
+            
         }
     }
     public void OnMapAnimationEnd()
@@ -50,6 +50,8 @@ public class MapIntroChange : MonoBehaviour
             GameManager.Instance.mapAnimationActivated = true;
         }
     }
+
+    
 }
 
 

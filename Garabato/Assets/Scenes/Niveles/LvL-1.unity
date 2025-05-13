@@ -5495,6 +5495,26 @@ PrefabInstance:
       propertyPath: drawingClip
       value: 
       objectReference: {fileID: 8300000, guid: 6b8b9faecaa1df148b72f2d22fdc4ee7, type: 3}
+    - target: {fileID: 7728965286657875272, guid: 38749652a79780146a50cb2dd9f85333, type: 3}
+      propertyPath: m_FlipY
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7728965286657875272, guid: 38749652a79780146a50cb2dd9f85333, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d13dc4ce6817de642a1f99388863e743, type: 3}
+    - target: {fileID: 7728965286657875272, guid: 38749652a79780146a50cb2dd9f85333, type: 3}
+      propertyPath: m_Color.b
+      value: 0.44654083
+      objectReference: {fileID: 0}
+    - target: {fileID: 7728965286657875272, guid: 38749652a79780146a50cb2dd9f85333, type: 3}
+      propertyPath: m_Color.g
+      value: 0.44654083
+      objectReference: {fileID: 0}
+    - target: {fileID: 7728965286657875272, guid: 38749652a79780146a50cb2dd9f85333, type: 3}
+      propertyPath: m_Color.r
+      value: 0.44654083
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
