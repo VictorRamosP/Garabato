@@ -56,7 +56,7 @@ public class PlayerShoot : MonoBehaviour
     {
         bool Shot = false;
 
-        if (Input.GetKey(KeyCode.UpArrow) && Input.GetKey(KeyCode.RightArrow) && _playermove.mirandoDerecha)
+        /*if (Input.GetKey(KeyCode.UpArrow) && Input.GetKey(KeyCode.RightArrow) && _playermove.mirandoDerecha)
         {
             shooting.transform.rotation = Quaternion.Euler(0, 0, -45);
             Shot = true;
@@ -66,27 +66,27 @@ public class PlayerShoot : MonoBehaviour
             shooting.transform.rotation = Quaternion.Euler(0, 0, 45);
             Shot = true;
         }
-        else if (Input.GetKey(KeyCode.DownArrow) && Input.GetKey(KeyCode.LeftArrow) && !_playermove.mirandoDerecha)
+        /*else if (Input.GetKey(KeyCode.DownArrow) && Input.GetKey(KeyCode.LeftArrow) && !_playermove.mirandoDerecha)
         {
             shooting.transform.rotation = Quaternion.Euler(0, 0, 135);
             Shot = true;
         }
-        else if (Input.GetKey(KeyCode.DownArrow) && Input.GetKey(KeyCode.RightArrow) && _playermove.mirandoDerecha)
+        /*else if (Input.GetKey(KeyCode.DownArrow) && Input.GetKey(KeyCode.RightArrow) && _playermove.mirandoDerecha)
         {
             shooting.transform.rotation = Quaternion.Euler(0, 0, -135);
             Shot = true;
-        }
-        else if (Input.GetKey(KeyCode.RightArrow) && _playermove.mirandoDerecha)
+        }*/
+        if (Input.GetKey(KeyCode.D) && Input.GetKey(KeyCode.Mouse0) && _playermove.mirandoDerecha)
         {
             shooting.transform.rotation = Quaternion.Euler(0, 0, -90);
             Shot = true;
         }
-        else if (Input.GetKey(KeyCode.LeftArrow) && !_playermove.mirandoDerecha)
+        else if (Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.Mouse0) && !_playermove.mirandoDerecha)
         {
             shooting.transform.rotation = Quaternion.Euler(0, 0, 90);
             Shot = true;
         }
-        else if (Input.GetKey(KeyCode.UpArrow))
+        else if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.Mouse0))
         {
             shooting.transform.rotation = Quaternion.Euler(0, 0, 0);
             Shot = true;

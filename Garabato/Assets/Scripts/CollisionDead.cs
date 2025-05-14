@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -7,6 +8,12 @@ public class CollisionDead : MonoBehaviour
 {
     private bool isDead = false;
     public bool isActive = true;
+    private GameObject weapon;
+
+    private void Start()
+    {
+        weapon = GameObject.FindGameObjectWithTag("Weapon");
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (!isActive) return;
@@ -15,9 +22,10 @@ public class CollisionDead : MonoBehaviour
             isDead = true;
 
             // Obtener Animator del jugador
-             Animator playerAnimator = collision.GetComponent<Animator>();
+            Animator playerAnimator = collision.GetComponent<Animator>();
              if (playerAnimator != null)
              {
+                weapon.SetActive(false);
                  playerAnimator.SetTrigger("Die"); // Trigger en el Animator
              }
 

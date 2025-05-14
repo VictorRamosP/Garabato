@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6262869458629969239}
   - component: {fileID: 7039001171351273185}
+  - component: {fileID: 468047584853295246}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -25,13 +26,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 416895776567791271}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.53520775, y: 0.8447205, z: 0, w: 0}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: -0.97, y: 0.03, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 493010231614953383}
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 64.716}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!212 &7039001171351273185
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -73,8 +74,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0299a5a38b47be54eb34453082dd28bd, type: 3}
-  m_Color: {r: 0.61088073, g: 0.990566, b: 0.35978103, a: 1}
+  m_Sprite: {fileID: -1840433836, guid: 7def688c1b3cdd04fb962d6b24168d97, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -84,6 +85,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &468047584853295246
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 416895776567791271}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 24c16119ac05dee4abbc8859a72d142d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2065004821525443642
 GameObject:
   m_ObjectHideFlags: 0
@@ -164,8 +186,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0299a5a38b47be54eb34453082dd28bd, type: 3}
-  m_Color: {r: 0.61088073, g: 0.990566, b: 0.35978103, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 1a1718fd6a6869d4b80fda6a82883fe3, type: 3}
+  m_Color: {r: 1, g: 0.031952336, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -292,6 +314,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e89a987b9047c5f4a9a7bc77be9b06e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isActive: 1
 --- !u!1 &8748771942516502059
 GameObject:
   m_ObjectHideFlags: 0
@@ -305,7 +328,7 @@ GameObject:
   m_Layer: 0
   m_Name: GroundDetector
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5938655980376293919, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -331,7 +354,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8748771942516502059}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
