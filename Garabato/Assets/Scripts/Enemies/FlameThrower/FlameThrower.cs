@@ -9,13 +9,19 @@ public class FlameThrower : MonoBehaviour
     private float cooldownTimer = 0f;
     public float reactiveFlame = 3f;
     public float desactiveFlame = 5f;
+    public bool isActive; 
     void Start()
     {
         flame.SetActive(false);
+        isActive = true;
     }
 
     void Update()
     {
+        if (!isActive) {
+            flame.SetActive(false);
+            return;
+        }
         cooldownTimer += Time.deltaTime;
 
         if (!infinite)

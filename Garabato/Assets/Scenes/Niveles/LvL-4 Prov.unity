@@ -726,10 +726,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PressurePlate (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3445892477217646035, guid: 4745fc11590eab145800fd22a028c8cf, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7120842687512311332, guid: 4745fc11590eab145800fd22a028c8cf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1658768319}
   m_SourcePrefab: {fileID: 100100000, guid: 4745fc11590eab145800fd22a028c8cf, type: 3}
 --- !u!4 &84455974 stripped
 Transform:
@@ -1940,6 +1944,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1332625425}
   m_LocalEulerAnglesHint: {x: -180, y: 0, z: 180}
+--- !u!1 &323574065 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7120842687512311332, guid: 4745fc11590eab145800fd22a028c8cf, type: 3}
+  m_PrefabInstance: {fileID: 2031093890}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &338428213
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2366,6 +2375,10 @@ PrefabInstance:
     - target: {fileID: 8305788705371641498, guid: 784255578e9bc5543b20aeec8ae32e52, type: 3}
       propertyPath: m_Name
       value: Flamethrower (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8305788705371641498, guid: 784255578e9bc5543b20aeec8ae32e52, type: 3}
+      propertyPath: m_TagString
+      value: Flamethrower
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6912,6 +6925,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flamethrower (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8305788705371641498, guid: 784255578e9bc5543b20aeec8ae32e52, type: 3}
+      propertyPath: m_TagString
+      value: Flamethrower
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7025,7 +7042,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 2d6aa79cab0f26145bc7ee30dc2cc16d, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.548
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -9196,6 +9213,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1332625425}
   m_LocalEulerAnglesHint: {x: 180, y: 180, z: 0}
+--- !u!1 &1658768316 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7120842687512311332, guid: 4745fc11590eab145800fd22a028c8cf, type: 3}
+  m_PrefabInstance: {fileID: 84455973}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1658768319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1658768316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 204b7a6aa928d784681a5eda8a1cffa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1705734305
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9515,6 +9549,10 @@ PrefabInstance:
     - target: {fileID: 8305788705371641498, guid: 784255578e9bc5543b20aeec8ae32e52, type: 3}
       propertyPath: m_Name
       value: Flamethrower (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8305788705371641498, guid: 784255578e9bc5543b20aeec8ae32e52, type: 3}
+      propertyPath: m_TagString
+      value: Flamethrower
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9978,6 +10016,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8305788705371641498, guid: 784255578e9bc5543b20aeec8ae32e52, type: 3}
       propertyPath: m_Name
+      value: Flamethrower
+      objectReference: {fileID: 0}
+    - target: {fileID: 8305788705371641498, guid: 784255578e9bc5543b20aeec8ae32e52, type: 3}
+      propertyPath: m_TagString
       value: Flamethrower
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -11010,6 +11052,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flamethrower (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8305788705371641498, guid: 784255578e9bc5543b20aeec8ae32e52, type: 3}
+      propertyPath: m_TagString
+      value: Flamethrower
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11496,16 +11542,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: PressurePlate
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 7120842687512311332, guid: 4745fc11590eab145800fd22a028c8cf, type: 3}
+      propertyPath: m_TagString
+      value: Flamethrower
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 3445892477217646035, guid: 4745fc11590eab145800fd22a028c8cf, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7120842687512311332, guid: 4745fc11590eab145800fd22a028c8cf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2031093892}
   m_SourcePrefab: {fileID: 100100000, guid: 4745fc11590eab145800fd22a028c8cf, type: 3}
 --- !u!4 &2031093891 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6180809275438284054, guid: 4745fc11590eab145800fd22a028c8cf, type: 3}
   m_PrefabInstance: {fileID: 2031093890}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2031093892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 323574065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 878d6dd9da1e1c24dbdde8c1524bc09d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2034236945
 PrefabInstance:
   m_ObjectHideFlags: 0
