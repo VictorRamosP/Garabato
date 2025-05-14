@@ -79,9 +79,12 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0, y: 0.5773587}
-      - {x: -0.5, y: -0.28866667}
-      - {x: 0.5, y: -0.28866667}
+    - - {x: 0.24682617, y: 0.3903027}
+      - {x: 0, y: 0.5773587}
+      - {x: -0.27316093, y: 0.40218356}
+      - {x: -0.30263904, y: -0.2095958}
+      - {x: -0.042485856, y: -0.53368807}
+      - {x: 0.23685324, y: -0.2239725}
   m_UseDelaunayMesh: 0
 --- !u!50 &5847737752744980501
 Rigidbody2D:
@@ -132,6 +135,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5856315358389474994}
   - component: {fileID: 4724113384538836822}
+  - component: {fileID: 8936332908995203}
   m_Layer: 0
   m_Name: Flame Sprite
   m_TagString: Untagged
@@ -148,7 +152,7 @@ Transform:
   m_GameObject: {fileID: 2021841605863696343}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -1, w: 0.000000059604645}
-  m_LocalPosition: {x: -0.08, y: 0.02, z: -0.03614367}
+  m_LocalPosition: {x: -0.006, y: 0.02, z: -0.03614367}
   m_LocalScale: {x: 0.13266505, y: 0.11596594, z: 0.13266505}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -195,7 +199,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5edae5b95fc15fc4e81916993e191c23, type: 3}
+  m_Sprite: {fileID: 1244195804, guid: f507e27a6a1289a4fbf7842b17d1ad43, type: 3}
   m_Color: {r: 0.6509434, g: 0.6478729, b: 0.6478729, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -206,6 +210,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &8936332908995203
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2021841605863696343}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 03835778f873b7c4ca23edbd7b82cc46, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &8305788705371641498
 GameObject:
   m_ObjectHideFlags: 0

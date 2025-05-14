@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 5136081697588360836}
   - component: {fileID: 8615793178308052026}
   - component: {fileID: 8232573925276233967}
+  - component: {fileID: 3132087852280152827}
   m_Layer: 6
   m_Name: EnemyPatrol
   m_TagString: Enemy
@@ -240,6 +241,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e89a987b9047c5f4a9a7bc77be9b06e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &3132087852280152827
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3596435939419734898}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0a1440ec9d6065640a446ceb2e964afc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &8897288025595621324
 GameObject:
   m_ObjectHideFlags: 0

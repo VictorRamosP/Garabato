@@ -48,6 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98640a7b85b5fe640b25497d62acf1dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  drawingClip: {fileID: 0}
 --- !u!95 &6252928956226151009
 Animator:
   serializedVersion: 5
@@ -81,6 +82,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98640a7b85b5fe640b25497d62acf1dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  drawingClip: {fileID: 0}
 --- !u!1 &6144150392738076377
 GameObject:
   m_ObjectHideFlags: 0

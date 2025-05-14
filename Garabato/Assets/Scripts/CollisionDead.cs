@@ -14,11 +14,11 @@ public class CollisionDead : MonoBehaviour
             isDead = true;
 
             // Obtener Animator del jugador
-            /* Animator playerAnimator = collision.GetComponent<Animator>();
+             Animator playerAnimator = collision.GetComponent<Animator>();
              if (playerAnimator != null)
              {
                  playerAnimator.SetTrigger("Die"); // Trigger en el Animator
-             }*/
+             }
 
             Rigidbody2D rb = collision.GetComponent<Rigidbody2D>();
             if (rb != null)
@@ -37,7 +37,7 @@ public class CollisionDead : MonoBehaviour
             }
 
             
-            StartCoroutine(ReloadAfteTheAnimation(1.5f)); // Poner Duracion Animacion
+            StartCoroutine(ReloadAfteTheAnimation(1f)); // Poner Duracion Animacion
         }
     }
 
