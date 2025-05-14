@@ -295,7 +295,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -578867788, guid: 4d0979cf3dc24b749b174c8ba6edb1dd, type: 3}
+  m_Sprite: {fileID: -1651751690, guid: 23f610f252b3f0046bc8db02e5299bad, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -338,18 +338,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.014015198}
+  m_Offset: {x: 0, y: 0.048783064}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.4788322, y: 1.8357142}
+    oldSize: {x: 2.024643, y: 2.024643}
     newSize: {x: 1.4788322, y: 1.8357142}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.9825678}
+  m_Size: {x: 1, y: 1.913032}
   m_EdgeRadius: 0
 --- !u!50 &3027629291519849553
 Rigidbody2D:
@@ -435,6 +435,7 @@ MonoBehaviour:
   coolDownShoot: 0.5
   bulletTimeDestroy: 2
   _playermove: {fileID: 622269753736096978}
+  shootSound: {fileID: 0}
   weaponVisible: 0.2
 --- !u!114 &7755168351606946705
 MonoBehaviour:
@@ -449,6 +450,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldownRotate: 0.5
+  rotateSound: {fileID: 0}
   k_Rotatemap: 100
   k_Rotatemap2: 97
   rotationDuration: 1
@@ -487,6 +489,7 @@ MonoBehaviour:
   floorlayerMask:
     serializedVersion: 2
     m_Bits: 8
+  jumpSound: {fileID: 0}
 --- !u!114 &8061562121256561879
 MonoBehaviour:
   m_ObjectHideFlags: 0
