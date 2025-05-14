@@ -6,9 +6,10 @@ using UnityEngine.SceneManagement;
 public class CollisionDead : MonoBehaviour
 {
     private bool isDead = false;
-
+    public bool isActive = true;
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (!isActive) return;
         if (!isDead && collision.CompareTag("Player") && !ChangeCam.isMapActive)
         {
             isDead = true;

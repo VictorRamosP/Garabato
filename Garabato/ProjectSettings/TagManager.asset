@@ -13,6 +13,7 @@ TagManager:
   - Box
   - Weapon
   - CreationMap
+  - Flamethrower
   layers:
   - Default
   - TransparentFX
