@@ -19,7 +19,6 @@ public class MapIntroChange : MonoBehaviour
         // Verifica si la animación ya fue mostrada
         if (GameManager.Instance != null && GameManager.Instance.mapAnimationActivated)
         {
-            // Saltar animación
             playerCam.Priority = 10;
             mapCam.Priority = 0;
           
@@ -27,7 +26,6 @@ public class MapIntroChange : MonoBehaviour
         }
         else
         {
-            // Ejecutar animación normalmente
             playerCam.Priority = 0;
             mapCam.Priority = 10;
 
