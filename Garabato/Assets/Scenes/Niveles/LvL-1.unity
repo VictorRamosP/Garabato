@@ -835,6 +835,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mapAnimationActivated: 0
+  playerIntroPlayed: 0
+  playerCanMove: 0
 --- !u!4 &365040891
 Transform:
   m_ObjectHideFlags: 0
@@ -1102,6 +1104,10 @@ PrefabInstance:
       propertyPath: playerCam
       value: 
       objectReference: {fileID: 70931765}
+    - target: {fileID: 5402392561987612215, guid: 98d421ee2232bfc4aaf4888bb64d9089, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6933798395593781726, guid: 98d421ee2232bfc4aaf4888bb64d9089, type: 3}
       propertyPath: m_Name
       value: Player

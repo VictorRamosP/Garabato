@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2693e34302cab24499aa8809a7444633
+guid: 16fb344f63fea8a47b61d323625a57eb
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,34 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SpritecheetCaida_50x50_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1417.3334
-        height: 1417
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 47b368bb7eed5c440a57b8234494ddf9
-      internalID: 1935291039
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpritecheetCaida_50x50_1
+      name: SpritesheetDibujar_50x50_0
       rect:
         serializedVersion: 2
         x: 1417
-        y: 0
-        width: 1417.3334
-        height: 1417
+        y: 1417.5
+        width: 1417.25
+        height: 1417.5
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,20 +111,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 517c962045667b547800d7fe9696176e
-      internalID: -627342809
+      spriteID: f3706516e5e094d4ba61c489233dd993
+      internalID: -248445816
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritecheetCaida_50x50_2
+      name: SpritesheetDibujar_50x50_1
       rect:
         serializedVersion: 2
         x: 2834
-        y: 0
-        width: 1417.3334
-        height: 1417
+        y: 1417
+        width: 1417
+        height: 1418
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,20 +132,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ba298e6e6169d974eb56a94a329eb46d
-      internalID: 1449154236
+      spriteID: fb0cbccc6dbb8c848b0d09ff87fb8503
+      internalID: -477786051
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritecheetCaida_50x50_3
+      name: SpritesheetDibujar_50x50_2
       rect:
         serializedVersion: 2
         x: 4251
-        y: 0
-        width: 1417.3334
-        height: 1417
+        y: 1417.5
+        width: 1417.25
+        height: 1417.5
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,20 +153,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a9926971b8adb8648881f5480259cb5e
-      internalID: 1101238409
+      spriteID: b3848cc514f3d324d8e4c85ed1863a24
+      internalID: -677598414
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritecheetCaida_50x50_4
+      name: SpritesheetDibujar_50x50_3
       rect:
         serializedVersion: 2
-        x: 5668
-        y: 0
-        width: 1417.3334
-        height: 1417
+        x: 0
+        y: 0.5
+        width: 1417.25
+        height: 1417.5
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,20 +174,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0cd26709f7bf03e47a845b6628068caa
-      internalID: 165336582
+      spriteID: 9174c8661c8a4fe4882bc8491fd18422
+      internalID: 1343841661
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritecheetCaida_50x50_5
+      name: SpritesheetDibujar_50x50_4
       rect:
         serializedVersion: 2
-        x: 7085
-        y: 0
-        width: 1417.3334
-        height: 1417
+        x: 1417
+        y: 0.5
+        width: 1417.25
+        height: 1417.5
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -216,8 +195,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a3fdf2742e1b6be498d15813109523af
-      internalID: -1282998524
+      spriteID: 6c5561fd49d7a394f8d68acd59d9b0ab
+      internalID: -812323924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetDibujar_50x50_5
+      rect:
+        serializedVersion: 2
+        x: 2834
+        y: 0.5
+        width: 1417.25
+        height: 1417.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f952a07d9c02b84ca490faa03fc806e
+      internalID: -1605919404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetDibujar_50x50_6
+      rect:
+        serializedVersion: 2
+        x: 4251
+        y: 0.5
+        width: 1417.25
+        height: 1417.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 084bf17fdfec39745ad4d0edba0592ec
+      internalID: -734598937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetDibujar_50x50_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1424
+        width: 1411
+        height: 1411
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 943dd874eb0cd194f819854a7dbbf508
+      internalID: 241995223
       vertices: []
       indices: 
       edges: []
@@ -233,12 +275,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      SpritecheetCaida_50x50_0: 1935291039
-      SpritecheetCaida_50x50_1: -627342809
-      SpritecheetCaida_50x50_2: 1449154236
-      SpritecheetCaida_50x50_3: 1101238409
-      SpritecheetCaida_50x50_4: 165336582
-      SpritecheetCaida_50x50_5: -1282998524
+      SpritesheetDibujar_50x50_0: -248445816
+      SpritesheetDibujar_50x50_1: -477786051
+      SpritesheetDibujar_50x50_2: -677598414
+      SpritesheetDibujar_50x50_3: 1343841661
+      SpritesheetDibujar_50x50_4: -812323924
+      SpritesheetDibujar_50x50_5: -1605919404
+      SpritesheetDibujar_50x50_6: -734598937
+      SpritesheetDibujar_50x50_7: 241995223
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

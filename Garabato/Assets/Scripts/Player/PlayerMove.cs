@@ -1,3 +1,4 @@
+using Cinemachine.Utility;
 using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
@@ -10,6 +11,9 @@ public class PlayerMove : MonoBehaviour
     public LayerMask floorlayerMask;
 
     public bool mirandoDerecha = true;
+    public bool canMove = false;
+
+    public CollisionDetection collisionDetection;
 
     [Header("Controles")]
     public KeyCode k_Jump = KeyCode.Space;
@@ -21,14 +25,29 @@ public class PlayerMove : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
         _weapon = GameObject.FindGameObjectWithTag("Weapon");
+
+        collisionDetection = GetComponent<CollisionDetection>();
     }
 
     void Update()
     {
-        if (!ChangeCam.isMapActive) 
-        { 
+        if (!ChangeCam.isMapActive && canMove && GameManager.Instance.mapAnimationActivated)
+        {
             Moverse();
         }
+
+        float verticalVelocity = _rigidbody.velocity.y;
+
+        _animator.SetFloat("verticalVelocity", verticalVelocity);
+        _animator.SetBool("isGrounded", collisionDetection.IsGrounded);
+        _animator.SetBool("isJumping", !collisionDetection.IsGrounded && verticalVelocity > 0.1f);
+        _animator.SetBool("isFalling", !collisionDetection.IsGrounded && verticalVelocity < -0.1f);
+
+        if (!collisionDetection.IsGrounded)
+        {
+            _weapon.SetActive(false);
+        }
+
         bool isIdle = Mathf.Abs(Input.GetAxis("Horizontal")) < 0.01f;
         bool isShootingIdle = isIdle && shootingActive;
         _animator.SetBool("isShootingIdle", isShootingIdle);
@@ -50,7 +69,7 @@ public class PlayerMove : MonoBehaviour
 
     void Orientacion(float desiredDirection)
     {
-        if ((mirandoDerecha == true && desiredDirection < 0) || (mirandoDerecha == false && desiredDirection > 0))
+        if ((mirandoDerecha && desiredDirection < 0) || (!mirandoDerecha && desiredDirection > 0))
         {
             mirandoDerecha = !mirandoDerecha;
             Vector3 escala = transform.localScale;

@@ -5,8 +5,11 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
 
     public bool mapAnimationActivated = false;
+    public bool playerIntroPlayed = false;
+    public bool playerCanMove = false;
     public bool IsPaused { get; private set; } = false;
 
+    
     void Awake()
     {
         if (Instance == null)
