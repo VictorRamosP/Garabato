@@ -26,6 +26,7 @@ public class PlayerMove : MonoBehaviour
         _animator = GetComponent<Animator>();
         _weapon = GameObject.FindGameObjectWithTag("Weapon");
 
+        _weapon.SetActive(false);
         collisionDetection = GetComponent<CollisionDetection>();
     }
 
