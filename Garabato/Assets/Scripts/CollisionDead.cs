@@ -25,8 +25,7 @@ public class CollisionDead : MonoBehaviour
             Animator playerAnimator = collision.GetComponent<Animator>();
              if (playerAnimator != null)
              {
-                weapon.SetActive(false);
-                 playerAnimator.SetTrigger("Die"); // Trigger en el Animator
+                 playerAnimator.SetTrigger("Die"); 
              }
 
             Rigidbody2D rb = collision.GetComponent<Rigidbody2D>();
