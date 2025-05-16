@@ -38,7 +38,8 @@ public class ChangeCam : MonoBehaviour
         if (rotateMap != null && rotateMap.IsRotating)
             return;
 
-        if (Input.GetKeyDown(k_SwitchJump) && (_collisionDetection.IsGrounded || isMapActive))
+        if (Input.GetKeyDown(k_SwitchJump) && (_collisionDetection.IsGrounded || isMapActive)
+            && GameManager.Instance.mapAnimationActivated)
         {
             SwitchCamera();
         }
