@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1391122325614822117}
   - component: {fileID: 3637044176095503275}
   - component: {fileID: 7291182699903594083}
+  - component: {fileID: -3239035611635258670}
   m_Layer: 3
   m_Name: Platform
   m_TagString: Obstacle
@@ -115,7 +116,7 @@ BoxCollider2D:
     serializedVersion: 2
     m_Bits: 4294967295
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0.17123103, y: -1.7795302}
   m_SpriteTilingProperty:
@@ -130,3 +131,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 9.561394, y: 1.7404764}
   m_EdgeRadius: 0
+--- !u!251 &-3239035611635258670
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7347012138467258837}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 1
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
