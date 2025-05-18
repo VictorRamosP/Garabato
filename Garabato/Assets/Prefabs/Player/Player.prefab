@@ -471,7 +471,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   JumpHeight: 3
   DistanceToMaxHeight: 3
-  SpeedHorizontal: 5
+  SpeedHorizontal: 3
   PressTimeToMaxJump: 0.3
   WallSlideSpeed: 100
   filter:
