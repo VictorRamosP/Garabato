@@ -1,0 +1,1346 @@
+fileFormatVersion: 2
+guid: 4d8ab88bc3fd7204aa44abbd9bd15643
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 1400
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Tiileset_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8503.714
+        width: 1417.375
+        height: 1417.2858
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 10}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8341113fc98a34e49b944e5fcc0e80d9
+      internalID: 1525813029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiileset_1
+      rect:
+        serializedVersion: 2
+        x: 1417
+        y: 8503.714
+        width: 1417.375
+        height: 1417.2858
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 10}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f11f8d1f1a0380b4fad2e92587d18c97
+      internalID: 1027752601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiileset_2
+      rect:
+        serializedVersion: 2
+        x: 2834
+        y: 8503.714
+        width: 1417.375
+        height: 1417.2858
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 10}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d9d5a87612c49d4ebdd6ac7082c1d74
+      internalID: -270937040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiileset_3
+      rect:
+        serializedVersion: 2
+        x: 4250
+        y: 8504
+        width: 1417
+        height: 1417
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 10}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b592dae891e752449693f62ea44dbb7
+      internalID: 109469590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiileset_4
+      rect:
+        serializedVersion: 2
+        x: 5668
+        y: 8503.714
+        width: 1417.375
+        height: 1417.2858
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 10}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7707ee7604685844aeef3d44bf10c51
+      internalID: 1901713509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiileset_5
+      rect:
+        serializedVersion: 2
+        x: 7085
+        y: 8503.714
+        width: 1417.375
+        height: 1417.2858
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 10}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6a5c6944e8a7ca44ac4efb82b7456ed
+      internalID: -1166305058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiileset_6
+      rect:
+        serializedVersion: 2
+        x: 8502
+        y: 8503.714
+        width: 1417.375
+        height: 1417.2858
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 10}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ae4b4d538649324d865cea193a050b5
+      internalID: -1265035525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiileset_7
+      rect:
+        serializedVersion: 2
+        x: 9919
+        y: 8503.714
+        width: 1417.375
+        height: 1417.2858
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 10}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1054f3a4fdf9e2c4aba630c4eb6affa1
+      internalID: 1916596206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiileset_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7086.7144
+        width: 1417.375
+        height: 1417.2858
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d624abd9c5edc54792a65c287b537b2
+      internalID: 958810161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiileset_9
+      rect:
+        serializedVersion: 2
+        x: 1417
+        y: 7086.7144
+        width: 1417.375
+        height: 1417.2858
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e8e325026476904293c77328d42ed83
+      internalID: 984371112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiileset_10
+      rect:
+        serializedVersion: 2
+        x: 2834
+        y: 7086.7144
+        width: 1417.375
+        height: 1417.2858
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7550ef4fcf0f335409bdc0460de47876
+      internalID: 701350575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiileset_11
+      rect:
+        serializedVersion: 2
+        x: 4251
+        y: 7086.7144
+        width: 1417.375
+        height: 1417.2858
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e315a9a5321377e4cb50f1a53981a1da
+      internalID: 867694410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiileset_12
+      rect:
+        serializedVersion: 2
+        x: 5668
+        y: 7086.7144
+        width: 1417.375
+        height: 1417.2858
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1eefbb2798665d4e947da97f0b2ed02
+      internalID: 1565360817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiileset_13
+      rect:
+        serializedVersion: 2
+        x: 7085
+        y: 7086.7144
+        width: 1417.375
+        height: 1417.2858
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd4a9970885c6a14c904fe8285297b56
+      internalID: -832693229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiileset_14
+      rect:
+        serializedVersion: 2
+        x: 8502
+        y: 7086.7144
+        width: 1417.375
+        height: 1417.2858
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b8ce521fd85f494c84db4134b381a75
+      internalID: -203796257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiileset_15
+      rect:
+        serializedVersion: 2
+        x: 9919
+        y: 7086.7144
+        width: 1417.375
+        height: 1417.2858
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0105ea563113514e99f78dbd27bd32c
+      internalID: 164704863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiileset_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5669.7144
+        width: 1417.375
+        height: 1417.2858
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0649344922578e4b87510246f4f8670
+      internalID: -212604510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiileset_17
+      rect:
+        serializedVersion: 2
+        x: 1417
+        y: 5669.7144
+        width: 1417.375
+        height: 1417.2858
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a90bd99b75212c4a8e5bae55791eab0
+      internalID: 854519601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiileset_18
+      rect:
+        serializedVersion: 2
+        x: 2834
+        y: 5669.7144
+        width: 1417.375
+        height: 1417.2858
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a422bb9612939884eb3c888555cb9648
+      internalID: -1875831632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiileset_19
+      rect:
+        serializedVersion: 2
+        x: 4251
+        y: 5669.7144
+        width: 1417.375
+        height: 1417.2858
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b35f4f6dea97804d8a398c52d919b80
+      internalID: -1831106475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiileset_20
+      rect:
+        serializedVersion: 2
+        x: 5668
+        y: 5669.7144
+        width: 1417.375
+        height: 1417.2858
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 136, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dff3f4db2ac62a4a8ce406a0fee940b
+      internalID: -1068770901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiileset_21
+      rect:
+        serializedVersion: 2
+        x: 7085
+        y: 5669.7144
+        width: 1417.375
+        height: 1417.2858
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 9}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a47965fc72809a4eb6363c062a17ada
+      internalID: -1557579797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiileset_22
+      rect:
+        serializedVersion: 2
+        x: 8502
+        y: 5669.7144
+        width: 1417.375
+        height: 1417.2858
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 7}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f66a6f97f92e26348b930eed03eb189e
+      internalID: -30845804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiileset_23
+      rect:
+        serializedVersion: 2
+        x: 9919
+        y: 5669.7144
+        width: 1417.375
+        height: 1417.2858
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 152, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 619c5ec4c62589e46b0a33329ac4a066
+      internalID: -358805019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiileset_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4252
+        width: 1417
+        height: 1417
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d91616917786794a99609ce04c72a2a
+      internalID: -705477275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiileset_25
+      rect:
+        serializedVersion: 2
+        x: 1417
+        y: 4252.7144
+        width: 1417.375
+        height: 1417.2858
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69de05ec43d50df4985e27c7894025e2
+      internalID: 254719031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiileset_26
+      rect:
+        serializedVersion: 2
+        x: 2834
+        y: 4252.7144
+        width: 1417.375
+        height: 1417.2858
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e9ff5c21b9939e479391a3b5484dfaf
+      internalID: 1262670653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiileset_27
+      rect:
+        serializedVersion: 2
+        x: 4251
+        y: 4252.7144
+        width: 1417.375
+        height: 1417.2858
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dddf27b20990a6443a56af44807bc8c7
+      internalID: -1515270986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiileset_28
+      rect:
+        serializedVersion: 2
+        x: 5668
+        y: 4252.7144
+        width: 1417.375
+        height: 1417.2858
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cd2ad75d9fa2bc49a6afaedc9d9f7ae
+      internalID: -617680176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiileset_29
+      rect:
+        serializedVersion: 2
+        x: 7085
+        y: 4252.7144
+        width: 1417.375
+        height: 1417.2858
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1f77769c0d53e746ae3bc2bb5c06820
+      internalID: 1049190869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiileset_30
+      rect:
+        serializedVersion: 2
+        x: 8502
+        y: 4252.7144
+        width: 1417.375
+        height: 1417.2858
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 156, y: 0, z: 0, w: 14}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4745cfed4a9650f488d1a4199a38067d
+      internalID: -888432255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiileset_31
+      rect:
+        serializedVersion: 2
+        x: 9919
+        y: 4252.7144
+        width: 1417.375
+        height: 1417.2858
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 134, w: 14}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b12f86d997ac86a4080a080ef15c1d57
+      internalID: 1799240201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiileset_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2836
+        width: 1417
+        height: 1410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 548, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c3cf47c7e883f6478ac92759e4191b9
+      internalID: 984491144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiileset_33
+      rect:
+        serializedVersion: 2
+        x: 1417
+        y: 2835.7144
+        width: 1417.375
+        height: 1417.2858
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 548, z: 0, w: 7}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50bb565589d474b47b8e9e2edfd0aa54
+      internalID: -1037034249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiileset_34
+      rect:
+        serializedVersion: 2
+        x: 2834
+        y: 2835.7144
+        width: 1417.375
+        height: 1417.2858
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 548, z: 0, w: 7}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dcef35731c126a418829372aaf97d5a
+      internalID: -883262411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiileset_35
+      rect:
+        serializedVersion: 2
+        x: 4251
+        y: 2835.7144
+        width: 1417.375
+        height: 1417.2858
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7192dac9f9ce9a4409e46c93ac5a21d8
+      internalID: -13252754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiileset_36
+      rect:
+        serializedVersion: 2
+        x: 5668
+        y: 2835.7144
+        width: 1417.375
+        height: 1417.2858
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8356e942c869a4b419daafecb758e880
+      internalID: 1379213610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiileset_37
+      rect:
+        serializedVersion: 2
+        x: 7085
+        y: 2835.7144
+        width: 1417.375
+        height: 1417.2858
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52320a16d57a21b49b293cff0c4098c6
+      internalID: -1639719311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiileset_38
+      rect:
+        serializedVersion: 2
+        x: 8502
+        y: 2835.7144
+        width: 1417.375
+        height: 1417.2858
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 165, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a63982537b9023449fe935c99386fb7
+      internalID: 1541892410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiileset_39
+      rect:
+        serializedVersion: 2
+        x: 9919
+        y: 2835.7144
+        width: 1417.375
+        height: 1417.2858
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 139, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7027a95c9fdaf094aa5c7a21389ed3fe
+      internalID: -1213239981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiileset_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1418.7142
+        width: 1417.375
+        height: 1417.2858
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 10}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aeccacf29aa6341448be55188604d894
+      internalID: -1088185945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiileset_41
+      rect:
+        serializedVersion: 2
+        x: 1417
+        y: 1418.7142
+        width: 1417.375
+        height: 1417.2858
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 11}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e8a6bbb2d5f6f040b37116ba1e84bc2
+      internalID: -2030998469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiileset_42
+      rect:
+        serializedVersion: 2
+        x: 2834
+        y: 1418.7142
+        width: 1417.375
+        height: 1417.2858
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 151, y: 0, z: 0, w: 11}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7affb6154c610484fa500382d72fa7e2
+      internalID: -519223791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiileset_43
+      rect:
+        serializedVersion: 2
+        x: 4251
+        y: 1418.7142
+        width: 1417.375
+        height: 1417.2858
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 142, w: 10}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d32f090466326f54d8403aad24a74f8b
+      internalID: -1202358876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiileset_44
+      rect:
+        serializedVersion: 2
+        x: 5668
+        y: 1418.7142
+        width: 1417.375
+        height: 1417.2858
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7503bbe753459b4ab092d30adc75820
+      internalID: 1766723777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiileset_45
+      rect:
+        serializedVersion: 2
+        x: 7085
+        y: 1418.7142
+        width: 1417.375
+        height: 1417.2858
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa1cf5cd6a3c39c40a1e1d8b197afdb1
+      internalID: -78523883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiileset_46
+      rect:
+        serializedVersion: 2
+        x: 8502
+        y: 1418.7142
+        width: 1417.375
+        height: 1417.2858
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 160, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94814ab20ce57ec4180f832ff515ef9b
+      internalID: 1034156783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiileset_47
+      rect:
+        serializedVersion: 2
+        x: 9919
+        y: 1418.7142
+        width: 1417.375
+        height: 1417.2858
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 139, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d7d24294b7bde04085f97a4636b83e2
+      internalID: -430698035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiileset_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1.7142334
+        width: 1417.375
+        height: 1417.2858
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 11}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0a866d34ae04734ab98122b18c10f1d
+      internalID: -1551013179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiileset_49
+      rect:
+        serializedVersion: 2
+        x: 1417
+        y: 1.7142334
+        width: 1417.375
+        height: 1417.2858
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 13}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b67254764891cf4da3c5bbd4f3fe344
+      internalID: -325637696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiileset_50
+      rect:
+        serializedVersion: 2
+        x: 2834
+        y: 1.7142334
+        width: 1417.375
+        height: 1417.2858
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d0680adb8923c343a7719bdbeb0c3de
+      internalID: -747796622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiileset_51
+      rect:
+        serializedVersion: 2
+        x: 4251
+        y: 1.7142334
+        width: 1417.375
+        height: 1417.2858
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 848b495676db3f74f91d8050c636cfbe
+      internalID: -1516222336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiileset_52
+      rect:
+        serializedVersion: 2
+        x: 5668
+        y: 1.7142334
+        width: 1417.375
+        height: 1417.2858
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 10}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d03e71ddce64f0f41abca672f94b7b34
+      internalID: 1206610495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiileset_53
+      rect:
+        serializedVersion: 2
+        x: 7085
+        y: 1.7142334
+        width: 1417.375
+        height: 1417.2858
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 13}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b38ae5ec0e4e16f4ea46d9acb776a435
+      internalID: 1230924002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiileset_54
+      rect:
+        serializedVersion: 2
+        x: 8502
+        y: 1.7142334
+        width: 1417.375
+        height: 1417.2858
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 154, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3147fa55147d6e46be98727a8f91958
+      internalID: 987832654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiileset_55
+      rect:
+        serializedVersion: 2
+        x: 9919
+        y: 1.7142334
+        width: 1417.375
+        height: 1417.2858
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 139, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0de4a2c7424b3a40926f1a7e220d12e
+      internalID: 2025657846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Tiileset_0: 1525813029
+      Tiileset_1: 1027752601
+      Tiileset_10: 701350575
+      Tiileset_11: 867694410
+      Tiileset_12: 1565360817
+      Tiileset_13: -832693229
+      Tiileset_14: -203796257
+      Tiileset_15: 164704863
+      Tiileset_16: -212604510
+      Tiileset_17: 854519601
+      Tiileset_18: -1875831632
+      Tiileset_19: -1831106475
+      Tiileset_2: -270937040
+      Tiileset_20: -1068770901
+      Tiileset_21: -1557579797
+      Tiileset_22: -30845804
+      Tiileset_23: -358805019
+      Tiileset_24: -705477275
+      Tiileset_25: 254719031
+      Tiileset_26: 1262670653
+      Tiileset_27: -1515270986
+      Tiileset_28: -617680176
+      Tiileset_29: 1049190869
+      Tiileset_3: 109469590
+      Tiileset_30: -888432255
+      Tiileset_31: 1799240201
+      Tiileset_32: 984491144
+      Tiileset_33: -1037034249
+      Tiileset_34: -883262411
+      Tiileset_35: -13252754
+      Tiileset_36: 1379213610
+      Tiileset_37: -1639719311
+      Tiileset_38: 1541892410
+      Tiileset_39: -1213239981
+      Tiileset_4: 1901713509
+      Tiileset_40: -1088185945
+      Tiileset_41: -2030998469
+      Tiileset_42: -519223791
+      Tiileset_43: -1202358876
+      Tiileset_44: 1766723777
+      Tiileset_45: -78523883
+      Tiileset_46: 1034156783
+      Tiileset_47: -430698035
+      Tiileset_48: -1551013179
+      Tiileset_49: -325637696
+      Tiileset_5: -1166305058
+      Tiileset_50: -747796622
+      Tiileset_51: -1516222336
+      Tiileset_52: 1206610495
+      Tiileset_53: 1230924002
+      Tiileset_54: 987832654
+      Tiileset_55: 2025657846
+      Tiileset_6: -1265035525
+      Tiileset_7: 1916596206
+      Tiileset_8: 958810161
+      Tiileset_9: 984371112
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
