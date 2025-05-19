@@ -12,7 +12,7 @@ public class RotateMap : MonoBehaviour
     private Collider2D _collider;
     private string _WhereIsDown;
     private int currentRotationState = 0;
-    public Action OnMapRotated;
+    public event Action OnMapRotated;
 
     public AudioClip rotateSound;
     private AudioSource _audioSource;

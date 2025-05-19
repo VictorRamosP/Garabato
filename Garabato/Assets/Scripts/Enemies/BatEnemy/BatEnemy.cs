@@ -2,18 +2,30 @@ using UnityEngine;
 
 public class BatEnemy : MonoBehaviour
 {
-    public Transform parent;
-    public float ChaseDistance = 5f;
+    private StateMachine stateMachine;
+
+    [Header("Variables")]
     public float MoveSpeed = 5f;
     public float ChaseSpeed = 3f;
-    public LayerMask ObstacleLayer;
-    public Transform Player;
-    public Rigidbody2D Rigidbody;
-    private StateMachine stateMachine;
-    public RotateMap Map;
+    public float NewTargetCooldown = 0f;
 
+    [HideInInspector]
+    public RotateMap Map;
+    public Transform Player;
+    public LayerMask ObstacleLayer;
+
+    [Header("Scripts de funciones")]
+    public BatPatrolArea Area;
+    public GameObject Bat;
     void Start()
     {
+        Map = GameObject.FindAnyObjectByType<RotateMap>();
+        Player = GameObject.FindGameObjectWithTag("Player").transform;
+
+        Area.SomethingInArea += SomethingInArea;
+        Area.SomethingLeftArea += SomethingLeftArea;
+        Map.OnMapRotated += OnMapRotated;
+
         stateMachine = new StateMachine();
         stateMachine.ChangeState(new PatrolState(this, stateMachine));
     }
@@ -21,30 +33,28 @@ public class BatEnemy : MonoBehaviour
     void Update()
     {
         if (ChangeCam.isMapActive) return;
+
         stateMachine.OnUpdate();
     }
 
-    public bool CanSeePlayer()
+    void SomethingInArea(Collider2D collision)
     {
-        if (Player == null) return false;
-
-        Vector2 direction = (Player.position - transform.position).normalized;
-        float distance = Vector2.Distance(transform.position, Player.position);
-
-        if (distance > ChaseDistance) return false;
-
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, distance, ObstacleLayer);
-        return hit.collider == null;
+        if (collision.CompareTag("Player"))
+        {
+            stateMachine.ChangeState(new ChaseState(this, stateMachine));
+        }
     }
 
-    void OnTriggerEnter2D(Collider2D collision)
+    void SomethingLeftArea(Collider2D collision)
     {
-        if (collision.CompareTag("Obstacle"))
+        if (collision.CompareTag("Player"))
         {
-            if (stateMachine.currentState is PatrolState patrol)
-            {
-                patrol.SetNewTargetFromCollision();
-            }
+            stateMachine.ChangeState(new PatrolState(this, stateMachine));
         }
+    }
+
+    void OnMapRotated()
+    {
+        Bat.transform.rotation = Quaternion.identity;
     }
 }

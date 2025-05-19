@@ -11,30 +11,20 @@ public class ChaseState : IState
         this.stateMachine = stateMachine;
     }
 
-    public void OnEnter() { }
+    public void OnEnter() { Debug.Log("Chase"); }
 
-    public void OnExit() { }
+    public void OnExit() { Debug.Log("No Chase"); }
 
-   public void OnUpdate()
-{
-    if (!enemy.CanSeePlayer())
+    public void OnUpdate()
     {
-        stateMachine.ChangeState(new PatrolState(enemy, stateMachine));
-        return;
-    }
+        Vector2 direction = (enemy.Player.position - enemy.Bat.transform.position).normalized;
+        Vector2 newPos = (Vector2)enemy.Bat.transform.position + direction * enemy.ChaseSpeed * Time.deltaTime;
 
-    Vector2 direction = (enemy.Player.position - enemy.transform.position).normalized;
-    Vector2 newPos = (Vector2)enemy.transform.position + direction * enemy.ChaseSpeed * Time.deltaTime;
-
-    RaycastHit2D hit = Physics2D.Raycast(enemy.transform.position, direction, 0.5f, enemy.ObstacleLayer);
-    if (hit.collider == null)
-    {
-        enemy.transform.position = newPos;
+        RaycastHit2D hit = Physics2D.Raycast(enemy.Bat.transform.position, direction, 0.5f, enemy.ObstacleLayer);
+        if (hit.collider == null)
+        {
+            enemy.Bat.transform.position = newPos;
+        }
     }
-    else
-    {
-        stateMachine.ChangeState(new PatrolState(enemy, stateMachine));
-    }
-}
 
 }
