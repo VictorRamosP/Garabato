@@ -125,6 +125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e89a987b9047c5f4a9a7bc77be9b06e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isActive: 1
 --- !u!1 &2021841605863696343
 GameObject:
   m_ObjectHideFlags: 0
@@ -200,7 +201,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 1244195804, guid: f507e27a6a1289a4fbf7842b17d1ad43, type: 3}
-  m_Color: {r: 0.6509434, g: 0.6478729, b: 0.6478729, a: 1}
+  m_Color: {r: 0.2735849, g: 0.2735849, b: 0.2735849, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -355,6 +356,7 @@ MonoBehaviour:
   flame: {fileID: 1139429739183032064}
   reactiveFlame: 3
   desactiveFlame: 5
+  isActive: 0
 --- !u!1 &8405015255363598623
 GameObject:
   m_ObjectHideFlags: 0
@@ -429,7 +431,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 12a1f25faf9710744adca17d00028006, type: 3}
-  m_Color: {r: 0.5566038, g: 0.5566038, b: 0.5566038, a: 1}
+  m_Color: {r: 0.7169812, g: 0.7169812, b: 0.7169812, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
