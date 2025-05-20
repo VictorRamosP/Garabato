@@ -86,13 +86,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3356891888394510697}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.24, y: 1.06, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 0.883, y: 0.171, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4873559554026065903}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!1 &5402392561987612215
 GameObject:
   m_ObjectHideFlags: 0
@@ -118,14 +118,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5402392561987612215}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -0.08, y: -0.15, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.213, y: -0.15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2371314325973124355}
   m_Father: {fileID: 987982724478991015}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6534434731700895472
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -167,7 +167,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: 13590765b04bf5b41a8f961c0ea51d5f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9ec74ce8e8bc4d84794c06f18f41166f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -295,7 +295,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: -1651751690, guid: 23f610f252b3f0046bc8db02e5299bad, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -440,6 +440,8 @@ MonoBehaviour:
   _playermove: {fileID: 622269753736096978}
   shootSound: {fileID: 8300000, guid: 2332e9ba6982870439c6c3b581574001, type: 3}
   weaponVisible: 0.2
+  sideShootSprite: {fileID: 21300000, guid: 9ec74ce8e8bc4d84794c06f18f41166f, type: 3}
+  upShootSprite: {fileID: 21300000, guid: c93bf38ff09b5024c8666c09f41a735a, type: 3}
 --- !u!114 &7755168351606946705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -470,8 +472,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JumpHeight: 3
-  DistanceToMaxHeight: 3
-  SpeedHorizontal: 3
+  DistanceToMaxHeight: 2
+  SpeedHorizontal: 4
   PressTimeToMaxJump: 0.3
   WallSlideSpeed: 100
   filter:
