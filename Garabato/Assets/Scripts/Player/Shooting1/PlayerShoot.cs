@@ -24,11 +24,14 @@ public class PlayerShoot : MonoBehaviour
 
     private SpriteRenderer weaponRenderer;
 
+    private CollisionDetection _collisionDetection;
+
     void Start()
     {
         shooting = GameObject.FindGameObjectWithTag("Weapon");
         _audioSource = GetComponent<AudioSource>();
         weaponRenderer = shooting.GetComponent<SpriteRenderer>();
+        _collisionDetection = GetComponent<CollisionDetection>();
 
         if (weaponRenderer != null && sideShootSprite != null)
         {
@@ -61,11 +64,13 @@ public class PlayerShoot : MonoBehaviour
 
     void RotateShoot()
     {
+        if (_collisionDetection == null || !_collisionDetection.IsGrounded)
+            return;
+
         bool Shot = false;
 
         if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.Mouse0))
         {
-            // Hacia arriba
             shooting.transform.rotation = Quaternion.Euler(0, 0, 0);
             firePoint.localRotation = Quaternion.Euler(0, 0, 0);
             firePoint.localPosition = new Vector3(0f, 1f, 0f);
@@ -77,7 +82,6 @@ public class PlayerShoot : MonoBehaviour
         }
         else if (Input.GetKey(KeyCode.Mouse0))
         {
-            // Hacia los lados
             if (_playermove.mirandoDerecha)
             {
                 shooting.transform.rotation = Quaternion.Euler(0, 0, 0);
