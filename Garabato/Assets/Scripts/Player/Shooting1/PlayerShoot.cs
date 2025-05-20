@@ -17,26 +17,33 @@ public class PlayerShoot : MonoBehaviour
     public AudioClip shootSound;
     private AudioSource _audioSource;
 
-    public float weaponVisible = 0.2f; // Tiempo que es visible el arma cuando dispara estando en Idle
+    public float weaponVisible = 0.2f;
+
+    public Sprite sideShootSprite;
+    public Sprite upShootSprite;
+
+    private SpriteRenderer weaponRenderer;
 
     void Start()
     {
         shooting = GameObject.FindGameObjectWithTag("Weapon");
         _audioSource = GetComponent<AudioSource>();
+        weaponRenderer = shooting.GetComponent<SpriteRenderer>();
+
+        if (weaponRenderer != null && sideShootSprite != null)
+        {
+            weaponRenderer.sprite = sideShootSprite;
+        }
     }
 
     void Update()
     {
         coolDownTimer -= Time.deltaTime;
 
-        if (!ChangeCam.isMapActive)
+        if (!ChangeCam.isMapActive && coolDownTimer <= 0)
         {
-            if (coolDownTimer <= 0)
-            {
-                RotateShoot();
-            }
+            RotateShoot();
         }
-       
     }
 
     void Shoot()
@@ -56,39 +63,37 @@ public class PlayerShoot : MonoBehaviour
     {
         bool Shot = false;
 
-        /*if (Input.GetKey(KeyCode.UpArrow) && Input.GetKey(KeyCode.RightArrow) && _playermove.mirandoDerecha)
+        if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.Mouse0))
         {
-            shooting.transform.rotation = Quaternion.Euler(0, 0, -45);
-            Shot = true;
-        }
-        else if (Input.GetKey(KeyCode.UpArrow) && Input.GetKey(KeyCode.LeftArrow) && !_playermove.mirandoDerecha)
-        {
-            shooting.transform.rotation = Quaternion.Euler(0, 0, 45);
-            Shot = true;
-        }
-        /*else if (Input.GetKey(KeyCode.DownArrow) && Input.GetKey(KeyCode.LeftArrow) && !_playermove.mirandoDerecha)
-        {
-            shooting.transform.rotation = Quaternion.Euler(0, 0, 135);
-            Shot = true;
-        }
-        /*else if (Input.GetKey(KeyCode.DownArrow) && Input.GetKey(KeyCode.RightArrow) && _playermove.mirandoDerecha)
-        {
-            shooting.transform.rotation = Quaternion.Euler(0, 0, -135);
-            Shot = true;
-        }*/
-        if (Input.GetKey(KeyCode.D) && Input.GetKey(KeyCode.Mouse0) && _playermove.mirandoDerecha)
-        {
-            shooting.transform.rotation = Quaternion.Euler(0, 0, -90);
-            Shot = true;
-        }
-        else if (Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.Mouse0) && !_playermove.mirandoDerecha)
-        {
-            shooting.transform.rotation = Quaternion.Euler(0, 0, 90);
-            Shot = true;
-        }
-        else if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.Mouse0))
-        {
+            // Hacia arriba
             shooting.transform.rotation = Quaternion.Euler(0, 0, 0);
+            firePoint.localRotation = Quaternion.Euler(0, 0, 0);
+            firePoint.localPosition = new Vector3(0f, 1f, 0f);
+
+            if (weaponRenderer && upShootSprite)
+                weaponRenderer.sprite = upShootSprite;
+
+            Shot = true;
+        }
+        else if (Input.GetKey(KeyCode.Mouse0))
+        {
+            // Hacia los lados
+            if (_playermove.mirandoDerecha)
+            {
+                shooting.transform.rotation = Quaternion.Euler(0, 0, 0);
+                firePoint.localRotation = Quaternion.Euler(0, 0, -90);
+                firePoint.localPosition = new Vector3(1f, 0f, 0f);
+            }
+            else
+            {
+                shooting.transform.rotation = Quaternion.Euler(0, 0, 0);
+                firePoint.localRotation = Quaternion.Euler(0, 0, -90);
+                firePoint.localPosition = new Vector3(1f, 0f, 0f);
+            }
+
+            if (weaponRenderer && sideShootSprite)
+                weaponRenderer.sprite = sideShootSprite;
+
             Shot = true;
         }
 
@@ -111,7 +116,6 @@ public class PlayerShoot : MonoBehaviour
         float moveInput = Mathf.Abs(Input.GetAxis("Horizontal"));
         if (moveInput > 0.01f)
         {
-            
             _playermove.shootingActive = false;
         }
         else
