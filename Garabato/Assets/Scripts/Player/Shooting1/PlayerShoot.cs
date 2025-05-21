@@ -54,7 +54,7 @@ public class PlayerShoot : MonoBehaviour
         activeBullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         Rigidbody2D rb = activeBullet.GetComponent<Rigidbody2D>();
 
-        Destroy(activeBullet, bulletTimeDestroy);
+       // Destroy(activeBullet, bulletTimeDestroy);
 
         if (_audioSource && shootSound)
         {
