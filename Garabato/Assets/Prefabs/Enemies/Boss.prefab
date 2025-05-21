@@ -1147,6 +1147,7 @@ MonoBehaviour:
   DownSpikeArea: {fileID: 3380746867724770176}
   LeftSpikeArea: {fileID: 4234002764883102743}
   RightSpikeArea: {fileID: 5330270714304557099}
+  Mapa: {fileID: 0}
   Bat: {fileID: 3160592083986916236, guid: 293d23e28bff261459c58d287e9cfe12, type: 3}
   Goomba: {fileID: 3596435939419734898, guid: 0dc374e74ed13ba47b75a267f14d3c94, type: 3}
   Spider: {fileID: 2065004821525443642, guid: 5d0b5aa4182a42448ad959d2f988e874, type: 3}
