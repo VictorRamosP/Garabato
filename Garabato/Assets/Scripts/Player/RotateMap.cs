@@ -16,11 +16,11 @@ public class RotateMap : MonoBehaviour
 
     public AudioClip rotateSound;
     private AudioSource _audioSource;
-
+    /*
     [Header("Controles")]
     public KeyCode k_Rotatemap = KeyCode.D;
     public KeyCode k_Rotatemap2 = KeyCode.A;
-
+    */
     [Header("Rotaci�n suave")]
     public float rotationDuration = 0.5f;
     private bool isRotating = false;
@@ -61,12 +61,12 @@ public class RotateMap : MonoBehaviour
         cooldownTimer -= Time.deltaTime;
         float originalGravity = _rigidbody.gravityScale;
 
-        if ((Input.GetKeyDown(k_Rotatemap) || Input.GetKeyDown(k_Rotatemap2)) && cooldownTimer <= 0f && !isRotating)
+        if ((InputManager.Instance.GetRotateMapRight() || InputManager.Instance.GetRotateMapLeft()) && cooldownTimer <= 0f && !isRotating)
         {
             _rigidbody.gravityScale = 0;
             _rigidbody.velocity = Vector2.zero;
 
-            float angle = (Input.GetKeyDown(k_Rotatemap2)) ? 90f : -90f;
+            float angle = (InputManager.Instance.GetRotateMapLeft()) ? 90f : -90f;
             StartCoroutine(SmoothRotate(angle));
             cooldownTimer = cooldownRotate;
         }

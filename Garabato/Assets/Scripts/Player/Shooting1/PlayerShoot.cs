@@ -69,7 +69,7 @@ public class PlayerShoot : MonoBehaviour
 
         bool Shot = false;
 
-        if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.Mouse0))
+        if (InputManager.Instance.GetUp() && InputManager.Instance.GetAttack())
         {
             shooting.transform.rotation = Quaternion.Euler(0, 0, 0);
             firePoint.localRotation = Quaternion.Euler(0, 0, 0);
@@ -80,7 +80,7 @@ public class PlayerShoot : MonoBehaviour
 
             Shot = true;
         }
-        else if (Input.GetKey(KeyCode.Mouse0))
+        else if (InputManager.Instance.GetAttack())
         {
             if (_playermove.mirandoDerecha)
             {
@@ -113,12 +113,13 @@ public class PlayerShoot : MonoBehaviour
         }
     }
 
-    IEnumerator DisableWeaponAfterShot()
+     IEnumerator DisableWeaponAfterShot()
     {
         yield return new WaitForSeconds(weaponVisible);
 
-        float moveInput = Mathf.Abs(Input.GetAxis("Horizontal"));
-        if (moveInput > 0.01f)
+        bool isMoving = InputManager.Instance.GetMoveLeft() || InputManager.Instance.GetMoveRight();
+
+        if (isMoving)
         {
             _playermove.shootingActive = false;
         }

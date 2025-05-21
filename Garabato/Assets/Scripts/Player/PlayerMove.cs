@@ -14,10 +14,10 @@ public class PlayerMove : MonoBehaviour
     public bool canMove = false;
 
     public CollisionDetection collisionDetection;
-
+    /*
     [Header("Controles")]
     public KeyCode k_Jump = KeyCode.Space;
-
+    */
     [HideInInspector] public bool shootingActive = false;
 
     void Start()
@@ -49,14 +49,20 @@ public class PlayerMove : MonoBehaviour
             _weapon.SetActive(false);
         }
 
-        bool isIdle = Mathf.Abs(Input.GetAxis("Horizontal")) < 0.01f;
+        bool isIdle = Mathf.Abs(InputManager.Instance.GetHorizontalAxis()) < 0.01f;
         bool isShootingIdle = isIdle && shootingActive;
         _animator.SetBool("isShootingIdle", isShootingIdle);
     }
 
     void Moverse()
     {
-        float moveInput = Input.GetAxis("Horizontal");
+        float moveInput = 0;
+
+        if (InputManager.Instance.GetMoveLeft())
+            moveInput = -1f;
+        else if (InputManager.Instance.GetMoveRight())
+            moveInput = 1f;
+
         _rigidbody.velocity = new Vector3(moveInput * speed, _rigidbody.velocity.y);
 
         bool isRunning = Mathf.Abs(moveInput) > 0.01f;

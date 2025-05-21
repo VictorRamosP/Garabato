@@ -33,7 +33,7 @@ public class CursorManager : MonoBehaviour
 
     public static void UnlockCursor()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (InputManager.Instance.GetPause())
         {
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;

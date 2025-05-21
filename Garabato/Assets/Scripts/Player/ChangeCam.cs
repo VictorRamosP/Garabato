@@ -10,10 +10,10 @@ public class ChangeCam : MonoBehaviour
     public LayerMask groundLayer;
     public Transform groundCheck;
     public float groundCheckRadius = 0.1f;
-
+    /*
     [Header("Controles")]
     public KeyCode k_SwitchJump = KeyCode.Tab;
-
+    */
     public static bool isMapActive = false;
 
     void Start()
@@ -33,12 +33,19 @@ public class ChangeCam : MonoBehaviour
 
     void Update()
     {
+         for (int i = 0; i < 20; i++)
+        {
+        if (Input.GetKeyDown("joystick button " + i))
+        {
+            Debug.Log("Joystick button " + i + " pressed");
+        }
+        }
         // Evita que cambie la camara si el mapa esta rotando
         RotateMap rotateMap = FindObjectOfType<RotateMap>();
         if (rotateMap != null && rotateMap.IsRotating)
             return;
 
-        if (Input.GetKeyDown(k_SwitchJump) && (_collisionDetection.IsGrounded || isMapActive)
+        if (InputManager.Instance.GetMap() && (_collisionDetection.IsGrounded || isMapActive)
             && GameManager.Instance.mapAnimationActivated)
         {
             SwitchCamera();

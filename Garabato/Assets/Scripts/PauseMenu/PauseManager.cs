@@ -3,12 +3,11 @@ using UnityEngine;
 public class PauseManager : MonoBehaviour
 {
     public GameObject pauseMenuUI;
-    public KeyCode pauseKey = KeyCode.P;
     private bool isPaused = false;
 
     void Update()
     {
-        if (Input.GetKeyDown(pauseKey))
+        if (InputManager.Instance.GetPause())
         {
             TogglePause();
         }

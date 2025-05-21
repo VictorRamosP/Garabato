@@ -9,7 +9,7 @@ public class PlayerJumper : MonoBehaviour
     public float PressTimeToMaxJump;
     public float WallSlideSpeed = 1;
     public ContactFilter2D filter;
-    public KeyCode JumpKey = KeyCode.Space;
+    //public KeyCode JumpKey = KeyCode.Space;
     public LayerMask floorlayerMask;
     public AudioClip jumpSound;  
     
@@ -32,7 +32,7 @@ public class PlayerJumper : MonoBehaviour
     void Update()
     {
         if (ChangeCam.isMapActive) return;
-        if (Input.GetKeyDown(JumpKey) && _collisionDetection.IsGrounded)
+        if (InputManager.Instance.GetJump() && _collisionDetection.IsGrounded)
         {            
             JumpStarted();
             if (_audioSource && jumpSound)
@@ -41,7 +41,7 @@ public class PlayerJumper : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyUp(JumpKey))
+        if (InputManager.Instance.GetJump())
         {
             JumpFinished();
         }      
