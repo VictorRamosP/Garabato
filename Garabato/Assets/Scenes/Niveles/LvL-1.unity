@@ -6217,6 +6217,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 702202625314917070, guid: 8e607d309f0d91840a779ee2a97217d4, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 146.8482
+      objectReference: {fileID: 0}
+    - target: {fileID: 702202625314917070, guid: 8e607d309f0d91840a779ee2a97217d4, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 146.8486
+      objectReference: {fileID: 0}
+    - target: {fileID: 702202625314917070, guid: 8e607d309f0d91840a779ee2a97217d4, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 72
+      objectReference: {fileID: 0}
+    - target: {fileID: 702202625314917070, guid: 8e607d309f0d91840a779ee2a97217d4, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -365
+      objectReference: {fileID: 0}
+    - target: {fileID: 1519900098125443261, guid: 8e607d309f0d91840a779ee2a97217d4, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 227.8137
+      objectReference: {fileID: 0}
+    - target: {fileID: 1519900098125443261, guid: 8e607d309f0d91840a779ee2a97217d4, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 227.8138
+      objectReference: {fileID: 0}
     - target: {fileID: 4379645106846230641, guid: 8e607d309f0d91840a779ee2a97217d4, type: 3}
       propertyPath: m_Name
       value: MapAnimation
