@@ -70,7 +70,7 @@ public class PlayerJumper : MonoBehaviour
     void JumpFinished()
     {
         float fractionOfTimePressed = 1 / Mathf.Clamp01((Time.time - _jumpStartedTime) / PressTimeToMaxJump);
-        _rigidbody.gravityScale *= fractionOfTimePressed;
+       // _rigidbody.gravityScale *= fractionOfTimePressed;
         Debug.Log("Callendo");
     }
 
