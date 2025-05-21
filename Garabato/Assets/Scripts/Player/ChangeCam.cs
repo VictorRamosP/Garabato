@@ -1,8 +1,10 @@
 using Cinemachine;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ChangeCam : MonoBehaviour
 {
+    public bool canChangeMap = true;
     private CollisionDetection _collisionDetection;
     public CinemachineVirtualCamera playerCam;
     public CinemachineVirtualCamera mapCam;
@@ -46,7 +48,7 @@ public class ChangeCam : MonoBehaviour
             return;
 
         if (InputManager.Instance.GetMap() && (_collisionDetection.IsGrounded || isMapActive)
-            && GameManager.Instance.mapAnimationActivated)
+            && GameManager.Instance.mapAnimationActivated && canChangeMap)
         {
             SwitchCamera();
         }
