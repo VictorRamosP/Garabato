@@ -58,7 +58,7 @@ public class ChangeCam : MonoBehaviour
     {
         if (!isMapActive)
         {
-            playerCam.Priority = 0;
+            playerCam.Priority = 1;
             mapCam.Priority = 10;
             isMapActive = true;
             gameObject.GetComponent<Rigidbody2D>().gravityScale = 0;
@@ -67,7 +67,7 @@ public class ChangeCam : MonoBehaviour
         else
         {
             playerCam.Priority = 10;
-            mapCam.Priority = 0;
+            mapCam.Priority = 1;
             isMapActive = false;
             gameObject.GetComponent<Rigidbody2D>().gravityScale = gravityScale;
         }

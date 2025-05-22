@@ -25,7 +25,6 @@ public class CollisionDead : MonoBehaviour
             {
                 weapon.SetActive(false);
             }
-            // Obtener Animator del jugador
             Animator playerAnimator = collision.GetComponent<Animator>();
              if (playerAnimator != null)
              {
