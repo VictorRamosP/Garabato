@@ -1,3 +1,4 @@
+using System.Collections;
 using Cinemachine;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -35,13 +36,6 @@ public class ChangeCam : MonoBehaviour
 
     void Update()
     {
-         for (int i = 0; i < 20; i++)
-        {
-        if (Input.GetKeyDown("joystick button " + i))
-        {
-            Debug.Log("Joystick button " + i + " pressed");
-        }
-        }
         // Evita que cambie la camara si el mapa esta rotando
         RotateMap rotateMap = FindObjectOfType<RotateMap>();
         if (rotateMap != null && rotateMap.IsRotating)
@@ -50,26 +44,37 @@ public class ChangeCam : MonoBehaviour
         if (InputManager.Instance.GetMap() && (_collisionDetection.IsGrounded || isMapActive)
             && GameManager.Instance.mapAnimationActivated && canChangeMap)
         {
-            SwitchCamera();
+            StartCoroutine(SwitchCamera());
         }
     }
 
-    void SwitchCamera()
+    IEnumerator SwitchCamera()
     {
+        FindAnyObjectByType<PlayerMove>().canMove = false;
+        FindAnyObjectByType<PlayerJumper>().canJump = false;
+        FindAnyObjectByType<PlayerShoot>().canShoot = false;
         if (!isMapActive)
         {
             playerCam.Priority = 1;
             mapCam.Priority = 10;
+            yield return new WaitForSeconds(1f);
             isMapActive = true;
             gameObject.GetComponent<Rigidbody2D>().gravityScale = 0;
             gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         }
         else
         {
+
             playerCam.Priority = 10;
-            mapCam.Priority = 1;
+            mapCam.Priority = 0;
+            yield return new WaitForSeconds(1f);
             isMapActive = false;
+            FindAnyObjectByType<PlayerMove>().canMove = true;
+            FindAnyObjectByType<PlayerJumper>().canJump = true;
+            FindAnyObjectByType<PlayerShoot>().canShoot = true;
             gameObject.GetComponent<Rigidbody2D>().gravityScale = gravityScale;
+
         }
+
     }
 }

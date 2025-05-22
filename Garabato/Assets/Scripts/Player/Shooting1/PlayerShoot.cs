@@ -25,9 +25,11 @@ public class PlayerShoot : MonoBehaviour
     private SpriteRenderer weaponRenderer;
 
     private CollisionDetection _collisionDetection;
+    public bool canShoot;
 
     void Start()
     {
+        canShoot = true;
         shooting = GameObject.FindGameObjectWithTag("Weapon");
         _audioSource = GetComponent<AudioSource>();
         weaponRenderer = shooting.GetComponent<SpriteRenderer>();
@@ -41,6 +43,7 @@ public class PlayerShoot : MonoBehaviour
 
     void Update()
     {
+        if (!canShoot) return;
         coolDownTimer -= Time.deltaTime;
 
         if (!ChangeCam.isMapActive && coolDownTimer <= 0)
