@@ -53,7 +53,8 @@ public class CollisionDead : MonoBehaviour
         }
         if (collision.CompareTag("Box") && !ChangeCam.isMapActive)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            Animator boxanimator = collision.GetComponent<Animator>();
+            boxanimator.SetBool("isBreak", true);
             StartCoroutine(ReloadAfterTheAnimation(1f));
         }
     }

@@ -5,21 +5,26 @@ using UnityEngine;
 public class LifeWall : MonoBehaviour
 {
     public float health = 200f;
-    public Sprite lowHealthSprite; 
+    public Sprite lowHealthSprite;
 
     private SpriteRenderer spriteRenderer;
     private bool hasChangedSprite = false;
+    private Animator animator;
+    private bool isDead = false;
 
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
     }
 
     public void TakeDamage(float damageTaken)
     {
+        if (isDead) return; 
+
         health -= damageTaken;
 
-        if (health <= 100f && !hasChangedSprite)
+        if (health <= 101f && !hasChangedSprite)
         {
             if (lowHealthSprite != null && spriteRenderer != null)
             {
@@ -30,8 +35,22 @@ public class LifeWall : MonoBehaviour
 
         if (health <= 0)
         {
-            gameObject.SetActive(false);
+            isDead = true;
+            if (animator != null)
+            {
+                animator.SetBool("isBreak", true);
+                StartCoroutine(DisableAfterDeath());
+            }
+            else
+            {
+                gameObject.SetActive(false);
+            }
         }
     }
-}
 
+    private IEnumerator DisableAfterDeath()
+    {
+        yield return new WaitForSeconds(1f); 
+        gameObject.SetActive(false);
+    }
+}
