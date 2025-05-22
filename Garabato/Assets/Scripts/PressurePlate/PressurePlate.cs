@@ -55,7 +55,7 @@ public class PressurePlate : MonoBehaviour
     {
         if (other.CompareTag("Player") && !keepOpen && isPlayerOnPlate)
         {
-            door.Close();
+            //door.Close();
             isPlayerOnPlate = false;
         }
     }

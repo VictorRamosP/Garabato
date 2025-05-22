@@ -11,7 +11,7 @@ public class Door : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         color = GetComponent<SpriteRenderer>();
-        color.color = Color.red;
+        //color.color = Color.red;
     }
 
     public void Open()
