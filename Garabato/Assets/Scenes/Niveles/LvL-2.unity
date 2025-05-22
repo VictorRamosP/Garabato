@@ -170,7 +170,7 @@ MonoBehaviour:
   - m_Script
   m_LockStageInInspector: 
   m_StreamingVersion: 20170927
-  m_Priority: 9
+  m_Priority: 11
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 2145631294}
@@ -11371,7 +11371,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 45
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -11396,7 +11396,7 @@ Transform:
   m_GameObject: {fileID: 153596343}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -20}
+  m_LocalPosition: {x: -45.7, y: -20.9, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12253,7 +12253,7 @@ Transform:
   m_GameObject: {fileID: 383737910}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 32.2, y: 7.5, z: 0.44360352}
+  m_LocalPosition: {x: 27.630001, y: 7.5, z: 0.44360352}
   m_LocalScale: {x: 18.69463, y: 18.69463, z: 18.69463}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13126,7 +13126,7 @@ Transform:
   m_GameObject: {fileID: 651221230}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 32.2, y: 7.5, z: 0.44360352}
+  m_LocalPosition: {x: 25.345001, y: 7.5, z: 0.44360352}
   m_LocalScale: {x: 18.69463, y: 18.69463, z: 18.69463}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15122,6 +15122,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 7649681999755672935, guid: 830fb53d0dea9b546ae5c428e33f7ddd, type: 3}
+      propertyPath: mapAnimationActivated
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16377,7 +16381,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1362261749
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17561,7 +17565,7 @@ Transform:
   m_GameObject: {fileID: 1534439326}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 32.2, y: 7.5, z: 0.44360352}
+  m_LocalPosition: {x: 29.915, y: 7.5, z: 0.44360352}
   m_LocalScale: {x: 18.69463, y: 18.69463, z: 18.69463}
   m_ConstrainProportionsScale: 0
   m_Children: []
