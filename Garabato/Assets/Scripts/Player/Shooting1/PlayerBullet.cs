@@ -34,7 +34,7 @@ public class PlayerBullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Enemy") || collision.CompareTag("Breakable"))
+        if (collision.CompareTag("Enemy"))
         {
             if (impactSound != null)
             {
@@ -44,6 +44,11 @@ public class PlayerBullet : MonoBehaviour
             Destroy(this.gameObject);            
         }
         else if (collision.CompareTag("Obstacle")) {
+            Destroy(this.gameObject);
+        }
+        else if (collision.CompareTag("Breakable"))
+        {
+            collision.GetComponent<LifeWall>().TakeDamage(damage);
             Destroy(this.gameObject);
         }
     }
