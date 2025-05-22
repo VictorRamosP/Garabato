@@ -105,8 +105,8 @@ public class CollisionDetection : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.CompareTag("Enemy")) {
+        /*if (collision.collider.CompareTag("Enemy")) {
             SceneManager.LoadScene("Gameplay");
-        }
+        }*/
     }
 }
