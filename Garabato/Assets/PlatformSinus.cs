@@ -20,8 +20,8 @@ public class PlatformSinus : MonoBehaviour
     void Update()
     {
         if (ChangeCam.isMapActive) return;
-        float offset = Mathf.Sin((Time.time + delay) * frequency) * amplitude;
-        transform.position = startPos + transform.parent.up * offset;
+        float y = Mathf.Sin((Time.time + delay) * frequency) * amplitude;
+        transform.position = startPos + new Vector3(0, y, 0);
     }
     void OnMapRotated()
     {
