@@ -48,11 +48,17 @@ public class CollisionDead : MonoBehaviour
             }
 
             
-            StartCoroutine(ReloadAfteTheAnimation(1f)); // Poner Duracion Animacion
+            StartCoroutine(ReloadAfterTheAnimation(1f)); // Poner Duracion Animacion
+
+        }
+        if (collision.CompareTag("Box") && !ChangeCam.isMapActive)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            StartCoroutine(ReloadAfterTheAnimation(1f));
         }
     }
 
-    private IEnumerator ReloadAfteTheAnimation(float delay)
+    private IEnumerator ReloadAfterTheAnimation(float delay)
     {
         yield return new WaitForSeconds(delay);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);

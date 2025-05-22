@@ -15,6 +15,7 @@ TagManager:
   - CreationMap
   - Flamethrower
   - SpikeSpawner
+  - Spikes
   layers:
   - Default
   - TransparentFX
