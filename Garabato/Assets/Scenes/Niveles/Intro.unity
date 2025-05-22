@@ -843,8 +843,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 28
-  m_fontSizeBase: 28
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2012,11 +2012,11 @@ MonoBehaviour:
   textPanel: {fileID: 1795147287}
   dialogs:
   - 'Princesa Denarya: Noko?!'
-  - "C\xF3mo has llegado hasta aqu\xED?"
-  - "No me digas que... Al final lo consigui\xF3."
-  - Para poder salir te espera un duro trabajo.
-  - "Supera los obst\xE1culos y atraviesa las p\xE1ginas usando los agujeros. Confiamos
-    en ti."
+  - "Princesa Denarya: C\xF3mo has llegado hasta aqu\xED?"
+  - "Princesa Denarya: No me digas que... Al final lo consigui\xF3."
+  - 'Princesa Denarya: Para poder salir te espera un duro trabajo.'
+  - "Princesa Denarya: Supera los obst\xE1culos y atraviesa las p\xE1ginas usando
+    los agujeros. Confiamos en ti."
 --- !u!61 &1769169400
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2729,8 +2729,8 @@ Transform:
   m_GameObject: {fileID: 2146694021}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -325.1375, y: -79.36432, z: 0}
-  m_LocalScale: {x: 3.5853257, y: 3.5853257, z: 3.5853257}
+  m_LocalPosition: {x: -325.1375, y: -79.05, z: 0}
+  m_LocalScale: {x: 3.1733718, y: 3.1733718, z: 3.1733718}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 509588142}
