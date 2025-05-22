@@ -12,6 +12,8 @@ public class Dialog : MonoBehaviour
 
     private bool dialogueStart;
     private int lineText;
+
+    private PlayerMove player;
     // Update is called once per frame
     void Update()
     {
@@ -27,6 +29,7 @@ public class Dialog : MonoBehaviour
             }
             else
             {
+                player.canMove = true;
                 StopAllCoroutines();
                 dialogueText.text = dialogs[lineText];
             }
@@ -41,6 +44,7 @@ public class Dialog : MonoBehaviour
         excalamacion.SetActive(false);
         Time.timeScale = 0;
         StartCoroutine(ShowLine());
+        player.canMove = false;
     }
 
     private void NextLine()
@@ -73,8 +77,9 @@ public class Dialog : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            player = collision.GetComponent<PlayerMove>();
+            collision.GetComponent<PlayerJumper>().canJump = false;
             isPlayerRange = true;
-            
         }
     }
 
@@ -82,6 +87,7 @@ public class Dialog : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            collision.GetComponent<PlayerJumper>().canJump = true;
             isPlayerRange = false;
         }
     }

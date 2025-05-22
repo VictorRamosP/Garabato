@@ -32,6 +32,7 @@ public class PlayerMove : MonoBehaviour
 
     void Update()
     {
+        if (!canMove) return;
         if (!ChangeCam.isMapActive && canMove && GameManager.Instance.mapAnimationActivated)
         {
             Moverse();

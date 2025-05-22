@@ -11,8 +11,8 @@ public class PlayerJumper : MonoBehaviour
     public ContactFilter2D filter;
     //public KeyCode JumpKey = KeyCode.Space;
     public LayerMask floorlayerMask;
-    public AudioClip jumpSound;  
-    
+    public AudioClip jumpSound;
+    public bool canJump;
     
     private AudioSource _audioSource;
     private Rigidbody2D _rigidbody;
@@ -26,12 +26,12 @@ public class PlayerJumper : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody2D>();
         _collisionDetection = gameObject.GetComponent<CollisionDetection>();
         _audioSource = GetComponent<AudioSource>();
-        
+        canJump = true;
     }
 
     void Update()
     {
-        if (ChangeCam.isMapActive) return;
+        if (ChangeCam.isMapActive || !canJump) return;
         if (InputManager.Instance.GetJumpDown() && _collisionDetection.IsGrounded)
         {            
             JumpStarted();
