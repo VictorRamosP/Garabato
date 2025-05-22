@@ -38,7 +38,8 @@ public class InputManager : MonoBehaviour
     }
 
     // Entradas combinadas: teclado o mando
-    public bool GetJump() => Input.GetKeyDown(jumpKey) || Input.GetKeyDown(joystickJumpKey);
+    public bool GetJumpDown() => Input.GetKeyDown(jumpKey) || Input.GetKeyDown(joystickJumpKey);
+    public bool GetJumpUp() => Input.GetKeyUp(jumpKey) || Input.GetKeyUp(joystickJumpKey);
     public bool GetAttack() => Input.GetKeyDown(attackKey) || Input.GetKeyDown(joystickAttackKey);
     public bool GetMoveLeft() => Input.GetKey(moveLeftKey) || GetHorizontalAxis() < -0.1f;
     public bool GetMoveRight() => Input.GetKey(moveRightKey) || GetHorizontalAxis() > 0.1f;

@@ -32,7 +32,7 @@ public class PlayerJumper : MonoBehaviour
     void Update()
     {
         if (ChangeCam.isMapActive) return;
-        if (InputManager.Instance.GetJump() && _collisionDetection.IsGrounded)
+        if (InputManager.Instance.GetJumpDown() && _collisionDetection.IsGrounded)
         {            
             JumpStarted();
             if (_audioSource && jumpSound)
@@ -41,7 +41,7 @@ public class PlayerJumper : MonoBehaviour
             }
         }
 
-        if (InputManager.Instance.GetJump())
+        if (InputManager.Instance.GetJumpUp())
         {
             JumpFinished();
         }      
@@ -59,7 +59,6 @@ public class PlayerJumper : MonoBehaviour
     void JumpStarted()
     {
         Debug.Log("Empieza");
-        
 
         SetGravity();
         var vel = new Vector2(_rigidbody.velocity.x, GetJumpForce());        
@@ -70,7 +69,7 @@ public class PlayerJumper : MonoBehaviour
     void JumpFinished()
     {
         float fractionOfTimePressed = 1 / Mathf.Clamp01((Time.time - _jumpStartedTime) / PressTimeToMaxJump);
-       // _rigidbody.gravityScale *= fractionOfTimePressed;
+        _rigidbody.gravityScale *= fractionOfTimePressed;
         Debug.Log("Callendo");
     }
 
