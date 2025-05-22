@@ -58,6 +58,7 @@ public class RotateMap : MonoBehaviour
 
     void Rotate()
     {
+        if (ChangeCam.isReturning) return;
         cooldownTimer -= Time.deltaTime;
         float originalGravity = _rigidbody.gravityScale;
 

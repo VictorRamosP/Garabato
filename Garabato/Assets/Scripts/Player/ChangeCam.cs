@@ -6,6 +6,7 @@ using UnityEngine;
 public class ChangeCam : MonoBehaviour
 {
     public bool canChangeMap = true;
+    public static bool isReturning;
     private CollisionDetection _collisionDetection;
     public CinemachineVirtualCamera playerCam;
     public CinemachineVirtualCamera mapCam;
@@ -26,7 +27,7 @@ public class ChangeCam : MonoBehaviour
             Debug.LogError("No Hay camaras asignadas");
             return;
         }
-
+        isReturning = false;
         /*playerCam.Priority = 0;
         mapCam.Priority = 10;*/
         isMapActive = false;
@@ -50,6 +51,7 @@ public class ChangeCam : MonoBehaviour
 
     IEnumerator SwitchCamera()
     {
+        isReturning = true;
         FindAnyObjectByType<PlayerMove>().canMove = false;
         FindAnyObjectByType<PlayerJumper>().canJump = false;
         FindAnyObjectByType<PlayerShoot>().canShoot = false;
@@ -61,6 +63,7 @@ public class ChangeCam : MonoBehaviour
             isMapActive = true;
             gameObject.GetComponent<Rigidbody2D>().gravityScale = 0;
             gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            isReturning = false;
         }
         else
         {
@@ -73,7 +76,7 @@ public class ChangeCam : MonoBehaviour
             FindAnyObjectByType<PlayerJumper>().canJump = true;
             FindAnyObjectByType<PlayerShoot>().canShoot = true;
             gameObject.GetComponent<Rigidbody2D>().gravityScale = gravityScale;
-
+            isReturning = false;
         }
 
     }
