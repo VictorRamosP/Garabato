@@ -5796,8 +5796,8 @@ Tilemap:
   - first: {x: -7, y: -13, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 17
-      m_TileSpriteIndex: 17
+      m_TileIndex: 1
+      m_TileSpriteIndex: 1
       m_TileMatrixIndex: 1
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -7057,7 +7057,7 @@ Tilemap:
   m_TileAssetArray:
   - m_RefCount: 3
     m_Data: {fileID: 11400000, guid: 7e5e4c2df26aaf84492e7821a4482897, type: 2}
-  - m_RefCount: 19
+  - m_RefCount: 20
     m_Data: {fileID: 11400000, guid: 31b1b3ea123ba91468ecb8660cd1fd5d, type: 2}
   - m_RefCount: 3
     m_Data: {fileID: 11400000, guid: bac4fe463cc22c04f8665350ea9f4c21, type: 2}
@@ -7089,7 +7089,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 9f2612405af4d7149a2fc72f407d6cce, type: 2}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 2
+  - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 601acbe2168daaa4cb4ee84820e2a59a, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 7fe33511e74379b468a50cb3887eb50e, type: 2}
@@ -7102,7 +7102,7 @@ Tilemap:
   m_TileSpriteArray:
   - m_RefCount: 3
     m_Data: {fileID: 1799240201, guid: 4d8ab88bc3fd7204aa44abbd9bd15643, type: 3}
-  - m_RefCount: 19
+  - m_RefCount: 20
     m_Data: {fileID: -270937040, guid: 4d8ab88bc3fd7204aa44abbd9bd15643, type: 3}
   - m_RefCount: 3
     m_Data: {fileID: -747796622, guid: 4d8ab88bc3fd7204aa44abbd9bd15643, type: 3}
@@ -7134,7 +7134,7 @@ Tilemap:
     m_Data: {fileID: -13252754, guid: 4d8ab88bc3fd7204aa44abbd9bd15643, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: -1516222336, guid: 4d8ab88bc3fd7204aa44abbd9bd15643, type: 3}
-  - m_RefCount: 2
+  - m_RefCount: 1
     m_Data: {fileID: 1206610495, guid: 4d8ab88bc3fd7204aa44abbd9bd15643, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 2025657846, guid: 4d8ab88bc3fd7204aa44abbd9bd15643, type: 3}
@@ -7375,14 +7375,6 @@ CompositeCollider2D:
         Y: -191941600
       - X: -47997676
         Y: -191992240
-      - X: -95915336
-        Y: -191992240
-      - X: -95915336
-        Y: -191941600
-      - X: -111993440
-        Y: -191941600
-      - X: -111993440
-        Y: -191992240
       - X: -143915344
         Y: -191992240
       - X: -143915344
@@ -7535,10 +7527,6 @@ CompositeCollider2D:
       - {x: -3.196359, y: -19.19416}
       - {x: -4.7997675, y: -19.19419}
       - {x: -4.799797, y: -19.199224}
-      - {x: -9.591534, y: -19.199196}
-      - {x: -9.591563, y: -19.19416}
-      - {x: -11.199344, y: -19.19419}
-      - {x: -11.199374, y: -19.199224}
       - {x: -14.391535, y: -19.199196}
       - {x: -14.391563, y: -19.19416}
       - {x: -16.001673, y: -19.194141}
