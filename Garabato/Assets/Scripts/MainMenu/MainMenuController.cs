@@ -7,6 +7,7 @@ public class MainMenuController : MonoBehaviour
     public void PlayGame()
     {
         GameManager.Instance.mapAnimationActivated = false;
+        GameObject.FindAnyObjectByType<CursorManager>().showMouse = false;
         SceneManager.LoadScene("LvL-1"); 
     }
 
