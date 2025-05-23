@@ -8,7 +8,7 @@ public class MapIntroChange : MonoBehaviour
     private CinemachineVirtualCamera playerCam;
     private CinemachineVirtualCamera mapCam;
     public AudioClip drawingClip;
-    
+    public bool activateAnimationmap;
     void Start()
     {
         GameObject playerCamObj = GameObject.FindGameObjectWithTag("PlayerCam");
