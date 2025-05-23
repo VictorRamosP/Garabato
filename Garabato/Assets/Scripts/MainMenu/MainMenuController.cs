@@ -50,11 +50,5 @@ public class MainMenuController : MonoBehaviour
         SceneManager.LoadScene(levelName);
     }
 
-    void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
-        {
-            LoadLevel(LevelToLoad);
-        }
-    }
+    
 }

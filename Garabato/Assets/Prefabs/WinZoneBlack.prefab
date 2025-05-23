@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4333270908590246798}
-  - component: {fileID: 2398917766340032525}
   - component: {fileID: 3957908497551273895}
+  - component: {fileID: 7416754633448320645}
   m_Layer: 0
   m_Name: WinZoneBlack
   m_TagString: Untagged
@@ -35,19 +35,6 @@ Transform:
   - {fileID: 3811807771072404060}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2398917766340032525
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7165379198716748600}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 676a497ec80356e45974081c46db77de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LevelToLoad: LvL-3 Prov
 --- !u!61 &3957908497551273895
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -93,6 +80,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 1.2}
   m_EdgeRadius: 0
+--- !u!114 &7416754633448320645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7165379198716748600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd3846edaddeac74eb963e3af0040e3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LevelToLoad: 
 --- !u!1 &8566515320666062026
 GameObject:
   m_ObjectHideFlags: 0

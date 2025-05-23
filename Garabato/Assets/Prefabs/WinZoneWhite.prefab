@@ -177,8 +177,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7905114139904471203}
-  - component: {fileID: 7353539638751674349}
   - component: {fileID: 8082453088041548684}
+  - component: {fileID: 8919631477990933310}
   m_Layer: 0
   m_Name: WinZoneWhite
   m_TagString: Untagged
@@ -203,19 +203,6 @@ Transform:
   - {fileID: 5889618428471312569}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7353539638751674349
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5809054634401755283}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 676a497ec80356e45974081c46db77de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LevelToLoad: LvL-3 Prov
 --- !u!61 &8082453088041548684
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -261,3 +248,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 1.2}
   m_EdgeRadius: 0
+--- !u!114 &8919631477990933310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5809054634401755283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd3846edaddeac74eb963e3af0040e3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

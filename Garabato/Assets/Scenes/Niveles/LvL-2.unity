@@ -18878,6 +18878,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WinZoneBlack
       objectReference: {fileID: 0}
+    - target: {fileID: 7416754633448320645, guid: 7d12ae8dcef5dc7438f85b66cfcf84da, type: 3}
+      propertyPath: LevelToLoad
+      value: LvL-3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -1193,7 +1193,7 @@ Transform:
   m_GameObject: {fileID: 389482119}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -28.9, y: -24, z: -10}
+  m_LocalPosition: {x: 26.8, y: -10.9, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5428,6 +5428,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WinZoneWhite
       objectReference: {fileID: 0}
+    - target: {fileID: 7353539638751674349, guid: f341b320bd26ec94c9904e2617603deb, type: 3}
+      propertyPath: LevelToLoad
+      value: LvL-6 New
+      objectReference: {fileID: 0}
     - target: {fileID: 7905114139904471203, guid: f341b320bd26ec94c9904e2617603deb, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.7158794
@@ -5442,7 +5446,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7905114139904471203, guid: f341b320bd26ec94c9904e2617603deb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 25.960524
+      value: 24.84
       objectReference: {fileID: 0}
     - target: {fileID: 7905114139904471203, guid: f341b320bd26ec94c9904e2617603deb, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5479,6 +5483,18 @@ PrefabInstance:
     - target: {fileID: 7905114139904471203, guid: f341b320bd26ec94c9904e2617603deb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8082453088041548684, guid: f341b320bd26ec94c9904e2617603deb, type: 3}
+      propertyPath: m_Size.x
+      value: 0.80162805
+      objectReference: {fileID: 0}
+    - target: {fileID: 8082453088041548684, guid: f341b320bd26ec94c9904e2617603deb, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.15081403
+      objectReference: {fileID: 0}
+    - target: {fileID: 8919631477990933310, guid: f341b320bd26ec94c9904e2617603deb, type: 3}
+      propertyPath: LevelToLoad
+      value: Lvl-6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6248,11 +6264,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 987982724478991015, guid: 98d421ee2232bfc4aaf4888bb64d9089, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -28.9
+      value: 26.8
       objectReference: {fileID: 0}
     - target: {fileID: 987982724478991015, guid: 98d421ee2232bfc4aaf4888bb64d9089, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -24
+      value: -10.9
       objectReference: {fileID: 0}
     - target: {fileID: 987982724478991015, guid: 98d421ee2232bfc4aaf4888bb64d9089, type: 3}
       propertyPath: m_LocalPosition.z
