@@ -1070,7 +1070,7 @@ TilemapRenderer:
   m_ChunkCullingBounds: {x: 0.30077684, y: 0.3007769, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
-  m_SortOrder: 0
+  m_SortOrder: 1
   m_Mode: 0
   m_DetectChunkCullingBounds: 0
   m_MaskInteraction: 0
