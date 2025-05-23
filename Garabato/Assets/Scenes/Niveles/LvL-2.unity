@@ -15518,6 +15518,10 @@ PrefabInstance:
       propertyPath: jumpSound
       value: 
       objectReference: {fileID: 8300000, guid: eed1c35659df397479499adf6944d59e, type: 3}
+    - target: {fileID: 6534434731700895472, guid: 98d421ee2232bfc4aaf4888bb64d9089, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6933798395593781726, guid: 98d421ee2232bfc4aaf4888bb64d9089, type: 3}
       propertyPath: m_Name
       value: Player
