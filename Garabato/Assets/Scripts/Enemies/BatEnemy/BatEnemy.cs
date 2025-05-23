@@ -13,6 +13,7 @@ public class BatEnemy : MonoBehaviour
     public RotateMap Map;
     public Transform Player;
     public LayerMask ObstacleLayer;
+    public EnemyLife Life;
 
     [Header("Scripts de funciones")]
     public BatPatrolArea Area;
@@ -32,7 +33,7 @@ public class BatEnemy : MonoBehaviour
 
     void Update()
     {
-        if (ChangeCam.isMapActive) return;
+        if (ChangeCam.isMapActive || Life.isDead || ChangeCam.isReturning) return;
 
         stateMachine.OnUpdate();
     }

@@ -302,6 +302,7 @@ MonoBehaviour:
   layerobstacles:
     serializedVersion: 2
     m_Bits: 8
+  Life: {fileID: 8615793178308052026}
 --- !u!114 &8615793178308052026
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -315,6 +316,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  isDead: 0
 --- !u!114 &8232573925276233967
 MonoBehaviour:
   m_ObjectHideFlags: 0

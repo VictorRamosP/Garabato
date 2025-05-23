@@ -138,6 +138,7 @@ MonoBehaviour:
   ObstacleLayer:
     serializedVersion: 2
     m_Bits: 8
+  Life: {fileID: 528542996392704990}
   Area: {fileID: 3603756025695526504}
   Bat: {fileID: 5942899294641507068}
 --- !u!1 &3309575283071425722
@@ -361,6 +362,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  isDead: 0
 --- !u!58 &3772691874394327048
 CircleCollider2D:
   m_ObjectHideFlags: 0

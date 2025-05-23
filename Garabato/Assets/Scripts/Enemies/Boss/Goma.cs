@@ -18,7 +18,7 @@ public class EraserController : MonoBehaviour
         // Detectar jugador
         if (collision.CompareTag("Player"))
         {
-            Debug.Log("Jugador tocado por la goma");
+            //Debug.Log("Jugador tocado por la goma");
 
             // Ejecutar muerte como en CollisionDead
             CollisionDead deathScript = collision.GetComponent<CollisionDead>();

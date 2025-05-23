@@ -5,7 +5,7 @@ public class EnemyLife : MonoBehaviour
 {
     public float health = 100f;
     private Animator animator;
-    private bool isDead = false;
+    public bool isDead = false;
 
     void Start()
     {

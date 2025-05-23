@@ -10,7 +10,7 @@ public class SpiderEnemy : MonoBehaviour
     public LayerMask WhatIsGround;
     public RotateMap Map;
     public Rigidbody2D rb;
-
+    public EnemyLife Life;
 
     [Header("Position")]
     public bool isUpsideDown;
@@ -19,7 +19,7 @@ public class SpiderEnemy : MonoBehaviour
     {
         if (Map != null)
         {
-            Debug.Log("El Map de SpiderEnemy es: " + Map.name);
+           //Debug.Log("El Map de SpiderEnemy es: " + Map.name);
         }
         else
         {
@@ -32,7 +32,7 @@ public class SpiderEnemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (ChangeCam.isMapActive) return;
+        if (ChangeCam.isMapActive || Life.isDead) return;
         stateMachine.OnUpdate();
     }
 }

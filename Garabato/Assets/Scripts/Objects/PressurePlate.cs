@@ -14,7 +14,7 @@ public class PressurePlate : MonoBehaviour
 
     public bool haveAnimation = true;
 
-    [Header("Cámaras")]
+    [Header("Cï¿½maras")]
     public CinemachineVirtualCamera playerCam;
     public CinemachineVirtualCamera camDoorPresuure;
     public float camSwitchDuration = 2f;
@@ -30,7 +30,7 @@ public class PressurePlate : MonoBehaviour
             {
                 if (haveAnimation)
                 {
-                    Debug.Log("Hola");
+                    //Debug.Log("Hola");
                     StartCoroutine(SwitchCameraTemporarily());
                 }
                 door.Open();
@@ -63,14 +63,14 @@ public class PressurePlate : MonoBehaviour
     {
         if (playerCam == null || camDoorPresuure == null)
         {
-            Debug.LogWarning("Cámaras no asignadas en PressurePlate.");
+            Debug.LogWarning("Cï¿½maras no asignadas en PressurePlate.");
             yield break;
         }
         playerCam.Priority = 0;
         camDoorPresuure.Priority = 10;
 
-        Debug.Log(playerCam.Priority);
-        Debug.Log(camDoorPresuure.Priority);
+        //Debug.Log(playerCam.Priority);
+        //Debug.Log(camDoorPresuure.Priority);
 
         yield return new WaitForSeconds(camSwitchDuration);
 

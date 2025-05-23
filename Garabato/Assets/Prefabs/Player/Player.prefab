@@ -398,7 +398,7 @@ MonoBehaviour:
     m_Bits: 8
   mirandoDerecha: 1
   canMove: 0
-  collisionDetection: {fileID: 0}
+  collisionDetection: {fileID: 8061562121256561879}
   shootingActive: 0
 --- !u!114 &4720523441102825042
 MonoBehaviour:
@@ -412,6 +412,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9563215cf5bf32a46875bb3af8f4163d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canChangeMap: 1
   playerCam: {fileID: 0}
   mapCam: {fileID: 0}
   groundLayer:
@@ -435,11 +436,14 @@ MonoBehaviour:
   firePoint: {fileID: 2371314325973124355}
   coolDownShoot: 0.5
   bulletTimeDestroy: 2
+  shooting: {fileID: 5402392561987612215}
   _playermove: {fileID: 622269753736096978}
   shootSound: {fileID: 8300000, guid: 2332e9ba6982870439c6c3b581574001, type: 3}
   weaponVisible: 0.2
   sideShootSprite: {fileID: 21300000, guid: 9ec74ce8e8bc4d84794c06f18f41166f, type: 3}
   upShootSprite: {fileID: 21300000, guid: c93bf38ff09b5024c8666c09f41a735a, type: 3}
+  weaponRenderer: {fileID: 6534434731700895472}
+  canShoot: 0
 --- !u!114 &7755168351606946705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -490,6 +494,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   jumpSound: {fileID: 8300000, guid: eed1c35659df397479499adf6944d59e, type: 3}
+  canJump: 0
 --- !u!114 &8061562121256561879
 MonoBehaviour:
   m_ObjectHideFlags: 0

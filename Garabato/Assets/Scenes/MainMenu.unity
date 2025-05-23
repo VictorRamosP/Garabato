@@ -884,7 +884,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonText: {fileID: 1312967884}
-  hoverColor: {r: 0.9245283, g: 0.9103971, b: 0.74718165, a: 1}
+  hoverColor: {r: 0.19215687, g: 0.25490198, b: 1, a: 1}
 --- !u!1 &426386612
 GameObject:
   m_ObjectHideFlags: 0
@@ -3829,7 +3829,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonText: {fileID: 1274928726}
-  hoverColor: {r: 0.9254902, g: 0.9098039, b: 0.7490196, a: 1}
+  hoverColor: {r: 0.19215687, g: 0.25490198, b: 1, a: 1}
 --- !u!1 &1791243876
 GameObject:
   m_ObjectHideFlags: 0
@@ -3947,7 +3947,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonText: {fileID: 789560621}
-  hoverColor: {r: 0.9254902, g: 0.9098039, b: 0.7490196, a: 1}
+  hoverColor: {r: 0.19339621, g: 0.2531673, b: 1, a: 1}
 --- !u!114 &1791243882
 MonoBehaviour:
   m_ObjectHideFlags: 0

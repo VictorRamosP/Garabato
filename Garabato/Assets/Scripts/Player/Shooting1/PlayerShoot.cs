@@ -11,7 +11,7 @@ public class PlayerShoot : MonoBehaviour
     private float coolDownTimer = 0f;
     public float bulletTimeDestroy = 2f;
 
-    private GameObject shooting;
+    public GameObject shooting;
     public PlayerMove _playermove;
 
     public AudioClip shootSound;
@@ -22,7 +22,7 @@ public class PlayerShoot : MonoBehaviour
     public Sprite sideShootSprite;
     public Sprite upShootSprite;
 
-    private SpriteRenderer weaponRenderer;
+    public SpriteRenderer weaponRenderer;
 
     private CollisionDetection _collisionDetection;
     public bool canShoot;
@@ -30,9 +30,22 @@ public class PlayerShoot : MonoBehaviour
     void Start()
     {
         canShoot = true;
-        shooting = GameObject.FindGameObjectWithTag("Weapon");
-        _audioSource = GetComponent<AudioSource>();
-        weaponRenderer = shooting.GetComponent<SpriteRenderer>();
+        //shooting = GameObject.FindGameObjectWithTag("Weapon");
+
+        if (shooting == null)
+        {
+            Debug.LogError("No se encontró ningún objeto con tag 'Weapon' en la escena.");
+            return;
+        }
+
+        //weaponRenderer = shooting.GetComponent<SpriteRenderer>();
+
+        if (weaponRenderer == null)
+        {
+            Debug.LogError("El objeto 'Weapon' no tiene SpriteRenderer.");
+            return;
+        }
+
         _collisionDetection = GetComponent<CollisionDetection>();
 
         if (weaponRenderer != null && sideShootSprite != null)
@@ -57,8 +70,7 @@ public class PlayerShoot : MonoBehaviour
         activeBullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         Rigidbody2D rb = activeBullet.GetComponent<Rigidbody2D>();
 
-       // Destroy(activeBullet, bulletTimeDestroy);
-
+        // Destroy(activeBullet, bulletTimeDestroy);
         if (_audioSource && shootSound)
         {
             _audioSource.PlayOneShot(shootSound);
@@ -116,7 +128,7 @@ public class PlayerShoot : MonoBehaviour
         }
     }
 
-     IEnumerator DisableWeaponAfterShot()
+    IEnumerator DisableWeaponAfterShot()
     {
         yield return new WaitForSeconds(weaponVisible);
 

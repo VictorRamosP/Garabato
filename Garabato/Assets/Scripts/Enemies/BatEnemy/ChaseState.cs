@@ -11,9 +11,15 @@ public class ChaseState : IState
         this.stateMachine = stateMachine;
     }
 
-    public void OnEnter() { Debug.Log("Chase"); }
+    public void OnEnter()
+    {
+        //Debug.Log("Chase"); 
+    }
 
-    public void OnExit() { Debug.Log("No Chase"); }
+    public void OnExit()
+    {
+        //Debug.Log("No Chase"); 
+    }
 
     public void OnUpdate()
     {

@@ -16,7 +16,7 @@ public class Patrol : MonoBehaviour
     public LayerMask layerFloor;
     public LayerMask layerobstacles;
     private bool mirandoder = true;
-
+    public EnemyLife Life;
 
     private void Start()
     {
@@ -25,7 +25,7 @@ public class Patrol : MonoBehaviour
     }
     private void Update()
     {
-        if (ChangeCam.isMapActive) 
+        if (ChangeCam.isMapActive || Life.isDead) 
         {
             _rb.velocity = Vector2.zero;
             _rb.isKinematic = true;

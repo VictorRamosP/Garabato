@@ -25,6 +25,8 @@ public class InputManager : MonoBehaviour
 
     private void Awake()
     {
+        PlayerPrefs.DeleteAll();
+
         if (Instance == null)
         {
             Instance = this;

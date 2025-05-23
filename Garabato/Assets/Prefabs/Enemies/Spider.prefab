@@ -289,6 +289,7 @@ MonoBehaviour:
     m_Bits: 8
   Map: {fileID: 7755168351606946705, guid: 98d421ee2232bfc4aaf4888bb64d9089, type: 3}
   rb: {fileID: 2722308683444308386}
+  Life: {fileID: -6428513066866793073}
   isUpsideDown: 0
 --- !u!114 &-6428513066866793073
 MonoBehaviour:
@@ -303,6 +304,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  isDead: 0
 --- !u!114 &3989608495491803259
 MonoBehaviour:
   m_ObjectHideFlags: 0
