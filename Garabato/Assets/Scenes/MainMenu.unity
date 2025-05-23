@@ -418,6 +418,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LevelToLoad: LvL-1
+  firstSelected: {fileID: 1791243878}
 --- !u!1 &288103921
 GameObject:
   m_ObjectHideFlags: 0
