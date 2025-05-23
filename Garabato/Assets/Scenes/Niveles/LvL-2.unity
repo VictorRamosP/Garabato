@@ -19213,11 +19213,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2765356677926484786, guid: 293d23e28bff261459c58d287e9cfe12, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.045343
+      value: -0.104
       objectReference: {fileID: 0}
     - target: {fileID: 3160592083986916236, guid: 293d23e28bff261459c58d287e9cfe12, type: 3}
       propertyPath: m_Name
       value: BatEnemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 5006503794774487008, guid: 293d23e28bff261459c58d287e9cfe12, type: 3}
+      propertyPath: m_Size.x
+      value: 1.8637176
+      objectReference: {fileID: 0}
+    - target: {fileID: 5006503794774487008, guid: 293d23e28bff261459c58d287e9cfe12, type: 3}
+      propertyPath: m_Size.y
+      value: 0.65570486
+      objectReference: {fileID: 0}
+    - target: {fileID: 5006503794774487008, guid: 293d23e28bff261459c58d287e9cfe12, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.38733742
+      objectReference: {fileID: 0}
+    - target: {fileID: 5006503794774487008, guid: 293d23e28bff261459c58d287e9cfe12, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.17214757
       objectReference: {fileID: 0}
     - target: {fileID: 7148170696669981162, guid: 293d23e28bff261459c58d287e9cfe12, type: 3}
       propertyPath: ObstacleLayer.m_Bits
