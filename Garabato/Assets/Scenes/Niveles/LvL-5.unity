@@ -5243,6 +5243,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spider
       objectReference: {fileID: 0}
+    - target: {fileID: 5767790891047284382, guid: 5d0b5aa4182a42448ad959d2f988e874, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6905,6 +6909,10 @@ PrefabInstance:
       propertyPath: Map
       value: 
       objectReference: {fileID: 2024554115}
+    - target: {fileID: 5767790891047284382, guid: 5d0b5aa4182a42448ad959d2f988e874, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6262869458629969239, guid: 5d0b5aa4182a42448ad959d2f988e874, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.4154

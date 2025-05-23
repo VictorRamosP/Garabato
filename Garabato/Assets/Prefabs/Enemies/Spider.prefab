@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3066091337319368953}
   - component: {fileID: -6428513066866793073}
   - component: {fileID: 3989608495491803259}
+  - component: {fileID: 6844425790394033064}
   m_Layer: 0
   m_Name: Spider
   m_TagString: Enemy
@@ -32,7 +33,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.07, y: -0.09, z: 0}
-  m_LocalScale: {x: 0.5016586, y: 0.45347634, z: 2.3762128}
+  m_LocalScale: {x: 0.20618406, y: 0.18638091, z: 0.97663474}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4888327828782995905}
@@ -46,7 +47,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2065004821525443642}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -82,7 +83,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: -1840433836, guid: 7def688c1b3cdd04fb962d6b24168d97, type: 3}
   m_Color: {r: 1, g: 0.031952336, b: 0, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 9.455901, y: 9.446667}
@@ -211,6 +212,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isActive: 1
+--- !u!95 &6844425790394033064
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2065004821525443642}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 24c16119ac05dee4abbc8859a72d142d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &7884474002934295279
 GameObject:
   m_ObjectHideFlags: 0
@@ -283,7 +305,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: c6bd0ce6f9ba1de49a82a0f17d249a82, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
