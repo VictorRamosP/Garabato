@@ -527,6 +527,7 @@ MonoBehaviour:
   weaponVisible: 0.2
   sideShootSprite: {fileID: 21300000, guid: 9ec74ce8e8bc4d84794c06f18f41166f, type: 3}
   upShootSprite: {fileID: 21300000, guid: c93bf38ff09b5024c8666c09f41a735a, type: 3}
+  diagonalShootSprite: {fileID: -53219583, guid: 6ae7fddf23757fd4590d29dcc1206208, type: 3}
   weaponRenderer: {fileID: 6534434731700895472}
   canShoot: 0
 --- !u!114 &7755168351606946705

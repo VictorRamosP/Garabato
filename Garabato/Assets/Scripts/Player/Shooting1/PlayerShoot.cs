@@ -21,6 +21,7 @@ public class PlayerShoot : MonoBehaviour
 
     public Sprite sideShootSprite;
     public Sprite upShootSprite;
+    public Sprite diagonalShootSprite;
 
     public SpriteRenderer weaponRenderer;
 
@@ -84,7 +85,28 @@ public class PlayerShoot : MonoBehaviour
 
         bool Shot = false;
 
-        if (InputManager.Instance.GetUp() && InputManager.Instance.GetAttack())
+         if (InputManager.Instance.GetAttack() && InputManager.Instance.GetUp() &&
+            (InputManager.Instance.GetMoveLeft() || InputManager.Instance.GetMoveRight()))
+            {
+            if (_playermove.mirandoDerecha)
+            {
+                shooting.transform.rotation = Quaternion.Euler(0, 0, 0);
+                firePoint.localRotation = Quaternion.Euler(0, 0, -45);
+                firePoint.localPosition = new Vector3(0.49f, 0.7f, 0f);
+            }
+            else
+            {
+                shooting.transform.rotation = Quaternion.Euler(0, 0, 0);
+                firePoint.localRotation = Quaternion.Euler(0, 0, -45);
+                firePoint.localPosition = new Vector3(0.49f, 0.7f, 0f);
+            }
+
+            if (weaponRenderer && diagonalShootSprite)
+                weaponRenderer.sprite = diagonalShootSprite;
+
+            Shot = true;
+        }
+        else if (InputManager.Instance.GetUp() && InputManager.Instance.GetAttack())
         {
             shooting.transform.rotation = Quaternion.Euler(0, 0, 0);
             firePoint.localRotation = Quaternion.Euler(0, 0, 0);
@@ -115,7 +137,7 @@ public class PlayerShoot : MonoBehaviour
 
             Shot = true;
         }
-
+      
         if (Shot)
         {
             shooting.SetActive(true);
