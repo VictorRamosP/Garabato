@@ -28,6 +28,8 @@ public class PlayerShoot : MonoBehaviour
     private CollisionDetection _collisionDetection;
     public bool canShoot;
 
+    public ParticleSystem shootParticles;
+
     void Start()
     {
         canShoot = true;
@@ -75,6 +77,10 @@ public class PlayerShoot : MonoBehaviour
         if (_audioSource && shootSound)
         {
             _audioSource.PlayOneShot(shootSound);
+        }
+        if (shootParticles != null)
+        {
+            shootParticles.Play();
         }
     }
 

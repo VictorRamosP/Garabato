@@ -13,6 +13,8 @@ public class PlayerMove : MonoBehaviour
     public bool mirandoDerecha = true;
     public bool canMove = false;
 
+    public ParticleSystem walkParticles;
+
     public CollisionDetection collisionDetection;
     /*
     [Header("Controles")]
@@ -67,6 +69,16 @@ public class PlayerMove : MonoBehaviour
         _rigidbody.velocity = new Vector3(moveInput * speed, _rigidbody.velocity.y);
 
         bool isRunning = Mathf.Abs(moveInput) > 0.01f;
+        if (isRunning && collisionDetection.IsGrounded)
+        {
+            if (!walkParticles.isPlaying)
+                walkParticles.Play();
+        }
+        else
+        {
+            if (walkParticles.isPlaying)
+                walkParticles.Stop();
+        }
         _animator.SetBool("IsRunning", isRunning);
 
         if (!shootingActive)
