@@ -15542,6 +15542,10 @@ PrefabInstance:
       propertyPath: rotateSound
       value: 
       objectReference: {fileID: 8300000, guid: 14fad3097a0b2c143adc09f89151af6e, type: 3}
+    - target: {fileID: 7755168351606946705, guid: 98d421ee2232bfc4aaf4888bb64d9089, type: 3}
+      propertyPath: rotationDuration
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18290,7 +18294,7 @@ MonoBehaviour:
   m_Follow: {fileID: 816113166}
   m_Lens:
     FieldOfView: 34
-    OrthographicSize: 45
+    OrthographicSize: 50
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
