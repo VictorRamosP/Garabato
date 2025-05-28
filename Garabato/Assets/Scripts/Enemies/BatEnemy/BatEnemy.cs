@@ -33,8 +33,9 @@ public class BatEnemy : MonoBehaviour
 
     void Update()
     {
+        Bat.transform.rotation = Quaternion.identity;
         if (ChangeCam.isMapActive || Life.isDead || ChangeCam.isReturning) return;
-
+        
         stateMachine.OnUpdate();
     }
 
@@ -56,6 +57,6 @@ public class BatEnemy : MonoBehaviour
 
     void OnMapRotated()
     {
-        Bat.transform.rotation = Quaternion.identity;
+        
     }
 }
