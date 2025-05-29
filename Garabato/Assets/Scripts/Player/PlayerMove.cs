@@ -1,5 +1,7 @@
 using Cinemachine.Utility;
+using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMove : MonoBehaviour
 {
@@ -16,11 +18,12 @@ public class PlayerMove : MonoBehaviour
     public ParticleSystem walkParticles;
 
     public CollisionDetection collisionDetection;
-    /*
-    [Header("Controles")]
-    public KeyCode k_Jump = KeyCode.Space;
-    */
+
     [HideInInspector] public bool shootingActive = false;
+
+
+    private bool isDead = false;
+
 
     void Start()
     {
@@ -69,7 +72,7 @@ public class PlayerMove : MonoBehaviour
         _rigidbody.velocity = new Vector3(moveInput * speed, _rigidbody.velocity.y);
 
         bool isRunning = Mathf.Abs(moveInput) > 0.01f;
-        if (isRunning && collisionDetection.IsGrounded)
+        /*if (isRunning && collisionDetection.IsGrounded)
         {
             if (!walkParticles.isPlaying)
                 walkParticles.Play();
@@ -78,7 +81,7 @@ public class PlayerMove : MonoBehaviour
         {
             if (walkParticles.isPlaying)
                 walkParticles.Stop();
-        }
+        }*/
         _animator.SetBool("IsRunning", isRunning);
 
         if (!shootingActive)
@@ -96,5 +99,47 @@ public class PlayerMove : MonoBehaviour
             escala.x *= -1;
             transform.localScale = escala;
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (isDead || ChangeCam.isMapActive)
+            return;
+
+        if ((collision.CompareTag("Dead") || collision.CompareTag("Spikes")) && !ChangeCam.isMapActive)
+        {
+            speed = 0;
+            Morir();
+        }
+    }
+
+    private void Morir()
+    {
+        isDead = true;
+
+        if (_weapon != null)
+            _weapon.SetActive(false);
+
+        _animator.SetTrigger("Die");
+
+        _rigidbody.velocity = Vector2.zero;
+        _rigidbody.angularVelocity = 0f;
+        _rigidbody.bodyType = RigidbodyType2D.Kinematic;
+
+        // Desactiva otros scripts menos este
+        MonoBehaviour[] scripts = GetComponents<MonoBehaviour>();
+        foreach (MonoBehaviour script in scripts)
+        {
+            if (script != this)
+                script.enabled = false;
+        }
+
+        StartCoroutine(ReloadAfterDelay(1f));
+    }
+
+    private IEnumerator ReloadAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

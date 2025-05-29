@@ -16,6 +16,7 @@ TagManager:
   - Flamethrower
   - SpikeSpawner
   - Spikes
+  - Dead
   layers:
   - Default
   - TransparentFX

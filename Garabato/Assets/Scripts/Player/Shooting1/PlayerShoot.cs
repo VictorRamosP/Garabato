@@ -96,13 +96,13 @@ public class PlayerShoot : MonoBehaviour
             {
             if (_playermove.mirandoDerecha)
             {
-                shooting.transform.rotation = Quaternion.Euler(0, 0, 0);
+                shooting.transform.rotation = Quaternion.Euler(0, 0, -18);
                 firePoint.localRotation = Quaternion.Euler(0, 0, -45);
                 firePoint.localPosition = new Vector3(0.49f, 0.7f, 0f);
             }
             else
             {
-                shooting.transform.rotation = Quaternion.Euler(0, 0, 0);
+                shooting.transform.rotation = Quaternion.Euler(0, 0, 9);
                 firePoint.localRotation = Quaternion.Euler(0, 0, -45);
                 firePoint.localPosition = new Vector3(0.49f, 0.7f, 0f);
             }

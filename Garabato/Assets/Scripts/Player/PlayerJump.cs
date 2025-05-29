@@ -58,7 +58,6 @@ public class PlayerJumper : MonoBehaviour
 
     void JumpStarted()
     {
-        //Debug.Log("Empieza");
 
         SetGravity();
         var vel = new Vector2(_rigidbody.velocity.x, GetJumpForce());        
@@ -70,7 +69,6 @@ public class PlayerJumper : MonoBehaviour
     {
         float fractionOfTimePressed = 1 / Mathf.Clamp01((Time.time - _jumpStartedTime) / PressTimeToMaxJump);
         _rigidbody.gravityScale *= fractionOfTimePressed;
-        //Debug.Log("Callendo");
     }
 
     private bool IsPeakReached()

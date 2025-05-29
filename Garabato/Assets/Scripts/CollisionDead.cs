@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class CollisionDead : MonoBehaviour
 {
-    private bool isDead = false;
     public bool isActive = true;
     private GameObject weapon;
 
@@ -17,7 +16,7 @@ public class CollisionDead : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (!isActive) return;
-        if (!isDead && collision.CompareTag("Player") && !ChangeCam.isMapActive)
+        /*if (!isDead && collision.CompareTag("Player") && !ChangeCam.isMapActive)
         {
             isDead = true;
 
@@ -50,7 +49,7 @@ public class CollisionDead : MonoBehaviour
             
             StartCoroutine(ReloadAfterTheAnimation(1f)); // Poner Duracion Animacion
 
-        }
+        }*/
         if (collision.CompareTag("Box") && !ChangeCam.isMapActive)
         {
             Animator boxanimator = collision.GetComponent<Animator>();

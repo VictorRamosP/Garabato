@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8ae05e90081e0e94abf96a527d077ee9
+guid: 93f456d191bc0854ebe24f69fd94cf19
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -97,12 +97,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SpritesheetMuerteMurcielago_50z50_0
+      name: SpritesheetMuerteWalkEnemy_50x50_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1417.4
+        width: 1417.3334
         height: 1417
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -111,19 +111,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ccb2515cb1012424ca3d4e4f956dbc8f
-      internalID: 244602770
+      spriteID: 0a9a6fd1a88e3254584bb096f6a132b3
+      internalID: 1230254612
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesheetMuerteMurcielago_50z50_1
+      name: SpritesheetMuerteWalkEnemy_50x50_1
       rect:
         serializedVersion: 2
         x: 1417
         y: 0
-        width: 1417.4
+        width: 1417.3334
         height: 1417
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -132,19 +132,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 400dfe71a74f82344ac36fcf9ceda4a6
-      internalID: 575581155
+      spriteID: 8e0e4cff147963e4593453f1689a4356
+      internalID: -274464794
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesheetMuerteMurcielago_50z50_2
+      name: SpritesheetMuerteWalkEnemy_50x50_2
       rect:
         serializedVersion: 2
         x: 2834
         y: 0
-        width: 1417.4
+        width: 1417.3334
         height: 1417
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -153,19 +153,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cb609f570305e0a42b41f9859564414c
-      internalID: 240882303
+      spriteID: 3d08245b5978a284a8bdb70cad59cb81
+      internalID: -495393494
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesheetMuerteMurcielago_50z50_3
+      name: SpritesheetMuerteWalkEnemy_50x50_3
       rect:
         serializedVersion: 2
         x: 4251
         y: 0
-        width: 1417.4
+        width: 1417.3334
         height: 1417
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -174,19 +174,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e59675c5a3ddebd48adaf2a1dd8ced9c
-      internalID: -1693160503
+      spriteID: 8129c07ea0dd7964e9496d0cdcfbc763
+      internalID: 1460050377
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesheetMuerteMurcielago_50z50_4
+      name: SpritesheetMuerteWalkEnemy_50x50_4
       rect:
         serializedVersion: 2
         x: 5668
         y: 0
-        width: 1417.4
+        width: 1417.3334
         height: 1417
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -195,8 +195,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b3aa493d5323992498a5815dee316bc8
-      internalID: -1126808415
+      spriteID: a2420019e8425f0419f0d3eea62ab4ea
+      internalID: -1202712669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesheetMuerteWalkEnemy_50x50_5
+      rect:
+        serializedVersion: 2
+        x: 7085
+        y: 0
+        width: 1417.3334
+        height: 1417
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffbaa57d375e9da4b80b70a5e59ac98d
+      internalID: -204769327
       vertices: []
       indices: 
       edges: []
@@ -212,11 +233,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      SpritesheetMuerteMurcielago_50z50_0: 244602770
-      SpritesheetMuerteMurcielago_50z50_1: 575581155
-      SpritesheetMuerteMurcielago_50z50_2: 240882303
-      SpritesheetMuerteMurcielago_50z50_3: -1693160503
-      SpritesheetMuerteMurcielago_50z50_4: -1126808415
+      SpritesheetMuerteWalkEnemy_50x50_0: 1230254612
+      SpritesheetMuerteWalkEnemy_50x50_1: -274464794
+      SpritesheetMuerteWalkEnemy_50x50_2: -495393494
+      SpritesheetMuerteWalkEnemy_50x50_3: 1460050377
+      SpritesheetMuerteWalkEnemy_50x50_4: -1202712669
+      SpritesheetMuerteWalkEnemy_50x50_5: -204769327
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
