@@ -58,10 +58,18 @@ public class PlayerJumper : MonoBehaviour
 
     void JumpStarted()
     {
-
         SetGravity();
-        var vel = new Vector2(_rigidbody.velocity.x, GetJumpForce());        
-        _rigidbody.velocity = vel;        
+
+      
+        float jumpDirection = InputManager.Instance.GetMoveLeft() ? -1f : InputManager.Instance.GetMoveRight() ? 1f : 0f;
+
+        
+        var vel = new Vector2(jumpDirection * SpeedHorizontal, GetJumpForce());
+        _rigidbody.velocity = vel;
+
+        
+        GetComponent<PlayerMove>().jumpDirection = jumpDirection;
+
         _jumpStartedTime = Time.time;
     }
 

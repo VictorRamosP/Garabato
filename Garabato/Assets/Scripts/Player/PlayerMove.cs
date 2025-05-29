@@ -2,6 +2,7 @@ using Cinemachine.Utility;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using static UnityEngine.LightAnchor;
 
 public class PlayerMove : MonoBehaviour
 {
@@ -24,7 +25,9 @@ public class PlayerMove : MonoBehaviour
 
     private bool isDead = false;
 
-
+    private bool isJumping = false;
+    [HideInInspector] public float jumpDirection = 0f;
+    public float airSpeed = 0.5f;
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
@@ -58,6 +61,7 @@ public class PlayerMove : MonoBehaviour
         bool isIdle = Mathf.Abs(InputManager.Instance.GetHorizontalAxis()) < 0.01f;
         bool isShootingIdle = isIdle && shootingActive;
         _animator.SetBool("isShootingIdle", isShootingIdle);
+        isJumping = !collisionDetection.IsGrounded;
     }
 
     void Moverse()
@@ -69,9 +73,29 @@ public class PlayerMove : MonoBehaviour
         else if (InputManager.Instance.GetMoveRight())
             moveInput = 1f;
 
-        _rigidbody.velocity = new Vector3(moveInput * speed, _rigidbody.velocity.y);
+        float horizontalVelocity = moveInput * speed;
+
+        if (!collisionDetection.IsGrounded)
+        {
+            bool sameDirection = Mathf.Sign(moveInput) == Mathf.Sign(jumpDirection) && moveInput != 0;
+
+            bool allowAnyDirection = jumpDirection == 0;
+
+            if (allowAnyDirection)
+                horizontalVelocity = moveInput * (speed * airSpeed);
+            else
+                horizontalVelocity = sameDirection ? jumpDirection * speed : moveInput * (speed * airSpeed);
+        }
+
+        _rigidbody.velocity = new Vector2(horizontalVelocity, _rigidbody.velocity.y);
 
         bool isRunning = Mathf.Abs(moveInput) > 0.01f;
+        _animator.SetBool("IsRunning", isRunning);
+
+        if (!shootingActive)
+            _weapon.SetActive(isRunning);
+
+        Orientacion(moveInput);
         /*if (isRunning && collisionDetection.IsGrounded)
         {
             if (!walkParticles.isPlaying)
@@ -82,12 +106,7 @@ public class PlayerMove : MonoBehaviour
             if (walkParticles.isPlaying)
                 walkParticles.Stop();
         }*/
-        _animator.SetBool("IsRunning", isRunning);
 
-        if (!shootingActive)
-            _weapon.SetActive(isRunning);
-
-        Orientacion(moveInput);
     }
 
     void Orientacion(float desiredDirection)
