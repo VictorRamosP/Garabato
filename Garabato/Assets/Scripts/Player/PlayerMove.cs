@@ -96,7 +96,13 @@ public class PlayerMove : MonoBehaviour
             _weapon.SetActive(isRunning);
 
         Orientacion(moveInput);
-        /*if (isRunning && collisionDetection.IsGrounded)
+        Particles(isRunning);
+        
+    }
+
+    void Particles(bool isRunning)
+    {
+        if (isRunning && collisionDetection.IsGrounded)
         {
             if (!walkParticles.isPlaying)
                 walkParticles.Play();
@@ -105,7 +111,7 @@ public class PlayerMove : MonoBehaviour
         {
             if (walkParticles.isPlaying)
                 walkParticles.Stop();
-        }*/
+        }
 
     }
 
