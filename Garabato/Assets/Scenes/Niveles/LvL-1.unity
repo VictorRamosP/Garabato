@@ -23695,6 +23695,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 987982724478991015, guid: 98d421ee2232bfc4aaf4888bb64d9089, type: 3}
   m_PrefabInstance: {fileID: 990339159971978082}
   m_PrefabAsset: {fileID: 0}
+--- !u!212 &987982724698942543 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 484776522390229029, guid: 98d421ee2232bfc4aaf4888bb64d9089, type: 3}
+  m_PrefabInstance: {fileID: 990339159971978082}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &990339159971978082
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23751,6 +23756,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3571669120507308728, guid: 98d421ee2232bfc4aaf4888bb64d9089, type: 3}
+      propertyPath: playerRenderer
+      value: 
+      objectReference: {fileID: 987982724698942543}
+    - target: {fileID: 3571669120507308728, guid: 98d421ee2232bfc4aaf4888bb64d9089, type: 3}
+      propertyPath: upplayerSprite
+      value: 
+      objectReference: {fileID: -697011090, guid: c2e11118437db0a4893a830cd6e3b4a9, type: 3}
+    - target: {fileID: 3571669120507308728, guid: 98d421ee2232bfc4aaf4888bb64d9089, type: 3}
+      propertyPath: playerUpShootSprite
+      value: 
+      objectReference: {fileID: -697011090, guid: c2e11118437db0a4893a830cd6e3b4a9, type: 3}
     - target: {fileID: 4720523441102825042, guid: 98d421ee2232bfc4aaf4888bb64d9089, type: 3}
       propertyPath: mapCam
       value: 
