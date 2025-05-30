@@ -8,13 +8,11 @@ public class SpiderPatrolState : IState
     private SpiderEnemy enemy;
     private StateMachine stateMachine;
     private Transform EdgedetectionPoint;
-    private bool isRotated;
     public SpiderPatrolState(SpiderEnemy enemy, StateMachine stateMachine, Transform EdgedetectionPoint)
     {
         this.enemy = enemy;
         this.stateMachine = stateMachine;
         this.EdgedetectionPoint = EdgedetectionPoint;
-        this.isRotated = false;
     }
     public void OnEnter()
     {
@@ -24,7 +22,7 @@ public class SpiderPatrolState : IState
             return;
         }
 
-        enemy.Map.OnMapRotated += MapRotated;
+        //Debug.Log("Spider entering patrolling State.");
     }
     public void OnUpdate()
     {
@@ -62,11 +60,6 @@ public class SpiderPatrolState : IState
     private void Flip()
     {
         enemy.transform.Rotate(0, 180, 0);
-    }
-
-    private void MapRotated()
-    {
-        isRotated = !isRotated;
     }
 }
 

@@ -17,6 +17,8 @@ TagManager:
   - SpikeSpawner
   - Spikes
   - Dead
+  - SpiderTongue
+  - SpiderAttackZone
   layers:
   - Default
   - TransparentFX

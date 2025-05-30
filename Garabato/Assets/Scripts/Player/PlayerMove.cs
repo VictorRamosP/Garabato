@@ -125,7 +125,7 @@ public class PlayerMove : MonoBehaviour
         if (isDead || ChangeCam.isMapActive)
             return;
 
-        if ((collision.CompareTag("Dead") || collision.CompareTag("Spikes")) && !ChangeCam.isMapActive)
+        if ((collision.CompareTag("Dead") || collision.CompareTag("Spikes") || collision.CompareTag("Enemy")) && !ChangeCam.isMapActive)
         {
             speed = 0;
             Morir();
