@@ -3535,7 +3535,6 @@ MonoBehaviour:
     a la \xFAltima p\xE1gina."
   - "A\xFAn as\xED, el duende no es muy inteligente y los obst\xE1culos se pueden
     superar."
-  - 
 --- !u!61 &796502231
 BoxCollider2D:
   m_ObjectHideFlags: 0
