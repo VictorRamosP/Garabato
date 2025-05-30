@@ -19,7 +19,7 @@ public class PlatformSinus : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (ChangeCam.isMapActive) return;
+        if (GameManager.Instance.isMapActive) return;
         float y = Mathf.Sin((Time.time + delay) * frequency) * amplitude;
         transform.position = startPos + new Vector3(0, y, 0);
     }

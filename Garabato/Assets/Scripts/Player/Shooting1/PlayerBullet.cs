@@ -17,6 +17,8 @@ public class PlayerBullet : MonoBehaviour
     }
     void Update()
     {
+        if (GameManager.Instance.isMapActive) return;
+
         transform.Translate(Vector2.up * speed * Time.deltaTime);
         _audioSource = GetComponent<AudioSource>();
         transform.Translate(Vector2.up * speed * Time.deltaTime);

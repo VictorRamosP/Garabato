@@ -83,7 +83,7 @@ public class CollisionDetection : MonoBehaviour
     private void CheckGrounded()
     {
         var colliders = Physics2D.OverlapCircleAll(GroundCheckPoint.position, _checkRadius, WhatIsGround);
-
+        GameManager.Instance.isPlayerGrounded = _isGrounded;
         _isGrounded =  (colliders.Length > 0);
     }
 

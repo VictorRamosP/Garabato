@@ -16,16 +16,21 @@ public class MapIntroChange : MonoBehaviour
         playerCam = playerCamObj.GetComponent<CinemachineVirtualCamera>();
         mapCam = mapCamObj.GetComponent<CinemachineVirtualCamera>();
 
-        // Verifica si la animación ya fue mostrada
         if (GameManager.Instance != null && GameManager.Instance.mapAnimationActivated)
         {
             playerCam.Priority = 10;
             mapCam.Priority = 0;
-          
+
             gameObject.SetActive(false);
         }
         else
         {
+            GameManager.Instance.canPlayerMove = false;
+            GameManager.Instance.canPlayerJump = false;
+            GameManager.Instance.canPlayerShoot = false;
+            GameManager.Instance.canPlayerFall = false;
+            GameManager.Instance.canPlayerGetHurt = false;
+
             playerCam.Priority = 0;
             mapCam.Priority = 10;
 
@@ -33,7 +38,7 @@ public class MapIntroChange : MonoBehaviour
             {
                 AudioSource.PlayClipAtPoint(drawingClip, Camera.main.transform.position);
             }
-            
+
         }
     }
     public void OnMapAnimationEnd()
@@ -42,14 +47,15 @@ public class MapIntroChange : MonoBehaviour
         mapCam.Priority = 0;
         gameObject.SetActive(false);
 
-        // Marcar que la animación ya se mostró
+        // Marcar que la animaciï¿½n ya se mostrï¿½
         if (GameManager.Instance != null)
         {
             GameManager.Instance.mapAnimationActivated = true;
+            GameManager.Instance.setPlayerConstraints(true);
         }
     }
 
-    
+
 }
 
 

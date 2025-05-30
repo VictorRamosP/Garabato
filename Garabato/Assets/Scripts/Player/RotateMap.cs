@@ -8,13 +8,12 @@ public class RotateMap : MonoBehaviour
     private GameObject map;
     public float cooldownRotate = 0.5f;
     private float cooldownTimer = 0f;
-    private Rigidbody2D _rigidbody;
-    private Collider2D _collider;
+    //private Rigidbody2D _rigidbody;
+    //private Collider2D _collider;
     private string _WhereIsDown;
-    private int currentRotationState = 0;
     public event Action OnMapRotated;
-
     public AudioClip rotateSound;
+    private GameObject player;
     private AudioSource _audioSource;
     /*
     [Header("Controles")]
@@ -30,9 +29,10 @@ public class RotateMap : MonoBehaviour
 
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
         map = GameObject.FindGameObjectWithTag("Map");
-        _rigidbody = GetComponent<Rigidbody2D>();
-        _collider = GetComponent<Collider2D>();
+        //_rigidbody = GetComponent<Rigidbody2D>();
+        //_collider = GetComponent<Collider2D>();
         _audioSource = GetComponent<AudioSource>();
 
         if (map == null)
@@ -44,44 +44,35 @@ public class RotateMap : MonoBehaviour
 
     void Update()
     {
-        if (ChangeCam.isMapActive)
+        if (GameManager.Instance.isMapActive)
         {
-            transform.SetParent(map.transform);
+            player.transform.SetParent(map.transform);
             Rotate();
         }
     }
 
     void LateUpdate()
     {
-        transform.rotation = Quaternion.identity;
+        player.transform.rotation = Quaternion.identity;
     }
 
     void Rotate()
     {
-        if (ChangeCam.isReturning) return;
+        if (GameManager.Instance.isCameraReturning) return;
         cooldownTimer -= Time.deltaTime;
-        float originalGravity = _rigidbody.gravityScale;
 
         if ((InputManager.Instance.GetRotateMapRight() || InputManager.Instance.GetRotateMapLeft()) && cooldownTimer <= 0f && !isRotating)
         {
-            _rigidbody.gravityScale = 0;
-            _rigidbody.velocity = Vector2.zero;
-
             float angle = (InputManager.Instance.GetRotateMapLeft()) ? 90f : -90f;
             StartCoroutine(SmoothRotate(angle));
             cooldownTimer = cooldownRotate;
         }
-
-        _rigidbody.gravityScale = originalGravity;
     }
 
     IEnumerator SmoothRotate(float angle)
     {
 
-        isRotating = true;
-
-        if (_collider != null)
-            _collider.enabled = false;
+        GameManager.Instance.isCameraRotating = true;
 
         _audioSource?.PlayOneShot(rotateSound);
 
@@ -100,21 +91,7 @@ public class RotateMap : MonoBehaviour
 
         map.transform.rotation = endRotation;
 
-        if (_collider != null)
-        {
-            _collider.enabled = true;
-        }
-
-        isRotating = false;
-        currentRotationState = (angle > 0) ? (currentRotationState + 1) % 4 : (currentRotationState + 3) % 4;
-
-        switch (currentRotationState)
-        {
-            case 0: _WhereIsDown = "down"; break;
-            case 1: _WhereIsDown = "right"; break;
-            case 2: _WhereIsDown = "up"; break;
-            case 3: _WhereIsDown = "left"; break;
-        }
+        GameManager.Instance.isCameraRotating = false;
         OnMapRotated?.Invoke();
     }
 }

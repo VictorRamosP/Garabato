@@ -17,7 +17,7 @@ public class MovingPlatform : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (ChangeCam.isMapActive) return;
+        if (GameManager.Instance.isMapActive) return;
         
         if (DestinationReached()) SetNewDestination();
         transform.position = Vector3.MoveTowards(transform.position, Destination.position, Time.deltaTime * Speed);

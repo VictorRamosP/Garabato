@@ -16,7 +16,7 @@ public class CollisionDead : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (!isActive) return;
-        /*if (!isDead && collision.CompareTag("Player") && !ChangeCam.isMapActive)
+        /*if (!isDead && collision.CompareTag("Player") && !GameManager.Instance.isMapActive)
         {
             isDead = true;
 
@@ -50,7 +50,7 @@ public class CollisionDead : MonoBehaviour
             StartCoroutine(ReloadAfterTheAnimation(1f)); // Poner Duracion Animacion
 
         }*/
-        if (collision.CompareTag("Box") && !ChangeCam.isMapActive)
+        if (collision.CompareTag("Box") && !GameManager.Instance.isMapActive)
         {
             Animator boxanimator = collision.GetComponent<Animator>();
             boxanimator.SetBool("isBreak", true);

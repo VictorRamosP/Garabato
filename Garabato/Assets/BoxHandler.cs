@@ -15,7 +15,7 @@ public class BoxHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (ChangeCam.isMapActive) {
+        if (GameManager.Instance.isMapActive) {
             _rb.gravityScale = 0;
         }else {
             _rb.gravityScale = gravityScale;

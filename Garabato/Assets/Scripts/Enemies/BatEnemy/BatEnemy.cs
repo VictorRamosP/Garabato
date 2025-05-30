@@ -25,7 +25,6 @@ public class BatEnemy : MonoBehaviour
 
         Area.SomethingInArea += SomethingInArea;
         Area.SomethingLeftArea += SomethingLeftArea;
-        Map.OnMapRotated += OnMapRotated;
 
         stateMachine = new StateMachine();
         stateMachine.ChangeState(new PatrolState(this, stateMachine));
@@ -34,7 +33,7 @@ public class BatEnemy : MonoBehaviour
     void Update()
     {
         Bat.transform.rotation = Quaternion.identity;
-        if (ChangeCam.isMapActive || Life.isDead || ChangeCam.isReturning) return;
+        if (GameManager.Instance.isMapActive || Life.isDead || GameManager.Instance.isCameraReturning) return;
         
         stateMachine.OnUpdate();
     }
@@ -53,10 +52,5 @@ public class BatEnemy : MonoBehaviour
         {
             stateMachine.ChangeState(new PatrolState(this, stateMachine));
         }
-    }
-
-    void OnMapRotated()
-    {
-        
     }
 }

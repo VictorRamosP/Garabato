@@ -26,13 +26,11 @@ public class PlayerShoot : MonoBehaviour
     public SpriteRenderer weaponRenderer;
 
     private CollisionDetection _collisionDetection;
-    public bool canShoot;
 
     public ParticleSystem shootParticles;
 
     void Start()
     {
-        canShoot = true;
         //shooting = GameObject.FindGameObjectWithTag("Weapon");
 
         if (shooting == null)
@@ -59,10 +57,10 @@ public class PlayerShoot : MonoBehaviour
 
     void Update()
     {
-        if (!canShoot) return;
+        if (!GameManager.Instance.canPlayerShoot) return;
         coolDownTimer -= Time.deltaTime;
 
-        if (!ChangeCam.isMapActive && coolDownTimer <= 0)
+        if (!GameManager.Instance.isMapActive && coolDownTimer <= 0)
         {
             RotateShoot();
         }

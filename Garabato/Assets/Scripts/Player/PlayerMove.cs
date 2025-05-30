@@ -40,8 +40,25 @@ public class PlayerMove : MonoBehaviour
 
     void Update()
     {
-        if (!canMove) return;
-        if (!ChangeCam.isMapActive && canMove && GameManager.Instance.mapAnimationActivated)
+        if (!GameManager.Instance.canPlayerFall)
+        {
+            _rigidbody.constraints = RigidbodyConstraints2D.FreezePosition;
+            _animator.SetBool("IsRunning", false);
+        }
+        else
+        {
+            _rigidbody.constraints = RigidbodyConstraints2D.FreezeRotation;
+        }
+
+        if (!GameManager.Instance.canPlayerGetHurt) GetComponent<Collider2D>().enabled = false;
+            else GetComponent<Collider2D>().enabled = true;
+
+        if (!GameManager.Instance.canPlayerMove)
+        {
+            return;
+        }
+        
+        if (!GameManager.Instance.isMapActive && GameManager.Instance.canPlayerMove && GameManager.Instance.mapAnimationActivated)
         {
             Moverse();
         }
@@ -122,10 +139,10 @@ public class PlayerMove : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (isDead || ChangeCam.isMapActive)
+        if (isDead || GameManager.Instance.isMapActive)
             return;
 
-        if ((collision.CompareTag("Dead") || collision.CompareTag("Spikes") || collision.CompareTag("Enemy")) && !ChangeCam.isMapActive)
+        if ((collision.CompareTag("Dead") || collision.CompareTag("Spikes") || collision.CompareTag("Enemy")) && !GameManager.Instance.isMapActive)
         {
             speed = 0;
             Morir();

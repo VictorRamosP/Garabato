@@ -1,20 +1,33 @@
 using UnityEngine;
 
+
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
-
     public bool mapAnimationActivated = false;
-    public bool playerIntroPlayed = false;
-    public bool playerCanMove = false;
-    public bool IsPaused { get; private set; } = false;
 
-    
+    [Header("Restricciones")]
+    public bool canChangeMap;
+
+    [Header("Condicionales")]
+    public bool canPlayerMove;
+    public bool canPlayerJump;
+    public bool canPlayerShoot;
+    public bool canPlayerFall;
+    public bool canPlayerGetHurt;
+
+    [Header("Estado")]
+    public bool isPaused;
+    public bool isCameraReturning;
+    public bool isCameraRotating;
+    public bool isMapActive;
+    public bool isPlayerGrounded;
     void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
+            isPaused = true;
             DontDestroyOnLoad(gameObject);
         }
         else
@@ -22,7 +35,7 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
-  
+
 
     void Update()
     {
@@ -34,11 +47,18 @@ public class GameManager : MonoBehaviour
 
     public void TogglePause()
     {
-        IsPaused = !IsPaused;
+        isPaused = !isPaused;
 
         // Detener el tiempo general
         //Time.timeScale = IsPaused ? 0f : 1f;
     }
 
-    
+    public void setPlayerConstraints(bool set)
+    {
+        canPlayerMove = set;
+        canPlayerJump = set;
+        canPlayerShoot = set;
+        canPlayerFall = set;
+        canPlayerGetHurt = set;
+    }
 }

@@ -26,12 +26,12 @@ public class PlayerJumper : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody2D>();
         _collisionDetection = gameObject.GetComponent<CollisionDetection>();
         _audioSource = GetComponent<AudioSource>();
-        canJump = true;
+        GameManager.Instance.canPlayerJump = true;
     }
 
     void Update()
     {
-        if (ChangeCam.isMapActive || !canJump) return;
+        if (GameManager.Instance.isMapActive || !GameManager.Instance.canPlayerJump) return;
         if (InputManager.Instance.GetJumpDown() && _collisionDetection.IsGrounded)
         {            
             JumpStarted();

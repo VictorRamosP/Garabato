@@ -25,7 +25,7 @@ public class Patrol : MonoBehaviour
     }
     private void Update()
     {
-        if (ChangeCam.isMapActive || Life.isDead) 
+        if (GameManager.Instance.isMapActive || Life.isDead) 
         {
             _rb.velocity = Vector2.zero;
             _rb.isKinematic = true;

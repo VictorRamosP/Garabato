@@ -12,7 +12,7 @@ public class CursorManager : MonoBehaviour
 
     private void Update()
     {
-        if (GameManager.Instance.IsPaused || showMouse)
+        if (GameManager.Instance.isPaused || showMouse)
         {
             UnlockCursor();
 

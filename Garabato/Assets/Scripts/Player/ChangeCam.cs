@@ -1,55 +1,33 @@
 using System.Collections;
+using System.Collections.Generic;
 using Cinemachine;
 using UnityEngine;
 
 public class ChangeCam : MonoBehaviour
 {
-    public bool canChangeMap = true;
-    public static bool isReturning;
-    public static bool isMapActive = false;
-
     [Header("Referencias")]
     public CinemachineVirtualCamera playerCam;
     public CinemachineVirtualCamera mapCam;
-    public LayerMask groundLayer;
-    public Transform groundCheck;
-    public float groundCheckRadius = 0.1f;
-
-    private float gravityScale;
-    private Rigidbody2D rb;
-    private CollisionDetection collisionDetection;
-    private PlayerMove playerMove;
-    private PlayerJumper playerJumper;
-    private PlayerShoot playerShoot;
-
+    private RotateMap rotateMap;
     void Start()
     {
         if (playerCam == null || mapCam == null)
         {
-            Debug.LogError("No hay cámaras asignadas");
+            Debug.LogError("No hay camaras asignadas");
             return;
         }
 
-        rb = GetComponent<Rigidbody2D>();
-        collisionDetection = GetComponent<CollisionDetection>();
-        playerMove = GetComponent<PlayerMove>();
-        playerJumper = GetComponent<PlayerJumper>();
-        playerShoot = GetComponent<PlayerShoot>();
+        GameManager.Instance.isCameraReturning = false;
+        GameManager.Instance.isMapActive = false;
 
-        gravityScale = rb.gravityScale;
-        isReturning = false;
-        isMapActive = false;
+        rotateMap = GetComponent<RotateMap>();
     }
-
     void Update()
     {
-        RotateMap rotateMap = FindObjectOfType<RotateMap>();
         if (rotateMap != null && rotateMap.IsRotating)
             return;
 
-        if (InputManager.Instance.GetMap() && (collisionDetection.IsGrounded || isMapActive) &&
-            GameManager.Instance.mapAnimationActivated &&
-            canChangeMap)
+        if (InputManager.Instance.GetMap() && (GameManager.Instance.isPlayerGrounded || GameManager.Instance.isMapActive) && GameManager.Instance.mapAnimationActivated && GameManager.Instance.canChangeMap)
         {
             StartCoroutine(SwitchCamera());
         }
@@ -57,24 +35,18 @@ public class ChangeCam : MonoBehaviour
 
     IEnumerator SwitchCamera()
     {
-        isReturning = true;
+        GameManager.Instance.isCameraReturning = true;
 
-        playerMove.canMove = false;
-        playerJumper.canJump = false;
-        playerShoot.canShoot = false;
+        GameManager.Instance.setPlayerConstraints(false);
 
-        rb.velocity = Vector2.zero;
-
-        if (!isMapActive)
+        if (!GameManager.Instance.isMapActive)
         {
             playerCam.Priority = 1;
             mapCam.Priority = 10;
 
             yield return new WaitForSeconds(1f);
 
-            isMapActive = true;
-            rb.gravityScale = 0;
-            rb.velocity = Vector2.zero; 
+            GameManager.Instance.isMapActive = true;
         }
         else
         {
@@ -83,14 +55,11 @@ public class ChangeCam : MonoBehaviour
 
             yield return new WaitForSeconds(1f);
 
-            isMapActive = false;
-            rb.gravityScale = gravityScale;
+            GameManager.Instance.isMapActive = false;
 
-            playerMove.canMove = true;
-            playerJumper.canJump = true;
-            playerShoot.canShoot = true;
+            GameManager.Instance.setPlayerConstraints(true);
         }
 
-        isReturning = false;
+        GameManager.Instance.isCameraReturning = false;
     }
 }

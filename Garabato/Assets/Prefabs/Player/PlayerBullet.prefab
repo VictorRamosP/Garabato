@@ -4977,6 +4977,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 8
   damage: 100
+  rotationSpeed: 2
   impactSound: {fileID: 8300000, guid: 3fb0fc317a207c741871617d79657484, type: 3}
 --- !u!50 &-2390868407283169896
 Rigidbody2D:

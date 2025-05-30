@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7649681999755672935}
   - component: {fileID: 4006757954691947306}
   - component: {fileID: 3270091619084249614}
+  - component: {fileID: 9059528836598382130}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -47,8 +48,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mapAnimationActivated: 0
-  playerIntroPlayed: 0
-  playerCanMove: 0
+  canChangeMap: 0
+  canPlayerMove: 0
+  canPlayerJump: 0
+  canPlayerShoot: 0
+  canPlayerFall: 0
+  isPaused: 0
+  isCameraReturning: 0
+  isCameraRotating: 0
+  isMapActive: 0
+  isPlayerGrounded: 0
 --- !u!114 &4006757954691947306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61,6 +70,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b00992f206680646be6a7dc6545639f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  showMouse: 0
 --- !u!114 &3270091619084249614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73,18 +83,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3b03d864db92b8489dbe4727f6ff7f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpKey: 32
-  attackKey: 323
-  moveLeftKey: 97
-  moveRightKey: 100
-  rotateMapLeftKey: 113
-  rotateMapRightKey: 101
-  mapKey: 9
-  pauseKey: 27
-  upKey: 119
-  joystickJumpKey: 331
-  joystickAttackKey: 335
-  joystickMapKey: 330
-  joystickPauseKey: 359
-  joystickRotateMapLeftKey: 334
-  joystickRotateMapRightKey: 355
+--- !u!114 &9059528836598382130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7402428579333675117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9563215cf5bf32a46875bb3af8f4163d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCam: {fileID: 0}
+  mapCam: {fileID: 0}
