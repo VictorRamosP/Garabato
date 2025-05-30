@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 81149a8fe6890f144bc3754acb4dab38
+guid: 3bae18ae8b5d58140af4126a6bef36e6
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SpritesheetMuerteBorrarWalkEnemy_0
+      name: ShpritesheetWalkEnemyDied_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 1417.5
         width: 1417.3334
-        height: 1417
+        height: 1417.5
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,20 +111,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 969be3d51949d9a4691f7e0c76c3d7bd
-      internalID: 1360561949
+      spriteID: f997a4128af170348bbd86e754bc7e4e
+      internalID: -1501809698
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesheetMuerteBorrarWalkEnemy_1
+      name: ShpritesheetWalkEnemyDied_1
       rect:
         serializedVersion: 2
         x: 1417
-        y: 0
+        y: 1417.5
         width: 1417.3334
-        height: 1417
+        height: 1417.5
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,20 +132,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 35136a1c87020264fab58d239118efc2
-      internalID: -271731035
+      spriteID: 93c6589c93dc0e349856038f39142824
+      internalID: -1912293646
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesheetMuerteBorrarWalkEnemy_2
+      name: ShpritesheetWalkEnemyDied_2
       rect:
         serializedVersion: 2
         x: 2834
-        y: 0
+        y: 1417.5
         width: 1417.3334
-        height: 1417
+        height: 1417.5
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,20 +153,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8c998c2d92d8c9f4d8baad0458737eca
-      internalID: 651096965
+      spriteID: 547733d924d957a4aa3af45e9178adae
+      internalID: -1531056272
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesheetMuerteBorrarWalkEnemy_3
+      name: ShpritesheetWalkEnemyDied_3
       rect:
         serializedVersion: 2
         x: 4251
-        y: 0
+        y: 1417.5
         width: 1417.3334
-        height: 1417
+        height: 1417.5
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,20 +174,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7353101c35a43894ebe3b55cb5b00792
-      internalID: 1353714069
+      spriteID: e77d96c9115da824c9fe81371f93647b
+      internalID: 351887962
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesheetMuerteBorrarWalkEnemy_4
+      name: ShpritesheetWalkEnemyDied_4
       rect:
         serializedVersion: 2
         x: 5668
-        y: 0
+        y: 1417.5
         width: 1417.3334
-        height: 1417
+        height: 1417.5
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,20 +195,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a77938648b65d7949b278337c5138013
-      internalID: 1568532131
+      spriteID: 4b844bab89543044da7be9bad0fad58f
+      internalID: -943160800
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpritesheetMuerteBorrarWalkEnemy_5
+      name: ShpritesheetWalkEnemyDied_5
       rect:
         serializedVersion: 2
-        x: 7087
-        y: 0
-        width: 1417
-        height: 1417
+        x: 7085
+        y: 1417.5
+        width: 1417.3334
+        height: 1417.5
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -216,8 +216,113 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 001838895a22e3d4d8a5b4574ae97eca
-      internalID: -452894248
+      spriteID: cb8abb1b126da634ea9992cdc7c26cdb
+      internalID: -130507193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShpritesheetWalkEnemyDied_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0.5
+        width: 1417.3334
+        height: 1417.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4db1eedb5deb4604182186ad60954906
+      internalID: -906827990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShpritesheetWalkEnemyDied_7
+      rect:
+        serializedVersion: 2
+        x: 1417
+        y: 0.5
+        width: 1417.3334
+        height: 1417.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f4aacc185163744f9f06ba213e00a8b
+      internalID: 595323490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShpritesheetWalkEnemyDied_8
+      rect:
+        serializedVersion: 2
+        x: 2834
+        y: 0.5
+        width: 1417.3334
+        height: 1417.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d9b0c50494060e439135dff81546036
+      internalID: -1363726785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShpritesheetWalkEnemyDied_9
+      rect:
+        serializedVersion: 2
+        x: 4251
+        y: 0.5
+        width: 1417.3334
+        height: 1417.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1c2b8306ddccdd49a59c168a0cd93b1
+      internalID: -2101555981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShpritesheetWalkEnemyDied_10
+      rect:
+        serializedVersion: 2
+        x: 5670
+        y: 0
+        width: 1417
+        height: 1418
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9db5c69e24c44b9449ad845df6626c36
+      internalID: 416080428
       vertices: []
       indices: 
       edges: []
@@ -233,12 +338,17 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      SpritesheetMuerteBorrarWalkEnemy_0: 1360561949
-      SpritesheetMuerteBorrarWalkEnemy_1: -271731035
-      SpritesheetMuerteBorrarWalkEnemy_2: 651096965
-      SpritesheetMuerteBorrarWalkEnemy_3: 1353714069
-      SpritesheetMuerteBorrarWalkEnemy_4: 1568532131
-      SpritesheetMuerteBorrarWalkEnemy_5: -452894248
+      ShpritesheetWalkEnemyDied_0: -1501809698
+      ShpritesheetWalkEnemyDied_1: -1912293646
+      ShpritesheetWalkEnemyDied_10: 416080428
+      ShpritesheetWalkEnemyDied_2: -1531056272
+      ShpritesheetWalkEnemyDied_3: 351887962
+      ShpritesheetWalkEnemyDied_4: -943160800
+      ShpritesheetWalkEnemyDied_5: -130507193
+      ShpritesheetWalkEnemyDied_6: -906827990
+      ShpritesheetWalkEnemyDied_7: 595323490
+      ShpritesheetWalkEnemyDied_8: -1363726785
+      ShpritesheetWalkEnemyDied_9: -2101555981
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
