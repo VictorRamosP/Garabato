@@ -8,11 +8,11 @@ public class Dialog : MonoBehaviour
     public GameObject excalamacion;
     public TMP_Text dialogueText;
     public GameObject textPanel;
-    [SerializeField, TextArea(3,4)] private string[] dialogs;
+    [SerializeField, TextArea(3, 4)] private string[] dialogs;
 
     private bool dialogueStart;
     private int lineText;
-    // Update is called once per frame
+
     void Update()
     {
         if (isPlayerRange && InputManager.Instance.GetJumpDown())
@@ -27,7 +27,6 @@ public class Dialog : MonoBehaviour
             }
             else
             {
-                GameManager.Instance.setPlayerConstraints(true);
                 StopAllCoroutines();
                 dialogueText.text = dialogs[lineText];
             }
@@ -40,15 +39,16 @@ public class Dialog : MonoBehaviour
         textPanel.SetActive(true);
         lineText = 0;
         excalamacion.SetActive(false);
+        GameManager.Instance.canPlayerMove = false;
+
         Time.timeScale = 0;
         StartCoroutine(ShowLine());
-        GameManager.Instance.setPlayerConstraints(false);
     }
 
     private void NextLine()
     {
         lineText++;
-        if (lineText<dialogs.Length)
+        if (lineText < dialogs.Length)
         {
             StartCoroutine(ShowLine());
         }
@@ -58,13 +58,14 @@ public class Dialog : MonoBehaviour
             textPanel.SetActive(false);
             excalamacion.SetActive(true);
             Time.timeScale = 1;
+            GameManager.Instance.canPlayerMove = true;
         }
     }
 
     private IEnumerator ShowLine()
     {
         dialogueText.text = string.Empty;
-        foreach(char c in dialogs[lineText])
+        foreach (char c in dialogs[lineText])
         {
             dialogueText.text += c;
             yield return new WaitForSecondsRealtime(0.05f);
@@ -75,7 +76,7 @@ public class Dialog : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            collision.GetComponent<PlayerJumper>().canJump = false;
+            GameManager.Instance.canPlayerJump = false;
             isPlayerRange = true;
         }
     }
@@ -84,7 +85,7 @@ public class Dialog : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            collision.GetComponent<PlayerJumper>().canJump = true;
+            GameManager.Instance.canPlayerJump = true;
             isPlayerRange = false;
         }
     }

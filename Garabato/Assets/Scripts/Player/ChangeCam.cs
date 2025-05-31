@@ -24,7 +24,7 @@ public class ChangeCam : MonoBehaviour
     }
     void Update()
     {
-        if (rotateMap != null && rotateMap.IsRotating)
+        if (rotateMap != null && GameManager.Instance.isCameraRotating)
             return;
 
         if (InputManager.Instance.GetMap() && (GameManager.Instance.isPlayerGrounded || GameManager.Instance.isMapActive) && GameManager.Instance.mapAnimationActivated && GameManager.Instance.canChangeMap)
