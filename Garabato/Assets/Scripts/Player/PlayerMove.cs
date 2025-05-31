@@ -10,7 +10,7 @@ public class PlayerMove : MonoBehaviour
     private Rigidbody2D _rigidbody;
     private Animator _animator;
     public float speed;
-    public float jumpForce;
+    //public float jumpForce;
     public LayerMask floorlayerMask;
 
     public bool mirandoDerecha = true;
@@ -76,8 +76,12 @@ public class PlayerMove : MonoBehaviour
         }
 
         bool isIdle = Mathf.Abs(InputManager.Instance.GetHorizontalAxis()) < 0.01f;
-        bool isShootingIdle = isIdle && shootingActive;
+        bool isShootingIdle = isIdle && shootingActive && !InputManager.Instance.GetUp();
         _animator.SetBool("isShootingIdle", isShootingIdle);
+
+        bool isShootingUp = isIdle && shootingActive && InputManager.Instance.GetUp();
+        _animator.SetBool("isShootingUp", isShootingUp);
+
         isJumping = !collisionDetection.IsGrounded;
     }
 
@@ -113,7 +117,13 @@ public class PlayerMove : MonoBehaviour
             _weapon.SetActive(isRunning);
 
         Orientacion(moveInput);
-        /*if (isRunning && collisionDetection.IsGrounded)
+        //Particles(isRunning);
+        
+    }
+
+    /*void Particles(bool isRunning)
+    {
+        if (isRunning && collisionDetection.IsGrounded)
         {
             if (!walkParticles.isPlaying)
                 walkParticles.Play();
@@ -122,9 +132,9 @@ public class PlayerMove : MonoBehaviour
         {
             if (walkParticles.isPlaying)
                 walkParticles.Stop();
-        }*/
+        }
 
-    }
+    }*/
 
     void Orientacion(float desiredDirection)
     {

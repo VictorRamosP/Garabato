@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f2031b05e80a4fb4e8fed8c30d10b705
+guid: c2e11118437db0a4893a830cd6e3b4a9
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 150
+  spritePixelsToUnits: 700
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -97,94 +97,10 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SpritesheetBorrarWalkEnemy_0
+      name: NokoApuntandoArriba_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 1417.4
-        height: 1417
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0fdb54c415a5ae44d84d736b08e6c753
-      internalID: 1060618976
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpritesheetBorrarWalkEnemy_1
-      rect:
-        serializedVersion: 2
-        x: 1417
-        y: 0
-        width: 1417.4
-        height: 1417
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a0510857ef24a754bbd814964ce91fad
-      internalID: -176368433
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpritesheetBorrarWalkEnemy_2
-      rect:
-        serializedVersion: 2
-        x: 2834
-        y: 0
-        width: 1417.4
-        height: 1417
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 383d98a55b0d15b4ca8b09d67b131e7e
-      internalID: -1273305415
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpritesheetBorrarWalkEnemy_3
-      rect:
-        serializedVersion: 2
-        x: 4251
-        y: 0
-        width: 1417.4
-        height: 1417
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: eb72aa6e9e7a06a4d8e57dbb3e234b1f
-      internalID: -52199083
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpritesheetBorrarWalkEnemy_4
-      rect:
-        serializedVersion: 2
-        x: 5670
         y: 0
         width: 1417
         height: 1417
@@ -195,8 +111,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: defa7c213a6318a439f8334911d4dfdd
-      internalID: -1316886164
+      spriteID: 280a2e38723e6124685f8e6fdf458a73
+      internalID: -697011090
       vertices: []
       indices: 
       edges: []
@@ -212,11 +128,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      SpritesheetBorrarWalkEnemy_0: 1060618976
-      SpritesheetBorrarWalkEnemy_1: -176368433
-      SpritesheetBorrarWalkEnemy_2: -1273305415
-      SpritesheetBorrarWalkEnemy_3: -52199083
-      SpritesheetBorrarWalkEnemy_4: -1316886164
+      NokoApuntandoArriba_0: -697011090
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
