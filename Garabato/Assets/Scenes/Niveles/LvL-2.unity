@@ -158,14 +158,9 @@ MonoBehaviour:
   dialogueText: {fileID: 1483495087}
   textPanel: {fileID: 1692631355}
   dialogs:
-  - 'El duende ha logrado perfeccionar sus poderes y ha salido del cuaderno.
-
-'
-  - "Ahora est\xE1 modificando todo con su magia oscura para que no puedas llegar
-    a la \xFAltima p\xE1gina."
-  - "A\xFAn as\xED, el duende no es muy inteligente y los obst\xE1culos se pueden
-    superar."
-  - 
+  - Esto se ha puesto peor de lo que imaginaba.
+  - Ha invocado a sus siervos oscuros para acabar contigo.
+  - Ves con mucho cuidado, todos contamos contigo.
 --- !u!61 &39689767
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -198,7 +193,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -1.0319957, y: 0.6174779}
+  m_Offset: {x: -1.3043249, y: 0.6174779}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -209,7 +204,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.0530803, y: 3.037908}
+  m_Size: {x: 2.508422, y: 3.037908}
   m_EdgeRadius: 0
 --- !u!95 &39689768
 Animator:
