@@ -66,6 +66,11 @@ public class PlayerMove : MonoBehaviour
         _animator.SetBool("isShootingUp", isShootingUp);
 
         isJumping = !collisionDetection.IsGrounded;
+
+        if (!collisionDetection.IsGrounded && walkParticles.isPlaying)
+        {
+            walkParticles.Stop();
+        }
     }
 
     void Moverse()
@@ -100,11 +105,11 @@ public class PlayerMove : MonoBehaviour
             _weapon.SetActive(isRunning);
 
         Orientacion(moveInput);
-        //Particles(isRunning);
+        Particles(isRunning);
         
     }
 
-    /*void Particles(bool isRunning)
+    void Particles(bool isRunning)
     {
         if (isRunning && collisionDetection.IsGrounded)
         {
@@ -117,7 +122,7 @@ public class PlayerMove : MonoBehaviour
                 walkParticles.Stop();
         }
 
-    }*/
+    }
 
     void Orientacion(float desiredDirection)
     {

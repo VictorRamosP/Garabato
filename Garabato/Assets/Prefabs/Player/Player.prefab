@@ -5313,7 +5313,7 @@ MonoBehaviour:
     m_Bits: 8
   mirandoDerecha: 1
   canMove: 0
-  walkParticles: {fileID: 0}
+  walkParticles: {fileID: 951804422302707932}
   collisionDetection: {fileID: 8061562121256561879}
   shootingActive: 0
   jumpDirection: 0
