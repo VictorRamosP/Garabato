@@ -21,9 +21,8 @@ public class MapIntroChange : MonoBehaviour
 
         // Verifica si la animación ya fue mostrada
         if (GameManager.Instance != null && GameManager.Instance.mapAnimationActivated)
-        {
-            gameplayCam.Priority = 0;
-            playerCam.Priority = 10;
+        {            
+            gameplayCam.Priority = 11;
             mapCam.Priority = 0;
           
             gameObject.SetActive(false);

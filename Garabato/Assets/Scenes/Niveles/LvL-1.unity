@@ -23987,7 +23987,7 @@ PrefabInstance:
     - target: {fileID: 4720523441102825042, guid: 98d421ee2232bfc4aaf4888bb64d9089, type: 3}
       propertyPath: playerCam
       value: 
-      objectReference: {fileID: 70931765}
+      objectReference: {fileID: 393036927}
     - target: {fileID: 4720523441102825042, guid: 98d421ee2232bfc4aaf4888bb64d9089, type: 3}
       propertyPath: canChangeMap
       value: 1
