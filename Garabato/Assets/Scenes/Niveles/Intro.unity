@@ -2105,7 +2105,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 622269753736096978, guid: 98d421ee2232bfc4aaf4888bb64d9089, type: 3}
       propertyPath: speed
-      value: 12
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 622269753736096978, guid: 98d421ee2232bfc4aaf4888bb64d9089, type: 3}
       propertyPath: jumpForce
@@ -14914,9 +14914,9 @@ MonoBehaviour:
   virtualCamera: {fileID: 1976367963}
   player: {fileID: 1037102595}
   idleTimeToZoom: 2
-  zoomedSize: 8
+  zoomedSize: 7
   normalSize: 10
-  zoomSpeed: 2
+  zoomSpeed: 0.9
 --- !u!4 &1876675170
 Transform:
   m_ObjectHideFlags: 0
@@ -15267,7 +15267,7 @@ GameObject:
   - component: {fileID: 1976367963}
   m_Layer: 0
   m_Name: GameplayCamera
-  m_TagString: Untagged
+  m_TagString: GameplayCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
