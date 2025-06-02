@@ -160,7 +160,6 @@ public class PlayerMove : MonoBehaviour
         _rigidbody.angularVelocity = 0f;
         _rigidbody.bodyType = RigidbodyType2D.Kinematic;
 
-        // Desactiva otros scripts menos este
         MonoBehaviour[] scripts = GetComponents<MonoBehaviour>();
         foreach (MonoBehaviour script in scripts)
         {
