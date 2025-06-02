@@ -13392,6 +13392,10 @@ PrefabInstance:
       propertyPath: camDoorPresuure
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3445892477217646035, guid: 4745fc11590eab145800fd22a028c8cf, type: 3}
+      propertyPath: canBeActivatedByPlayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4479606522261075144, guid: 4745fc11590eab145800fd22a028c8cf, type: 3}
       propertyPath: m_Color.b
       value: 0.71541
