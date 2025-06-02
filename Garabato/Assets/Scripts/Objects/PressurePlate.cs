@@ -7,6 +7,7 @@ public class PressurePlate : MonoBehaviour
 {
     public Door door; 
     public bool keepOpen = true; // Para indicar si la puerta se queda abierta al pasar una vez o hay que estar encima de la placa para que se abra
+    public bool canBeActivatedByPlayer = false;
 
     private Animator _animatior;
     private bool isPlayerOnPlate = false;
@@ -14,7 +15,8 @@ public class PressurePlate : MonoBehaviour
 
     public bool haveAnimation = true;
 
-    [Header("C�maras")]
+
+    [Header("Camaras")]
     public CinemachineVirtualCamera playerCam;
     public CinemachineVirtualCamera camDoorPresuure;
     public float camSwitchDuration = 2f;
@@ -24,13 +26,12 @@ public class PressurePlate : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Box"))
+        if (other.CompareTag("Box") || (canBeActivatedByPlayer && other.CompareTag("Player")))
         {
             if (keepOpen && !hasActivated)
             {
                 if (haveAnimation)
                 {
-                    //Debug.Log("Hola");
                     StartCoroutine(SwitchCameraTemporarily());
                 }
                 door.Open();
@@ -63,14 +64,13 @@ public class PressurePlate : MonoBehaviour
     {
         if (playerCam == null || camDoorPresuure == null)
         {
-            Debug.LogWarning("C�maras no asignadas en PressurePlate.");
+            Debug.LogWarning("Camaras no asignadas en PressurePlate.");
             yield break;
         }
         playerCam.Priority = 0;
         camDoorPresuure.Priority = 10;
 
-        //Debug.Log(playerCam.Priority);
-        //Debug.Log(camDoorPresuure.Priority);
+        
 
         yield return new WaitForSeconds(camSwitchDuration);
 
