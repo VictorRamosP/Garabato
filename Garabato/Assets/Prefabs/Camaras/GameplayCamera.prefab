@@ -100,6 +100,7 @@ GameObject:
   - component: {fileID: 4285652596928919176}
   - component: {fileID: 6833301261291569315}
   - component: {fileID: 296859023296452680}
+  - component: {fileID: 1797643120046122994}
   m_Layer: 0
   m_Name: GameplayCamera
   m_TagString: GameplayCamera
@@ -197,3 +198,19 @@ MonoBehaviour:
   zoomedSize: 7
   normalSize: 10
   zoomSpeed: 0.9
+--- !u!114 &1797643120046122994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8128321304897219153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 843ca4ea870259e4989d210a3015495e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  virtualCamera: {fileID: 4285652596928919176}
+  leftOffset: 0.75
+  rightOffset: 0.25
+  smoothSpeed: 2
