@@ -167,7 +167,7 @@ public class PlayerMove : MonoBehaviour
                 script.enabled = false;
         }
 
-        StartCoroutine(ReloadAfterDelay(1f));
+        StartCoroutine(ReloadAfterDelay(1.3f));
     }
 
     private IEnumerator ReloadAfterDelay(float delay)
