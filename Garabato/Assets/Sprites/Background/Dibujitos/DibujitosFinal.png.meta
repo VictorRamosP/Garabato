@@ -1,0 +1,1104 @@
+fileFormatVersion: 2
+guid: 31abe6530e52f644e97d56408f5b002a
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: DibujitosFinal_0
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 1192
+        width: 45
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6ac4b70b1cfcfe458d2f4d646a1ea2f
+      internalID: 430833991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DibujitosFinal_1
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 1166
+        width: 150
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3cf56bf889d5254ebe960e188368e44
+      internalID: 1663003146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DibujitosFinal_2
+      rect:
+        serializedVersion: 2
+        x: 1184
+        y: 1231
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ea3860129f84fb4e9e845ca05fe7c86
+      internalID: 1755438227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DibujitosFinal_3
+      rect:
+        serializedVersion: 2
+        x: 867
+        y: 1111
+        width: 76
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 449d1c1ad7c5add43adc17467db38d19
+      internalID: 801156233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DibujitosFinal_4
+      rect:
+        serializedVersion: 2
+        x: 950
+        y: 1142
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e4fd6caedb38464da3e636a52e41b7e
+      internalID: -452729594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DibujitosFinal_5
+      rect:
+        serializedVersion: 2
+        x: 1035
+        y: 1121
+        width: 74
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78a27296577cad24ab526d72a4e7c97a
+      internalID: 1750375862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DibujitosFinal_6
+      rect:
+        serializedVersion: 2
+        x: 997
+        y: 1098
+        width: 50
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9968453633a374b4e97718bc2c7736f5
+      internalID: -1801531614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DibujitosFinal_7
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 1058
+        width: 27
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfa7ca41f0f4e7f47b3ac864a7369397
+      internalID: -1838229201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DibujitosFinal_8
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 996
+        width: 72
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40b9ecce1e6ebaa4bb00e92ac037370e
+      internalID: -1456679698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DibujitosFinal_9
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 894
+        width: 140
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0226f7b274276940b102100d4382d33
+      internalID: 1936462285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DibujitosFinal_10
+      rect:
+        serializedVersion: 2
+        x: 1189
+        y: 1011
+        width: 68
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a42701d35bd7924f9ce215950978d0b
+      internalID: -158557839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DibujitosFinal_11
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 881
+        width: 81
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7043cda0c12ccbd46a6b55842c47c506
+      internalID: -486614949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DibujitosFinal_12
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 930
+        width: 69
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a814708af989dc41ac19bf5ca315a18
+      internalID: -1471021619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DibujitosFinal_13
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 970
+        width: 42
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d769d419691b9594a8a9ec5796819627
+      internalID: -93546596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DibujitosFinal_14
+      rect:
+        serializedVersion: 2
+        x: 942
+        y: 1001
+        width: 5
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06bb4cd47be190b468d56a5dcbd69baa
+      internalID: -2099241291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DibujitosFinal_15
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 686
+        width: 151
+        height: 251
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5da5d7ca393899343b77dabb3d0fe064
+      internalID: -621217274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DibujitosFinal_16
+      rect:
+        serializedVersion: 2
+        x: 573
+        y: 864
+        width: 94
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 529979763acea4b4a832965d8f68207b
+      internalID: 2133830632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DibujitosFinal_17
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 817
+        width: 83
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26160f60254e7814fa75ce6f8a39d122
+      internalID: -1528643373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DibujitosFinal_18
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 680
+        width: 156
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2490a619991f6634da8ad96326880ff7
+      internalID: -1907697376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DibujitosFinal_19
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 692
+        width: 133
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cda7eda7da2b8042a5c3f822f21cc55
+      internalID: 1115784254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DibujitosFinal_20
+      rect:
+        serializedVersion: 2
+        x: 802
+        y: 810
+        width: 50
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e24d38793af54045a81463c66d70089
+      internalID: 80338699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DibujitosFinal_21
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 486
+        width: 102
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e677c907e1509a459e3774177c50331
+      internalID: 1166231041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DibujitosFinal_22
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 543
+        width: 106
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaa0d1351c81ae84796a5dce8067cc91
+      internalID: -1776820520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DibujitosFinal_23
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 590
+        width: 77
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5aef171a27719c47add88aa6698b16f
+      internalID: 1574722296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DibujitosFinal_24
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 590
+        width: 83
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2057ef7b6cdd6c54fa533728e5b2f6d1
+      internalID: 1271149945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DibujitosFinal_25
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 557
+        width: 122
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 730be978cf441b94dba6b0a6cc7fd9e2
+      internalID: 1483826994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DibujitosFinal_26
+      rect:
+        serializedVersion: 2
+        x: 1108
+        y: 631
+        width: 96
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27068c38906515441b6ff71be5b27cbe
+      internalID: 1467655808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DibujitosFinal_27
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 470
+        width: 36
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5290150908708e549be49346cd864e26
+      internalID: -1320493672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DibujitosFinal_28
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 466
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 799d73b29e812e74884035a606fbcd17
+      internalID: 724478282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DibujitosFinal_29
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 443
+        width: 48
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78c6a7ace7d37974baf1aecef144de85
+      internalID: -861408419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DibujitosFinal_30
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 450
+        width: 42
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 428766e1cd5a31a41bd5df91cd4d2206
+      internalID: 611857241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DibujitosFinal_31
+      rect:
+        serializedVersion: 2
+        x: 1140
+        y: 430
+        width: 137
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a3aa9960f98fd7478902a014e04d2e2
+      internalID: 1600766530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DibujitosFinal_32
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 422
+        width: 38
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02ab5f59876a11f4b8364b2b280285e6
+      internalID: -157741355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DibujitosFinal_33
+      rect:
+        serializedVersion: 2
+        x: 1167
+        y: 291
+        width: 100
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 474eb76d12556c143b4b01a992d76b88
+      internalID: -1090400861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DibujitosFinal_34
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 303
+        width: 39
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30f0d882a9e16924d85d911655225cce
+      internalID: -2045608111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DibujitosFinal_35
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 299
+        width: 135
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f194ea2e795d984dacdb4b87425b89d
+      internalID: -944980814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DibujitosFinal_36
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 233
+        width: 53
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4e1b44da2cba5c49977adfddcb7434a
+      internalID: 449868534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DibujitosFinal_37
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 176
+        width: 153
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d979de07d2109cf448ee28f2de73aec4
+      internalID: -1167794387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DibujitosFinal_38
+      rect:
+        serializedVersion: 2
+        x: 1206
+        y: 196
+        width: 58
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97a82e2f822bea547be87d59ab92df39
+      internalID: -2088498116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DibujitosFinal_39
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 65
+        width: 123
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c551e32bfff4c684f93798a9d05b0667
+      internalID: -1040519163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DibujitosFinal_40
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 186
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84dd2182870e56b4bbea5e3a59ef106f
+      internalID: 407357498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DibujitosFinal_41
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 29
+        width: 137
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8cf3a787b10b4747a03984c4d713904
+      internalID: 2080858419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DibujitosFinal_42
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 111
+        width: 99
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 563b9ce14e6ff7a47ba9a8b3fb9f668e
+      internalID: -1645354623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DibujitosFinal_43
+      rect:
+        serializedVersion: 2
+        x: 1003
+        y: 31
+        width: 91
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47906b6cfa983c841bc60b8c2bfd7da5
+      internalID: -2078626476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DibujitosFinal_44
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 33
+        width: 33
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 834e2d63b82a5b8498a8053db320dcf2
+      internalID: 2068092957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      DibujitosFinal_0: 430833991
+      DibujitosFinal_1: 1663003146
+      DibujitosFinal_10: -158557839
+      DibujitosFinal_11: -486614949
+      DibujitosFinal_12: -1471021619
+      DibujitosFinal_13: -93546596
+      DibujitosFinal_14: -2099241291
+      DibujitosFinal_15: -621217274
+      DibujitosFinal_16: 2133830632
+      DibujitosFinal_17: -1528643373
+      DibujitosFinal_18: -1907697376
+      DibujitosFinal_19: 1115784254
+      DibujitosFinal_2: 1755438227
+      DibujitosFinal_20: 80338699
+      DibujitosFinal_21: 1166231041
+      DibujitosFinal_22: -1776820520
+      DibujitosFinal_23: 1574722296
+      DibujitosFinal_24: 1271149945
+      DibujitosFinal_25: 1483826994
+      DibujitosFinal_26: 1467655808
+      DibujitosFinal_27: -1320493672
+      DibujitosFinal_28: 724478282
+      DibujitosFinal_29: -861408419
+      DibujitosFinal_3: 801156233
+      DibujitosFinal_30: 611857241
+      DibujitosFinal_31: 1600766530
+      DibujitosFinal_32: -157741355
+      DibujitosFinal_33: -1090400861
+      DibujitosFinal_34: -2045608111
+      DibujitosFinal_35: -944980814
+      DibujitosFinal_36: 449868534
+      DibujitosFinal_37: -1167794387
+      DibujitosFinal_38: -2088498116
+      DibujitosFinal_39: -1040519163
+      DibujitosFinal_4: -452729594
+      DibujitosFinal_40: 407357498
+      DibujitosFinal_41: 2080858419
+      DibujitosFinal_42: -1645354623
+      DibujitosFinal_43: -2078626476
+      DibujitosFinal_44: 2068092957
+      DibujitosFinal_5: 1750375862
+      DibujitosFinal_6: -1801531614
+      DibujitosFinal_7: -1838229201
+      DibujitosFinal_8: -1456679698
+      DibujitosFinal_9: 1936462285
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
