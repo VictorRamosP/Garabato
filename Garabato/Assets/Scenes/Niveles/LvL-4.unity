@@ -716,8 +716,8 @@ MonoBehaviour:
   dialogueText: {fileID: 248147552}
   textPanel: {fileID: 369937108}
   dialogs:
-  - Hemos llegado a la cueva. Este lugar siempre me ha dado mala espina.
-  - Tengo un mal presentimiento Noko.
+  - Ya queda poco.
+  - "Un poco m\xE1s y podr\xE1s devolver a ese travieso duende a d\xF3nde le pertenece."
 --- !u!61 &212879840
 BoxCollider2D:
   m_ObjectHideFlags: 0
