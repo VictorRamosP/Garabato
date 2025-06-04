@@ -48,7 +48,21 @@ public class InputManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    public bool GetJump()
+    {
+        if (Input.GetKey(jumpKey))
+        {
+            currentInputSource = InputSource.Keyboard;
+            return true;
+        }
+        else if (Input.GetKey(joystickJumpKey))
+        {
+            currentInputSource = InputSource.Joystick;
+            return true;
+        }
 
+        return false;
+    }
     // Modified methods to update currentInputSource
     public bool GetJumpDown()
     {

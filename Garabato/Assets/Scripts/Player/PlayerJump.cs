@@ -13,7 +13,7 @@ public class PlayerJumper : MonoBehaviour
     public LayerMask floorlayerMask;
     public AudioClip jumpSound;
     public bool canJump;
-    
+    public float FallGravityMultiplier = 2.5f;
     private AudioSource _audioSource;
     private Rigidbody2D _rigidbody;
     private CollisionDetection _collisionDetection;
@@ -33,7 +33,7 @@ public class PlayerJumper : MonoBehaviour
     {
         if (ChangeCam.isMapActive || !canJump) return;
         if (InputManager.Instance.GetJumpDown() && _collisionDetection.IsGrounded)
-        {            
+        {
             JumpStarted();
             if (_audioSource && jumpSound)
             {
@@ -44,30 +44,34 @@ public class PlayerJumper : MonoBehaviour
         if (InputManager.Instance.GetJumpUp())
         {
             JumpFinished();
-        }      
+        }
 
 
     }
 
     void FixedUpdate()
     {
-        if (IsPeakReached()) TweakGravity();
+        if (_rigidbody.velocity.y < 0)
+        {
+            // Está cayendo → aplicamos gravedad extra
+            _rigidbody.velocity += Vector2.up * Physics2D.gravity.y * (FallGravityMultiplier - 1) * Time.fixedDeltaTime;
+        }
 
-        if (IsWallSliding) SetWallSlide();
+        //if (IsWallSliding) SetWallSlide();
     }
 
     void JumpStarted()
     {
         SetGravity();
 
-      
+
         float jumpDirection = InputManager.Instance.GetMoveLeft() ? -1f : InputManager.Instance.GetMoveRight() ? 1f : 0f;
 
-        
+
         var vel = new Vector2(jumpDirection * SpeedHorizontal, GetJumpForce());
         _rigidbody.velocity = vel;
 
-        
+
         GetComponent<PlayerMove>().jumpDirection = jumpDirection;
 
         _jumpStartedTime = Time.time;
@@ -75,8 +79,11 @@ public class PlayerJumper : MonoBehaviour
 
     void JumpFinished()
     {
-        float fractionOfTimePressed = 1 / Mathf.Clamp01((Time.time - _jumpStartedTime) / PressTimeToMaxJump);
-        _rigidbody.gravityScale *= fractionOfTimePressed;
+        // Si el jugador va hacia arriba cuando suelta el botón, cortamos el salto
+        if (_rigidbody.velocity.y > 0)
+        {
+            _rigidbody.velocity = new Vector2(_rigidbody.velocity.x, _rigidbody.velocity.y * 0.5f);
+        }
     }
 
     private bool IsPeakReached()
