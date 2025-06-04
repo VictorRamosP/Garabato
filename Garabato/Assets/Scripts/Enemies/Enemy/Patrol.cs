@@ -21,22 +21,22 @@ public class Patrol : MonoBehaviour
     private void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
-
+        Life.OnDeath += Freeze;
     }
-    private void Update()
+    private void FixedUpdate()
     {
-        if (ChangeCam.isMapActive || Life.isDead) 
+        if (ChangeCam.isMapActive || Life.isDead || ChangeCam.isReturning)
         {
-            _rb.velocity = Vector2.zero;
-            _rb.isKinematic = true;
+            Freeze();
             return;
-        } 
-        if (_rb.isKinematic)
+        }
+        if (_rb.constraints == RigidbodyConstraints2D.FreezeAll)
         {
+            _rb.constraints = RigidbodyConstraints2D.None;
             _rb.isKinematic = false;
         }
         Patrolfunc();
-        
+
     }
     public void Patrolfunc()
     {
@@ -55,5 +55,12 @@ public class Patrol : MonoBehaviour
     {
         mirandoder = !mirandoder;
         transform.eulerAngles = new Vector3(0, transform.eulerAngles.y + 180, 0);
+    }
+    void Freeze()
+    {
+        _rb.velocity = Vector2.zero;
+        _rb.angularVelocity = 0f;
+        _rb.constraints = RigidbodyConstraints2D.FreezeAll;
+        _rb.isKinematic = true;
     }
 }

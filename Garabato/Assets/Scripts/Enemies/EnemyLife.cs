@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -6,6 +7,7 @@ public class EnemyLife : MonoBehaviour
     public float health = 100f;
     private Animator animator;
     public bool isDead = false;
+    public event Action OnDeath;
 
     void Start()
     {
@@ -44,7 +46,7 @@ public class EnemyLife : MonoBehaviour
     private IEnumerator Die()
     {
         animator.SetTrigger("Die");
-
+        OnDeath?.Invoke();
         yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
         gameObject.SetActive(false);
         
