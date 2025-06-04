@@ -174,5 +174,6 @@ public class PlayerMove : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
     }
 }
