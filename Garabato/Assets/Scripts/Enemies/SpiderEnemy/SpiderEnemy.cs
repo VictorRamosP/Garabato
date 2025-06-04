@@ -26,7 +26,7 @@ public class SpiderEnemy : MonoBehaviour
     {
         if (Map == null) Debug.LogError("Map no está asignado en SpiderEnemy.");
 
-        spiderAttack.OnPlayerEntered += PlayerInArea;
+        //spiderAttack.OnPlayerEntered += PlayerInArea;
 
         stateMachine = new StateMachine();
         stateMachine.ChangeState(new SpiderPatrolState(this, stateMachine, EdgedetectionPoint));
