@@ -23,6 +23,16 @@ public class InputManager : MonoBehaviour
     private KeyCode joystickRotateMapLeftKey = KeyCode.JoystickButton4;
     private KeyCode joystickRotateMapRightKey = KeyCode.JoystickButton5;
 
+    public enum InputSource
+    {
+        None,
+        Keyboard,
+        Joystick
+    }
+
+    // Variable to track the current input source
+    public InputSource currentInputSource { get; private set; } = InputSource.None;
+
     private void Awake()
     {
         PlayerPrefs.DeleteAll();
@@ -39,17 +49,166 @@ public class InputManager : MonoBehaviour
         }
     }
 
-    // Entradas combinadas: teclado o mando
-    public bool GetJumpDown() => Input.GetKeyDown(jumpKey) || Input.GetKeyDown(joystickJumpKey);
-    public bool GetJumpUp() => Input.GetKeyUp(jumpKey) || Input.GetKeyUp(joystickJumpKey);
-    public bool GetAttack() => Input.GetKeyDown(attackKey) || Input.GetKeyDown(joystickAttackKey);
-    public bool GetMoveLeft() => Input.GetKey(moveLeftKey) || GetHorizontalAxis() < -0.1f;
-    public bool GetMoveRight() => Input.GetKey(moveRightKey) || GetHorizontalAxis() > 0.1f;
-    public bool GetMap() => Input.GetKeyDown(mapKey) || Input.GetKeyDown(joystickMapKey);
-    public bool GetPause() => Input.GetKeyDown(pauseKey) || Input.GetKeyDown(joystickPauseKey);
-    public bool GetRotateMapLeft() => Input.GetKeyDown(rotateMapLeftKey) || Input.GetKeyDown(joystickRotateMapLeftKey);
-    public bool GetRotateMapRight() => Input.GetKeyDown(rotateMapRightKey) || Input.GetKeyDown(joystickRotateMapRightKey);
-    public bool GetUp() => Input.GetKey(upKey) || Input.GetAxis("Vertical") > 0.5f;
+    // Modified methods to update currentInputSource
+    public bool GetJumpDown()
+    {
+        bool inputDetected = false;
+        if (Input.GetKeyDown(jumpKey))
+        {
+            currentInputSource = InputSource.Keyboard;
+            inputDetected = true;
+        }
+        else if (Input.GetKeyDown(joystickJumpKey))
+        {
+            currentInputSource = InputSource.Joystick;
+            inputDetected = true;
+        }
+        return inputDetected;
+    }
+
+    public bool GetJumpUp()
+    {
+        bool inputDetected = false;
+        if (Input.GetKeyUp(jumpKey))
+        {
+            currentInputSource = InputSource.Keyboard;
+            inputDetected = true;
+        }
+        else if (Input.GetKeyUp(joystickJumpKey))
+        {
+            currentInputSource = InputSource.Joystick;
+            inputDetected = true;
+        }
+        return inputDetected;
+    }
+
+    public bool GetAttack()
+    {
+        bool inputDetected = false;
+        if (Input.GetKeyDown(attackKey))
+        {
+            currentInputSource = InputSource.Keyboard;
+            inputDetected = true;
+        }
+        else if (Input.GetKeyDown(joystickAttackKey))
+        {
+            currentInputSource = InputSource.Joystick;
+            inputDetected = true;
+        }
+        return inputDetected;
+    }
+
+    public bool GetMoveLeft()
+    {
+        bool inputDetected = false;
+        if (Input.GetKey(moveLeftKey))
+        {
+            currentInputSource = InputSource.Keyboard;
+            inputDetected = true;
+        }
+        else if (GetHorizontalAxis() < -0.1f)
+        {
+            currentInputSource = InputSource.Joystick;
+            inputDetected = true;
+        }
+        return inputDetected;
+    }
+
+    public bool GetMoveRight()
+    {
+        bool inputDetected = false;
+        if (Input.GetKey(moveRightKey))
+        {
+            currentInputSource = InputSource.Keyboard;
+            inputDetected = true;
+        }
+        else if (GetHorizontalAxis() > 0.1f)
+        {
+            currentInputSource = InputSource.Joystick;
+            inputDetected = true;
+        }
+        return inputDetected;
+    }
+
+    public bool GetMap()
+    {
+        bool inputDetected = false;
+        if (Input.GetKeyDown(mapKey))
+        {
+            currentInputSource = InputSource.Keyboard;
+            inputDetected = true;
+        }
+        else if (Input.GetKeyDown(joystickMapKey))
+        {
+            currentInputSource = InputSource.Joystick;
+            inputDetected = true;
+        }
+        return inputDetected;
+    }
+
+    public bool GetPause()
+    {
+        bool inputDetected = false;
+        if (Input.GetKeyDown(pauseKey))
+        {
+            currentInputSource = InputSource.Keyboard;
+            inputDetected = true;
+        }
+        else if (Input.GetKeyDown(joystickPauseKey))
+        {
+            currentInputSource = InputSource.Joystick;
+            inputDetected = true;
+        }
+        return inputDetected;
+    }
+
+    public bool GetRotateMapLeft()
+    {
+        bool inputDetected = false;
+        if (Input.GetKeyDown(rotateMapLeftKey))
+        {
+            currentInputSource = InputSource.Keyboard;
+            inputDetected = true;
+        }
+        else if (Input.GetKeyDown(joystickRotateMapLeftKey))
+        {
+            currentInputSource = InputSource.Joystick;
+            inputDetected = true;
+        }
+        return inputDetected;
+    }
+
+    public bool GetRotateMapRight()
+    {
+        bool inputDetected = false;
+        if (Input.GetKeyDown(rotateMapRightKey))
+        {
+            currentInputSource = InputSource.Keyboard;
+            inputDetected = true;
+        }
+        else if (Input.GetKeyDown(joystickRotateMapRightKey))
+        {
+            currentInputSource = InputSource.Joystick;
+            inputDetected = true;
+        }
+        return inputDetected;
+    }
+
+    public bool GetUp()
+    {
+        bool inputDetected = false;
+        if (Input.GetKey(upKey))
+        {
+            currentInputSource = InputSource.Keyboard;
+            inputDetected = true;
+        }
+        else if (Input.GetAxis("Vertical") > 0.5f)
+        {
+            currentInputSource = InputSource.Joystick;
+            inputDetected = true;
+        }
+        return inputDetected;
+    }
 
     public float GetHorizontalAxis()
     {
@@ -69,6 +228,7 @@ public class InputManager : MonoBehaviour
             case "RotateMapRight": rotateMapRightKey = newKey; break;
             case "Map": mapKey = newKey; break;
             case "Pause": pauseKey = newKey; break;
+            case "Up": upKey = newKey; break;
         }
 
         SaveBindings();
@@ -100,6 +260,7 @@ public class InputManager : MonoBehaviour
         PlayerPrefs.SetString("RotateMapRight", rotateMapRightKey.ToString());
         PlayerPrefs.SetString("Map", mapKey.ToString());
         PlayerPrefs.SetString("Pause", pauseKey.ToString());
+        PlayerPrefs.SetString("Up", upKey.ToString());
 
         PlayerPrefs.SetString("JoystickJump", joystickJumpKey.ToString());
         PlayerPrefs.SetString("JoystickAttack", joystickAttackKey.ToString());
@@ -121,6 +282,7 @@ public class InputManager : MonoBehaviour
         if (PlayerPrefs.HasKey("RotateMapRight")) rotateMapRightKey = (KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("RotateMapRight"));
         if (PlayerPrefs.HasKey("Map")) mapKey = (KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("Map"));
         if (PlayerPrefs.HasKey("Pause")) pauseKey = (KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("Pause"));
+        if (PlayerPrefs.HasKey("Up")) upKey = (KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("Up"));
 
         if (PlayerPrefs.HasKey("JoystickJump")) joystickJumpKey = (KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("JoystickJump"));
         if (PlayerPrefs.HasKey("JoystickAttack")) joystickAttackKey = (KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("JoystickAttack"));
