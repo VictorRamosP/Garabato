@@ -14,7 +14,7 @@ public class PatrolState : IState
         this.stateMachine = stateMachine;
 
         enemy.Map.OnMapRotated += MapRotated;
-        enemy.Bat.GetComponent<BatEnemyCollisionHandler>().BatCollided += BatCollisioned;
+        //enemy.Bat.GetComponent<BatEnemyCollisionHandler>().BatCollided += BatCollisioned;
     }
 
     public void OnEnter()
