@@ -1625,7 +1625,7 @@ Transform:
   m_GameObject: {fileID: 389482119}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -34.02, y: 2.23, z: -10}
+  m_LocalPosition: {x: -34.02, y: -9.8, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1709,6 +1709,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1797643120046122994, guid: a048482c9c2f36c4799c26db79d87a21, type: 3}
+      propertyPath: upwardOffset
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 4285652596928919176, guid: a048482c9c2f36c4799c26db79d87a21, type: 3}
       propertyPath: m_Follow
       value: 
@@ -1727,7 +1731,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8955302068199977792, guid: a048482c9c2f36c4799c26db79d87a21, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.23
+      value: -9.8
       objectReference: {fileID: 0}
     - target: {fileID: 8955302068199977792, guid: a048482c9c2f36c4799c26db79d87a21, type: 3}
       propertyPath: m_LocalPosition.z
@@ -18087,7 +18091,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 987982724478991015, guid: 98d421ee2232bfc4aaf4888bb64d9089, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.23
+      value: -9.8
       objectReference: {fileID: 0}
     - target: {fileID: 987982724478991015, guid: 98d421ee2232bfc4aaf4888bb64d9089, type: 3}
       propertyPath: m_LocalPosition.z
@@ -18143,7 +18147,7 @@ PrefabInstance:
       objectReference: {fileID: 457220075}
     - target: {fileID: 4873559554026065903, guid: 98d421ee2232bfc4aaf4888bb64d9089, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.318
+      value: 0.226
       objectReference: {fileID: 0}
     - target: {fileID: 4873559554026065903, guid: 98d421ee2232bfc4aaf4888bb64d9089, type: 3}
       propertyPath: m_LocalPosition.y
@@ -18153,6 +18157,10 @@ PrefabInstance:
       propertyPath: jumpSound
       value: 
       objectReference: {fileID: 8300000, guid: eed1c35659df397479499adf6944d59e, type: 3}
+    - target: {fileID: 6534434731700895472, guid: 98d421ee2232bfc4aaf4888bb64d9089, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6933798395593781726, guid: 98d421ee2232bfc4aaf4888bb64d9089, type: 3}
       propertyPath: m_Name
       value: Player
