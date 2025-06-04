@@ -53,7 +53,6 @@ public class PlayerJumper : MonoBehaviour
     {
         if (_rigidbody.velocity.y < 0)
         {
-            // Está cayendo → aplicamos gravedad extra
             _rigidbody.velocity += Vector2.up * Physics2D.gravity.y * (FallGravityMultiplier - 1) * Time.fixedDeltaTime;
         }
 
@@ -79,7 +78,6 @@ public class PlayerJumper : MonoBehaviour
 
     void JumpFinished()
     {
-        // Si el jugador va hacia arriba cuando suelta el botón, cortamos el salto
         if (_rigidbody.velocity.y > 0)
         {
             _rigidbody.velocity = new Vector2(_rigidbody.velocity.x, _rigidbody.velocity.y * 0.5f);
