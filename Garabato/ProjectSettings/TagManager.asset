@@ -20,6 +20,7 @@ TagManager:
   - SpiderTongue
   - SpiderAttackZone
   - GameplayCamera
+  - Flame
   layers:
   - Default
   - TransparentFX
