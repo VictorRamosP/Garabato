@@ -30,10 +30,6 @@ public class RotateMap : MonoBehaviour
     {
         if (GameManager.Instance.isMapActive)
         {
-            if (player == null) player = GameObject.FindGameObjectWithTag("Player");
-            if (map == null) map = GameObject.FindGameObjectWithTag("Map");
-            player.transform.SetParent(map.transform);
-            player.transform.rotation = Quaternion.identity;
             Rotate();
         }
     }

@@ -21,11 +21,7 @@ public class PlayerMove : MonoBehaviour
     public CollisionDetection collisionDetection;
 
     [HideInInspector] public bool shootingActive = false;
-
-
     private bool isDead = false;
-
-    private bool isJumping = false;
     [HideInInspector] public float jumpDirection = 0f;
     public float airSpeed = 0.5f;
     void Start()
@@ -38,27 +34,13 @@ public class PlayerMove : MonoBehaviour
         collisionDetection = GetComponent<CollisionDetection>();
     }
 
+    public void Move()
+    {
+        Update();
+    }
     void Update()
     {
-        if (!GameManager.Instance.canPlayerFall)
-        {
-            _rigidbody.constraints = RigidbodyConstraints2D.FreezePosition;
-            _animator.SetBool("IsRunning", false);
-        }
-        else
-        {
-            _rigidbody.constraints = RigidbodyConstraints2D.FreezeRotation;
-        }
-
-        if (!GameManager.Instance.canPlayerGetHurt) GetComponent<Collider2D>().enabled = false;
-            else GetComponent<Collider2D>().enabled = true;
-
-        if (!GameManager.Instance.canPlayerMove)
-        {
-            return;
-        }
-        
-        if (!GameManager.Instance.isMapActive && GameManager.Instance.canPlayerMove && GameManager.Instance.mapAnimationActivated)
+        if (!GameManager.Instance.isMapActive && GameManager.Instance.canPlayerMove)
         {
             Moverse();
         }
