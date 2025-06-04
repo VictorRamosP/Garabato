@@ -10,13 +10,14 @@ public class CameraLookAhead : MonoBehaviour
     public float leftOffset;
     public float rightOffset;
     public float smoothSpeed = 2f;
-
+    public float coolDown;
+    private float coolDownTimer;
     private CinemachineFramingTransposer transposer;
     private float targetScreenX;
 
     void Start()
     {
-       
+        coolDownTimer = 0f;
         player = GameObject.FindGameObjectWithTag("Player");
         transposer = virtualCamera.GetCinemachineComponent<CinemachineFramingTransposer>();
         targetScreenX = transposer.m_ScreenX;
@@ -24,9 +25,13 @@ public class CameraLookAhead : MonoBehaviour
 
     void Update()
     {
-        bool lookingRight = player.transform.localScale.x > 0;
-        targetScreenX = lookingRight ? rightOffset : leftOffset;
+        coolDownTimer += Time.deltaTime;
+        if (coolDownTimer >= coolDown)
+        {
+            bool lookingRight = player.transform.localScale.x > 0;
+            targetScreenX = lookingRight ? rightOffset : leftOffset;
 
-        transposer.m_ScreenX = Mathf.Lerp(transposer.m_ScreenX, targetScreenX, Time.deltaTime * smoothSpeed);
+            transposer.m_ScreenX = Mathf.Lerp(transposer.m_ScreenX, targetScreenX, Time.deltaTime * smoothSpeed);
+        }
     }
 }
