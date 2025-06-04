@@ -1713,6 +1713,10 @@ PrefabInstance:
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 2024554111}
+    - target: {fileID: 6833301261291569315, guid: a048482c9c2f36c4799c26db79d87a21, type: 3}
+      propertyPath: m_BoundingShape2D
+      value: 
+      objectReference: {fileID: 957636415}
     - target: {fileID: 8128321304897219153, guid: a048482c9c2f36c4799c26db79d87a21, type: 3}
       propertyPath: m_Name
       value: GameplayCamera
@@ -2507,6 +2511,30 @@ PrefabInstance:
     m_TransformParent: {fileID: 1332625425}
     m_Modifications:
     - target: {fileID: 4236723361130823100, guid: 2ee67447a5475e34ca18e6d0cc350080, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4236723361130823100, guid: 2ee67447a5475e34ca18e6d0cc350080, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4236723361130823100, guid: 2ee67447a5475e34ca18e6d0cc350080, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[0].x
+      value: 52.760498
+      objectReference: {fileID: 0}
+    - target: {fileID: 4236723361130823100, guid: 2ee67447a5475e34ca18e6d0cc350080, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[0].y
+      value: 42.09224
+      objectReference: {fileID: 0}
+    - target: {fileID: 4236723361130823100, guid: 2ee67447a5475e34ca18e6d0cc350080, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[1].x
+      value: -53.19734
+      objectReference: {fileID: 0}
+    - target: {fileID: 4236723361130823100, guid: 2ee67447a5475e34ca18e6d0cc350080, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[1].y
+      value: 41.841595
+      objectReference: {fileID: 0}
+    - target: {fileID: 4236723361130823100, guid: 2ee67447a5475e34ca18e6d0cc350080, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[2].x
       value: -53.678543
       objectReference: {fileID: 0}
@@ -3221,6 +3249,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 5260347073858022890, guid: 689afa3583891bb4eb10c1406f3402c5, type: 3}
   m_PrefabInstance: {fileID: 927454816}
+  m_PrefabAsset: {fileID: 0}
+--- !u!60 &957636415 stripped
+PolygonCollider2D:
+  m_CorrespondingSourceObject: {fileID: 4236723361130823100, guid: 2ee67447a5475e34ca18e6d0cc350080, type: 3}
+  m_PrefabInstance: {fileID: 746291176}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &980413845 stripped
 Transform:
@@ -18130,7 +18163,7 @@ PrefabInstance:
       objectReference: {fileID: 457220075}
     - target: {fileID: 4873559554026065903, guid: 98d421ee2232bfc4aaf4888bb64d9089, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.08
+      value: 0.318
       objectReference: {fileID: 0}
     - target: {fileID: 4873559554026065903, guid: 98d421ee2232bfc4aaf4888bb64d9089, type: 3}
       propertyPath: m_LocalPosition.y

@@ -1788,6 +1788,10 @@ PrefabInstance:
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 987982724698942532}
+    - target: {fileID: 6833301261291569315, guid: a048482c9c2f36c4799c26db79d87a21, type: 3}
+      propertyPath: m_BoundingShape2D
+      value: 
+      objectReference: {fileID: 2082683560}
     - target: {fileID: 8128321304897219153, guid: a048482c9c2f36c4799c26db79d87a21, type: 3}
       propertyPath: m_Name
       value: GameplayCamera
@@ -23618,6 +23622,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7188526774754780474, guid: 2ee67447a5475e34ca18e6d0cc350080, type: 3}
   m_PrefabInstance: {fileID: 5894448400839266393}
   m_PrefabAsset: {fileID: 0}
+--- !u!60 &2082683560 stripped
+PolygonCollider2D:
+  m_CorrespondingSourceObject: {fileID: 4236723361130823100, guid: 2ee67447a5475e34ca18e6d0cc350080, type: 3}
+  m_PrefabInstance: {fileID: 5894448400839266393}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2094788926
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23889,6 +23898,46 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 816113166}
     m_Modifications:
+    - target: {fileID: 4236723361130823100, guid: 2ee67447a5475e34ca18e6d0cc350080, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4236723361130823100, guid: 2ee67447a5475e34ca18e6d0cc350080, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4236723361130823100, guid: 2ee67447a5475e34ca18e6d0cc350080, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[0].x
+      value: 56.143684
+      objectReference: {fileID: 0}
+    - target: {fileID: 4236723361130823100, guid: 2ee67447a5475e34ca18e6d0cc350080, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[0].y
+      value: 43.220226
+      objectReference: {fileID: 0}
+    - target: {fileID: 4236723361130823100, guid: 2ee67447a5475e34ca18e6d0cc350080, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[1].x
+      value: -54.98535
+      objectReference: {fileID: 0}
+    - target: {fileID: 4236723361130823100, guid: 2ee67447a5475e34ca18e6d0cc350080, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[1].y
+      value: 43.080128
+      objectReference: {fileID: 0}
+    - target: {fileID: 4236723361130823100, guid: 2ee67447a5475e34ca18e6d0cc350080, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[2].x
+      value: -55.775654
+      objectReference: {fileID: 0}
+    - target: {fileID: 4236723361130823100, guid: 2ee67447a5475e34ca18e6d0cc350080, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[2].y
+      value: -23.798204
+      objectReference: {fileID: 0}
+    - target: {fileID: 4236723361130823100, guid: 2ee67447a5475e34ca18e6d0cc350080, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[3].x
+      value: 56.873867
+      objectReference: {fileID: 0}
+    - target: {fileID: 4236723361130823100, guid: 2ee67447a5475e34ca18e6d0cc350080, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[3].y
+      value: -23.917366
+      objectReference: {fileID: 0}
     - target: {fileID: 6116357716051537002, guid: 2ee67447a5475e34ca18e6d0cc350080, type: 3}
       propertyPath: m_Name
       value: LimitesCam

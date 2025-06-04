@@ -5,17 +5,17 @@ using UnityEngine;
 
 public class MapIntroChange : MonoBehaviour
 {
-    private CinemachineVirtualCamera playerCam;
+    //private CinemachineVirtualCamera playerCam;
     private CinemachineVirtualCamera mapCam;
     private CinemachineVirtualCamera gameplayCam;
     public AudioClip drawingClip;
     public bool activateAnimationmap;
     void Start()
     {
-        GameObject playerCamObj = GameObject.FindGameObjectWithTag("PlayerCam");
+       // GameObject playerCamObj = GameObject.FindGameObjectWithTag("PlayerCam");
         GameObject mapCamObj = GameObject.FindGameObjectWithTag("MapCam");
         GameObject gameplayCamObj = GameObject.FindGameObjectWithTag("GameplayCamera");
-        playerCam = playerCamObj.GetComponent<CinemachineVirtualCamera>();
+       // playerCam = playerCamObj.GetComponent<CinemachineVirtualCamera>();
         mapCam = mapCamObj.GetComponent<CinemachineVirtualCamera>();
         gameplayCam = gameplayCamObj.GetComponent<CinemachineVirtualCamera>();
 
@@ -29,7 +29,7 @@ public class MapIntroChange : MonoBehaviour
         }
         else
         {
-            playerCam.Priority = 0;
+            //playerCam.Priority = 0;
             gameplayCam.Priority = 0;
             mapCam.Priority = 10;
 
@@ -42,7 +42,7 @@ public class MapIntroChange : MonoBehaviour
     }
     public void OnMapAnimationEnd()
     {
-        playerCam.Priority = 10;
+        //playerCam.Priority = 10;
         gameplayCam.Priority = 11;
         mapCam.Priority = 0;
         gameObject.SetActive(false);
