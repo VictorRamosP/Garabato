@@ -261,6 +261,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd3846edaddeac74eb963e3af0040e3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coolDown: 0
   LevelToLoad: 
 --- !u!1 &8496419576414610859
 GameObject:
@@ -1132,7 +1133,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 10
+      scalar: 3
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -5066,7 +5067,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 9b0a56448a594574db9c71b89ed40085, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
