@@ -213,4 +213,6 @@ MonoBehaviour:
   virtualCamera: {fileID: 4285652596928919176}
   leftOffset: 0.75
   rightOffset: 0.25
-  smoothSpeed: 2
+  smoothSpeed: 1.5
+  coolDown: 2
+  upwardOffset: 0.2
