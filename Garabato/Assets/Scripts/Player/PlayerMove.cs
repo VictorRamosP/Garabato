@@ -62,6 +62,9 @@ public class PlayerMove : MonoBehaviour
         bool isShootingIdle = isIdle && shootingActive && !InputManager.Instance.GetUp();
         _animator.SetBool("isShootingIdle", isShootingIdle);
 
+        bool isLookUp = isIdle && InputManager.Instance.GetUp();
+        _animator.SetBool("isLookUp", isLookUp);
+
         bool isShootingUp = isIdle && shootingActive && InputManager.Instance.GetUp();
         _animator.SetBool("isShootingUp", isShootingUp);
 
