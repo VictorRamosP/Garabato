@@ -46,27 +46,14 @@ public class PlayerMove : MonoBehaviour
             Moverse();
         }
 
-        float verticalVelocity = _rigidbody.velocity.y;
-
-        _animator.SetFloat("verticalVelocity", verticalVelocity);
-        _animator.SetBool("isGrounded", collisionDetection.IsGrounded);
-        _animator.SetBool("isJumping", !collisionDetection.IsGrounded && verticalVelocity > 0.1f);
-        _animator.SetBool("isFalling", !collisionDetection.IsGrounded && verticalVelocity < -0.1f);
+        Animaciones();
 
         if (!collisionDetection.IsGrounded)
         {
             _weapon.SetActive(false);
         }
 
-        bool isIdle = Mathf.Abs(InputManager.Instance.GetHorizontalAxis()) < 0.01f;
-        bool isShootingIdle = isIdle && shootingActive && !InputManager.Instance.GetUp();
-        _animator.SetBool("isShootingIdle", isShootingIdle);
-
-        bool isLookUp = isIdle && InputManager.Instance.GetUp();
-        _animator.SetBool("isLookUp", isLookUp);
-
-        bool isShootingUp = isIdle && shootingActive && InputManager.Instance.GetUp();
-        _animator.SetBool("isShootingUp", isShootingUp);
+      
 
         isJumping = !collisionDetection.IsGrounded;
 
@@ -76,6 +63,26 @@ public class PlayerMove : MonoBehaviour
         }
     }
 
+    void Animaciones()
+    {
+        float verticalVelocity = _rigidbody.velocity.y;
+
+        _animator.SetFloat("verticalVelocity", verticalVelocity);
+        _animator.SetBool("isGrounded", collisionDetection.IsGrounded);
+        _animator.SetBool("isJumping", !collisionDetection.IsGrounded && verticalVelocity > 0.1f);
+        _animator.SetBool("isFalling", !collisionDetection.IsGrounded && verticalVelocity < -0.1f);
+
+        //Animaciones Estando quieto
+        bool isIdle = Mathf.Abs(InputManager.Instance.GetHorizontalAxis()) < 0.01f;
+        bool isShootingIdle = isIdle && shootingActive && !InputManager.Instance.GetUp();
+        _animator.SetBool("isShootingIdle", isShootingIdle);
+
+        bool isLookUp = isIdle && InputManager.Instance.GetUp();
+        _animator.SetBool("isLookUp", isLookUp);
+
+        bool isShootingUp = isIdle && shootingActive && InputManager.Instance.GetUp();
+        _animator.SetBool("isShootingUp", isShootingUp);
+    }
     void Moverse()
     {
         float moveInput = 0;

@@ -9,7 +9,6 @@ public class PlayerShoot : MonoBehaviour
 
     public float coolDownShoot = 1f;
     private float coolDownTimer = 0f;
-    public float bulletTimeDestroy = 2f;
     private bool wasUpShoot = false;
 
     public GameObject shooting;
