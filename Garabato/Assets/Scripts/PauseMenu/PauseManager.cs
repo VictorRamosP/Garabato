@@ -26,7 +26,7 @@ public class PauseManager : MonoBehaviour
         }
         else
         {
-            CursorManager.LockCursor();   
+            CursorManager.LockCursor();
             Time.timeScale = 1;
         }
     }
@@ -46,10 +46,18 @@ public class PauseManager : MonoBehaviour
 
     public void MainMenu()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu");
         Time.timeScale = 1;
         GameManager.Instance.SetPause(false);
+        GameManager.Instance.AllowCursorLock = false; 
         pauseMenuUI.SetActive(false);
-        CursorManager.UnlockCursor(); 
+
+        CursorManager cm = FindObjectOfType<CursorManager>();
+        if (cm != null)
+        {
+            cm.showMouse = true;
+            cm.ApplyCursorState();
+        }
+
+        UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu");
     }
 }

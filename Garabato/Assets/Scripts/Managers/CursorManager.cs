@@ -8,13 +8,9 @@ public class CursorManager : MonoBehaviour
     {
         ApplyCursorState();
     }
+  
 
-    private void Update()
-    {
-        ApplyCursorState();
-    }
-
-    private void ApplyCursorState()
+    public void ApplyCursorState()
     {
         if (!GameManager.Instance.AllowCursorLock || GameManager.Instance.IsPaused || showMouse)
         {

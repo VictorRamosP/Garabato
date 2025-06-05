@@ -11,9 +11,11 @@ public class MainMenuController : MonoBehaviour
 
     void Start()
     {
-        CursorManager.UnlockCursor(); 
+        GameManager.Instance.AllowCursorLock = false; 
+        CursorManager.UnlockCursor();
         StartCoroutine(SelectFirstButtonNextFrame());
     }
+
     void Awake()
     {
         StartCoroutine(SelectFirstButtonNextFrame());
@@ -28,13 +30,17 @@ public class MainMenuController : MonoBehaviour
 
     public void PlayGame()
     {
-        CursorManager.LockCursor(); 
+        GameManager.Instance.AllowCursorLock = true;
         GameObject.FindAnyObjectByType<CursorManager>().showMouse = false;
+        CursorManager.LockCursor();
         SceneManager.LoadScene("Intro");
     }
 
     public void LevelSelector()
     {
+        GameManager.Instance.AllowCursorLock = true;
+        GameObject.FindAnyObjectByType<CursorManager>().showMouse = false;
+        CursorManager.LockCursor();
         SceneManager.LoadScene("LevelSelector");
     }
 
@@ -46,8 +52,9 @@ public class MainMenuController : MonoBehaviour
 
     public void LoadLevel(string levelName)
     {
-        CursorManager.LockCursor();
+        GameManager.Instance.AllowCursorLock = true;
         GameObject.FindAnyObjectByType<CursorManager>().showMouse = false;
+        CursorManager.LockCursor();
         SceneManager.LoadScene(levelName);
     }
 }

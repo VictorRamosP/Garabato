@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
 
     public bool IsPaused { get; private set; } = false;
 
-    public bool AllowCursorLock { get; set; } = true; 
+    public bool AllowCursorLock { get; set; } = true;
 
     void Awake()
     {
