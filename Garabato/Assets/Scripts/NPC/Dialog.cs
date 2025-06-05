@@ -24,6 +24,7 @@ public class Dialog : MonoBehaviour
         {
             if (!dialogueStart)
             {
+                FindObjectOfType<PlayerMove>()._animator.SetBool("IsRunning", false);
                 StartDialogue();
             }
             else if (dialogueText.text == dialogs[lineText])

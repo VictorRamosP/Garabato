@@ -2322,7 +2322,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 987982724478991015, guid: 98d421ee2232bfc4aaf4888bb64d9089, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -14.52
+      value: -14.91
       objectReference: {fileID: 0}
     - target: {fileID: 987982724478991015, guid: 98d421ee2232bfc4aaf4888bb64d9089, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2388,6 +2388,10 @@ PrefabInstance:
       propertyPath: playerCam
       value: 
       objectReference: {fileID: 1976367963}
+    - target: {fileID: 4720523441102825042, guid: 98d421ee2232bfc4aaf4888bb64d9089, type: 3}
+      propertyPath: groundCheckRadius
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 5402392561987612215, guid: 98d421ee2232bfc4aaf4888bb64d9089, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -17520,7 +17524,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8955302068199977792, guid: a048482c9c2f36c4799c26db79d87a21, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -14.52
+      value: -14.91
       objectReference: {fileID: 0}
     - target: {fileID: 8955302068199977792, guid: a048482c9c2f36c4799c26db79d87a21, type: 3}
       propertyPath: m_LocalPosition.z
