@@ -12448,6 +12448,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3533086258660890806, guid: 8e607d309f0d91840a779ee2a97217d4, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 429ecfa508aade24e95d232ab49982a0, type: 3}
     - target: {fileID: 4379645106846230641, guid: 8e607d309f0d91840a779ee2a97217d4, type: 3}
       propertyPath: m_Name
       value: MapAnimation
