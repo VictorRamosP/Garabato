@@ -32,7 +32,10 @@ public class ChangeCam : MonoBehaviour
             StartCoroutine(SwitchCamera());
         }
     }
-
+    public void Change()
+    {
+        StartCoroutine(SwitchCamera());
+    }
     IEnumerator SwitchCamera()
     {
         GameManager.Instance.isCameraReturning = true;

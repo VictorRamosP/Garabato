@@ -1,0 +1,466 @@
+fileFormatVersion: 2
+guid: 54d14dbb51b7b9c4c9856249d29bfa5a
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 700
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SpriteSheetMuerteNoko_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4251.75
+        width: 1417.25
+        height: 1417.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 202cdf8010f11f1488975e74fcdeb51e
+      internalID: 343561508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheetMuerteNoko_1
+      rect:
+        serializedVersion: 2
+        x: 1417
+        y: 4251.75
+        width: 1417.25
+        height: 1417.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57848f18aa998a546ae5e92f70346d85
+      internalID: 1811701346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheetMuerteNoko_2
+      rect:
+        serializedVersion: 2
+        x: 2834
+        y: 4251.75
+        width: 1417.25
+        height: 1417.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 429dd8c3f8ebd6348a1be34d35f2d707
+      internalID: -663415144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheetMuerteNoko_3
+      rect:
+        serializedVersion: 2
+        x: 4251
+        y: 4251.75
+        width: 1417.25
+        height: 1417.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1aa3085bc1b54b94aa9d5151bd2dbad9
+      internalID: -2017050960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheetMuerteNoko_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2834.75
+        width: 1417.25
+        height: 1417.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fc0082348feed94d8dc4d0b6f7e3c23
+      internalID: -634996709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheetMuerteNoko_5
+      rect:
+        serializedVersion: 2
+        x: 1417
+        y: 2834.75
+        width: 1417.25
+        height: 1417.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c34e97db652c9d49b2923b6fc4b0b94
+      internalID: -13147923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheetMuerteNoko_6
+      rect:
+        serializedVersion: 2
+        x: 2834
+        y: 2834.75
+        width: 1417.25
+        height: 1417.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5f236787624fae4495f91d941ec395c
+      internalID: 268449973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheetMuerteNoko_7
+      rect:
+        serializedVersion: 2
+        x: 4251
+        y: 2834.75
+        width: 1417.25
+        height: 1417.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6561f1ed478d03b48bfeda754e12e04d
+      internalID: 288534582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheetMuerteNoko_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1417.75
+        width: 1417.25
+        height: 1417.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7494dab16e6d8044a9391e125450994c
+      internalID: 1431016738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheetMuerteNoko_9
+      rect:
+        serializedVersion: 2
+        x: 1417
+        y: 1417.75
+        width: 1417.25
+        height: 1417.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb30bdf75c1305949acbd631956190cb
+      internalID: -1446077515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheetMuerteNoko_10
+      rect:
+        serializedVersion: 2
+        x: 2834
+        y: 1417.75
+        width: 1417.25
+        height: 1417.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2228b0bee90f36b4e97e336123bd598c
+      internalID: 722026480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheetMuerteNoko_11
+      rect:
+        serializedVersion: 2
+        x: 4251
+        y: 1417.75
+        width: 1417.25
+        height: 1417.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 000f384a99ca00446a74b72fbec56a27
+      internalID: 1069431532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheetMuerteNoko_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0.75
+        width: 1417.25
+        height: 1417.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45002e24dfe5eee4ba832dc26284c24d
+      internalID: 1630866128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheetMuerteNoko_13
+      rect:
+        serializedVersion: 2
+        x: 1417
+        y: 0.75
+        width: 1417.25
+        height: 1417.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f3315f944453e043a88ffa508f2071e
+      internalID: -1652263651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheetMuerteNoko_14
+      rect:
+        serializedVersion: 2
+        x: 2834
+        y: 0.75
+        width: 1417.25
+        height: 1417.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbc59b7de646aea4c9c833823803fb2d
+      internalID: -279401630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheetMuerteNoko_15
+      rect:
+        serializedVersion: 2
+        x: 4252
+        y: 0
+        width: 1417
+        height: 1417
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8ab024d476511c4fb02cfa9f951ae31
+      internalID: -1503851745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      SpriteSheetMuerteNoko_0: 343561508
+      SpriteSheetMuerteNoko_1: 1811701346
+      SpriteSheetMuerteNoko_10: 722026480
+      SpriteSheetMuerteNoko_11: 1069431532
+      SpriteSheetMuerteNoko_12: 1630866128
+      SpriteSheetMuerteNoko_13: -1652263651
+      SpriteSheetMuerteNoko_14: -279401630
+      SpriteSheetMuerteNoko_15: -1503851745
+      SpriteSheetMuerteNoko_2: -663415144
+      SpriteSheetMuerteNoko_3: -2017050960
+      SpriteSheetMuerteNoko_4: -634996709
+      SpriteSheetMuerteNoko_5: -13147923
+      SpriteSheetMuerteNoko_6: 268449973
+      SpriteSheetMuerteNoko_7: 288534582
+      SpriteSheetMuerteNoko_8: 1431016738
+      SpriteSheetMuerteNoko_9: -1446077515
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

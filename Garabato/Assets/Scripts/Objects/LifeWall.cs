@@ -5,17 +5,16 @@ using UnityEngine;
 public class LifeWall : MonoBehaviour
 {
     public float health = 200f;
-    public Sprite lowHealthSprite;
 
-    private SpriteRenderer spriteRenderer;
-    private bool hasChangedSprite = false;
+    private float initialHealth;
     private Animator animator;
     private bool isDead = false;
 
     void Start()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
+        initialHealth = health;
+
     }
 
     public void TakeDamage(float damageTaken)
@@ -23,14 +22,10 @@ public class LifeWall : MonoBehaviour
         if (isDead) return; 
 
         health -= damageTaken;
-
-        if (health <= 101f && !hasChangedSprite)
+        if (health <= initialHealth/2 )
         {
-            if (lowHealthSprite != null && spriteRenderer != null)
-            {
-                spriteRenderer.sprite = lowHealthSprite;
-                hasChangedSprite = true;
-            }
+            Debug.Log("entra");
+            animator.SetBool("isLowHealth", true);
         }
 
         if (health <= 0)
@@ -50,7 +45,7 @@ public class LifeWall : MonoBehaviour
 
     private IEnumerator DisableAfterDeath()
     {
-        yield return new WaitForSeconds(1f); 
+        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length); 
         gameObject.SetActive(false);
     }
 }

@@ -9,7 +9,7 @@ public class PlayerShoot : MonoBehaviour
 
     public float coolDownShoot = 1f;
     private float coolDownTimer = 0f;
-    public float bulletTimeDestroy = 2f;
+    private bool wasUpShoot = false;
 
     public GameObject shooting;
     public PlayerMove _playermove;
@@ -92,6 +92,8 @@ public class PlayerShoot : MonoBehaviour
          if (InputManager.Instance.GetAttack() && InputManager.Instance.GetUp() &&
             (InputManager.Instance.GetMoveLeft() || InputManager.Instance.GetMoveRight()))
             {
+            wasUpShoot = false;
+
             if (_playermove.mirandoDerecha)
             {
                 shooting.transform.rotation = Quaternion.Euler(0, 0, -18);
@@ -112,6 +114,8 @@ public class PlayerShoot : MonoBehaviour
         }
         else if (InputManager.Instance.GetUp() && InputManager.Instance.GetAttack())
         {
+            wasUpShoot = true;
+
             shooting.transform.rotation = Quaternion.Euler(0, 0, 0);
             firePoint.localRotation = Quaternion.Euler(0, 0, 0);
             firePoint.localPosition = new Vector3(0f, 1f, 0f);
@@ -123,6 +127,8 @@ public class PlayerShoot : MonoBehaviour
         }
         else if (InputManager.Instance.GetAttack())
         {
+            wasUpShoot = false;
+
             if (_playermove.mirandoDerecha)
             {
                 shooting.transform.rotation = Quaternion.Euler(0, 0, 0);
@@ -157,6 +163,12 @@ public class PlayerShoot : MonoBehaviour
     IEnumerator DisableWeaponAfterShot()
     {
         yield return new WaitForSeconds(weaponVisible);
+
+        if (wasUpShoot && weaponRenderer && sideShootSprite)
+        {
+            weaponRenderer.sprite = sideShootSprite;
+            wasUpShoot = false; 
+        }
 
         bool isMoving = InputManager.Instance.GetMoveLeft() || InputManager.Instance.GetMoveRight();
 

@@ -13,6 +13,11 @@ public class Dialog : MonoBehaviour
     private bool dialogueStart;
     private int lineText;
 
+    private PlayerMove player;
+    void Start()
+    {
+        excalamacion.SetActive(false);
+    }
     void Update()
     {
         if (isPlayerRange && InputManager.Instance.GetJumpDown())
@@ -76,7 +81,9 @@ public class Dialog : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            GameManager.Instance.canPlayerJump = false;
+            excalamacion.SetActive(true);
+            player = collision.GetComponent<PlayerMove>();
+            collision.GetComponent<PlayerJumper>().canJump = false;
             isPlayerRange = true;
         }
     }
@@ -85,7 +92,8 @@ public class Dialog : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            GameManager.Instance.canPlayerJump = true;
+            excalamacion.SetActive(false);
+            collision.GetComponent<PlayerJumper>().canJump = true;
             isPlayerRange = false;
         }
     }

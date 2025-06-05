@@ -45,6 +45,25 @@ public class PlayerMove : MonoBehaviour
             Moverse();
         }
 
+        Animaciones();
+
+        if (!collisionDetection.IsGrounded)
+        {
+            _weapon.SetActive(false);
+        }
+
+      
+
+        //isJumping = !collisionDetection.IsGrounded;
+
+        if (!collisionDetection.IsGrounded && walkParticles.isPlaying)
+        {
+            walkParticles.Stop();
+        }
+    }
+
+    void Animaciones()
+    {
         float verticalVelocity = _rigidbody.velocity.y;
 
         _animator.SetFloat("verticalVelocity", verticalVelocity);
@@ -52,21 +71,17 @@ public class PlayerMove : MonoBehaviour
         _animator.SetBool("isJumping", !collisionDetection.IsGrounded && verticalVelocity > 0.1f);
         _animator.SetBool("isFalling", !collisionDetection.IsGrounded && verticalVelocity < -0.1f);
 
-        if (!collisionDetection.IsGrounded)
-        {
-            _weapon.SetActive(false);
-        }
-
+        //Animaciones Estando quieto
         bool isIdle = Mathf.Abs(InputManager.Instance.GetHorizontalAxis()) < 0.01f;
         bool isShootingIdle = isIdle && shootingActive && !InputManager.Instance.GetUp();
         _animator.SetBool("isShootingIdle", isShootingIdle);
 
+        bool isLookUp = isIdle && InputManager.Instance.GetUp();
+        _animator.SetBool("isLookUp", isLookUp);
+
         bool isShootingUp = isIdle && shootingActive && InputManager.Instance.GetUp();
         _animator.SetBool("isShootingUp", isShootingUp);
-
-        isJumping = !collisionDetection.IsGrounded;
     }
-
     void Moverse()
     {
         float moveInput = 0;
@@ -99,11 +114,11 @@ public class PlayerMove : MonoBehaviour
             _weapon.SetActive(isRunning);
 
         Orientacion(moveInput);
-        //Particles(isRunning);
+        Particles(isRunning);
         
     }
 
-    /*void Particles(bool isRunning)
+    void Particles(bool isRunning)
     {
         if (isRunning && collisionDetection.IsGrounded)
         {
@@ -116,7 +131,7 @@ public class PlayerMove : MonoBehaviour
                 walkParticles.Stop();
         }
 
-    }*/
+    }
 
     void Orientacion(float desiredDirection)
     {
@@ -134,7 +149,7 @@ public class PlayerMove : MonoBehaviour
         if (isDead || GameManager.Instance.isMapActive)
             return;
 
-        if ((collision.CompareTag("Dead") || collision.CompareTag("Spikes") || collision.CompareTag("Enemy")) && !GameManager.Instance.isMapActive)
+        if ((collision.CompareTag("Dead") || collision.CompareTag("Spikes") || collision.CompareTag("Enemy") || collision.CompareTag("Flame")) && !GameManager.Instance.isMapActive)
         {
             speed = 0;
             Morir();
@@ -154,7 +169,6 @@ public class PlayerMove : MonoBehaviour
         _rigidbody.angularVelocity = 0f;
         _rigidbody.bodyType = RigidbodyType2D.Kinematic;
 
-        // Desactiva otros scripts menos este
         MonoBehaviour[] scripts = GetComponents<MonoBehaviour>();
         foreach (MonoBehaviour script in scripts)
         {
@@ -162,12 +176,13 @@ public class PlayerMove : MonoBehaviour
                 script.enabled = false;
         }
 
-        StartCoroutine(ReloadAfterDelay(1f));
+        StartCoroutine(ReloadAfterDelay(1.3f));
     }
 
     private IEnumerator ReloadAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
     }
 }

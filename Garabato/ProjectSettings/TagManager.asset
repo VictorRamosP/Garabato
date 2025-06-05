@@ -19,6 +19,8 @@ TagManager:
   - Dead
   - SpiderTongue
   - SpiderAttackZone
+  - GameplayCamera
+  - Flame
   layers:
   - Default
   - TransparentFX
