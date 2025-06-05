@@ -674,6 +674,11 @@ Transform:
   - {fileID: 2068984414}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &76894091 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5465355166164074378, guid: 8e607d309f0d91840a779ee2a97217d4, type: 3}
+  m_PrefabInstance: {fileID: 320081299}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &103964102
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1768,6 +1773,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: MapAnimation
       objectReference: {fileID: 0}
+    - target: {fileID: 6509385856578683868, guid: 8e607d309f0d91840a779ee2a97217d4, type: 3}
+      propertyPath: m_Alpha
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6509385856578683868, guid: 8e607d309f0d91840a779ee2a97217d4, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6826032315480442245, guid: 8e607d309f0d91840a779ee2a97217d4, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1847,6 +1860,14 @@ PrefabInstance:
     - target: {fileID: 6826032315480442245, guid: 8e607d309f0d91840a779ee2a97217d4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7862765529192496767, guid: 8e607d309f0d91840a779ee2a97217d4, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 76894091}
+    - target: {fileID: 7862765529192496767, guid: 8e607d309f0d91840a779ee2a97217d4, type: 3}
+      propertyPath: activateAnimationmap
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

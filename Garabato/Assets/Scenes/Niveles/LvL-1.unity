@@ -5052,6 +5052,10 @@ PrefabInstance:
       value: -0.19754283
       objectReference: {fileID: 0}
     - target: {fileID: 8919631477990933310, guid: f341b320bd26ec94c9904e2617603deb, type: 3}
+      propertyPath: coolDown
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8919631477990933310, guid: f341b320bd26ec94c9904e2617603deb, type: 3}
       propertyPath: LevelToLoad
       value: LvL-2
       objectReference: {fileID: 0}
@@ -8803,7 +8807,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7416754633448320645, guid: 7d12ae8dcef5dc7438f85b66cfcf84da, type: 3}
       propertyPath: coolDown
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7416754633448320645, guid: 7d12ae8dcef5dc7438f85b66cfcf84da, type: 3}
       propertyPath: LevelToLoad
@@ -27436,6 +27440,14 @@ PrefabInstance:
     - target: {fileID: 6996129972549991982, guid: 8e607d309f0d91840a779ee2a97217d4, type: 3}
       propertyPath: m_ReferenceResolution.y
       value: 1080
+      objectReference: {fileID: 0}
+    - target: {fileID: 7862765529192496767, guid: 8e607d309f0d91840a779ee2a97217d4, type: 3}
+      propertyPath: activateAnimationmap
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8659922564033393360, guid: 8e607d309f0d91840a779ee2a97217d4, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -9,7 +9,6 @@ public class WinZone : MonoBehaviour
     private float coolDownTimer;
     public string LevelToLoad;
     private bool finishcooldawn = false;
-
     private void Update()
     {
         coolDownTimer += Time.deltaTime;
@@ -19,17 +18,22 @@ public class WinZone : MonoBehaviour
             finishcooldawn = true;
         }
     }
-    public void LoadLevel(string Level)
+    IEnumerator LoadLevel(string level)
     {
-        SceneManager.LoadScene(Level);
+        GameObject.FindAnyObjectByType<ChangeCam>().Change();
+        GameObject.Find("MapAnimation").GetComponent<Animator>().SetTrigger("Start");
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene(level);
     }
+
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (finishcooldawn)
         {
             if (collision.CompareTag("Player"))
             {
-                LoadLevel(LevelToLoad);
+                collision.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+                StartCoroutine(LoadLevel(LevelToLoad));
             }
         }
     }

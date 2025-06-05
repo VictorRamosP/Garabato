@@ -2578,8 +2578,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7862765529192496767, guid: 8e607d309f0d91840a779ee2a97217d4, type: 3}
+      propertyPath: Book
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7862765529192496767, guid: 8e607d309f0d91840a779ee2a97217d4, type: 3}
       propertyPath: activateAnimationmap
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:

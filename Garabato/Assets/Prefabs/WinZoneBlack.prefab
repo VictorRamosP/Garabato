@@ -4950,8 +4950,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd3846edaddeac74eb963e3af0040e3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coolDown: 0
+  coolDown: 5
   LevelToLoad: 
+  loadLevel: {fileID: 7862765529192496767, guid: 8e607d309f0d91840a779ee2a97217d4, type: 3}
 --- !u!1 &8566515320666062026
 GameObject:
   m_ObjectHideFlags: 0
