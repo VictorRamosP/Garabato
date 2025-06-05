@@ -2711,11 +2711,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e88e6852d76be114c9beb37df5eb55ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  title1: {fileID: 21300000, guid: 38864cce73273f844b4b5161646e0fe8, type: 3}
+  title1: {fileID: 0}
   title2: {fileID: 21300000, guid: 615644f6f9f6b9e4a997ec7125886162, type: 3}
-  title3: {fileID: 21300000, guid: 3c933050f81e2d048b08f55d91fdcad7, type: 3}
-  title4: {fileID: 21300000, guid: 615644f6f9f6b9e4a997ec7125886162, type: 3}
-  title5: {fileID: 21300000, guid: 615644f6f9f6b9e4a997ec7125886162, type: 3}
+  title3: {fileID: 0}
+  title4: {fileID: 0}
+  title5: {fileID: 0}
   changeInterval: 5
 --- !u!1 &1274928724
 GameObject:
