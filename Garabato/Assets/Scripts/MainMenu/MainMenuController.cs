@@ -30,11 +30,13 @@ public class MainMenuController : MonoBehaviour
 
     public void PlayGame()
     {
+        FindObjectOfType<UICursorController>()?.ShowSystemCursor();
+
+        Cursor.lockState = CursorLockMode.Locked;
         GameManager.Instance.AllowCursorLock = true;
-        GameObject.FindAnyObjectByType<CursorManager>().showMouse = false;
-        CursorManager.LockCursor();
         SceneManager.LoadScene("Intro");
     }
+
 
     public void LevelSelector()
     {
