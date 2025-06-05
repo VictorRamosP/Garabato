@@ -3,7 +3,6 @@ using UnityEngine;
 public class PauseManager : MonoBehaviour
 {
     public GameObject pauseMenuUI;
-    private bool isPaused = false;
 
     void Update()
     {
@@ -15,16 +14,29 @@ public class PauseManager : MonoBehaviour
 
     public void TogglePause()
     {
-        isPaused = !isPaused;
-        pauseMenuUI.SetActive(isPaused);
-        Time.timeScale = isPaused ? 0 : 1;
+        bool newPauseState = !GameManager.Instance.IsPaused;
+        GameManager.Instance.SetPause(newPauseState);
+
+        pauseMenuUI.SetActive(newPauseState);
+
+        if (newPauseState)
+        {
+            CursorManager.UnlockCursor();
+            Time.timeScale = 0;
+        }
+        else
+        {
+            CursorManager.LockCursor();   
+            Time.timeScale = 1;
+        }
     }
 
     public void ResumeGame()
     {
-        isPaused = false;
+        GameManager.Instance.SetPause(false);
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1;
+        CursorManager.LockCursor();
     }
 
     public void QuitGame()
@@ -32,12 +44,12 @@ public class PauseManager : MonoBehaviour
         Application.Quit();
     }
 
-    
-    public void MainMenu()    
-    {        
+    public void MainMenu()
+    {
         UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu");
         Time.timeScale = 1;
-        isPaused = false;
+        GameManager.Instance.SetPause(false);
         pauseMenuUI.SetActive(false);
+        CursorManager.UnlockCursor(); 
     }
 }

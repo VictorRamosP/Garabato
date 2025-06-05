@@ -27504,7 +27504,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7862765529192496767, guid: 8e607d309f0d91840a779ee2a97217d4, type: 3}
       propertyPath: activateAnimationmap
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8659922564033393360, guid: 8e607d309f0d91840a779ee2a97217d4, type: 3}
       propertyPath: m_RaycastTarget

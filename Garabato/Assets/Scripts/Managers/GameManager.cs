@@ -3,11 +3,14 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
+
     public bool mapAnimationActivated;
     public bool playerIntroPlayed = false;
     public bool playerCanMove = false;
+
     public bool IsPaused { get; private set; } = false;
 
+    public bool AllowCursorLock { get; set; } = true; 
 
     void Awake()
     {
@@ -21,23 +24,9 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
-  
 
-    void Update()
+    public void SetPause(bool pause)
     {
-        if (InputManager.Instance.GetPause())
-        {
-            TogglePause();
-        }
+        IsPaused = pause;
     }
-
-    public void TogglePause()
-    {
-        IsPaused = !IsPaused;
-
-        // Detener el tiempo general
-        //Time.timeScale = IsPaused ? 0f : 1f;
-    }
-
-    
 }

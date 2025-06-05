@@ -1,21 +1,24 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CursorManager : MonoBehaviour
 {
-    public bool showMouse;
+    public bool showMouse = false;
+
     private void Start()
     {
-        LockCursor();
+        ApplyCursorState();
     }
 
     private void Update()
     {
-        if (GameManager.Instance.IsPaused || showMouse)
+        ApplyCursorState();
+    }
+
+    private void ApplyCursorState()
+    {
+        if (!GameManager.Instance.AllowCursorLock || GameManager.Instance.IsPaused || showMouse)
         {
             UnlockCursor();
-
         }
         else
         {
@@ -23,10 +26,9 @@ public class CursorManager : MonoBehaviour
         }
     }
 
-
     public static void LockCursor()
     {
-        Cursor.lockState = CursorLockMode.None;
+        Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
 

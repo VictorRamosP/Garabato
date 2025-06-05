@@ -9,16 +9,15 @@ public class MainMenuController : MonoBehaviour
     public string LevelToLoad;
     public Button firstSelected;
 
+    void Start()
+    {
+        CursorManager.UnlockCursor(); 
+        StartCoroutine(SelectFirstButtonNextFrame());
+    }
     void Awake()
     {
         StartCoroutine(SelectFirstButtonNextFrame());
     }
-    /* 
-    void Start()
-    {
-        StartCoroutine(SelectFirstButtonNextFrame());
-    }
-    */
 
     IEnumerator SelectFirstButtonNextFrame()
     {
@@ -29,6 +28,7 @@ public class MainMenuController : MonoBehaviour
 
     public void PlayGame()
     {
+        CursorManager.LockCursor(); 
         GameObject.FindAnyObjectByType<CursorManager>().showMouse = false;
         SceneManager.LoadScene("Intro");
     }
@@ -46,8 +46,8 @@ public class MainMenuController : MonoBehaviour
 
     public void LoadLevel(string levelName)
     {
+        CursorManager.LockCursor();
+        GameObject.FindAnyObjectByType<CursorManager>().showMouse = false;
         SceneManager.LoadScene(levelName);
     }
-
-    
 }
