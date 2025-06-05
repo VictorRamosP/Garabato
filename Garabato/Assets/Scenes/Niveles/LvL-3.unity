@@ -4199,11 +4199,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8082453088041548684, guid: f341b320bd26ec94c9904e2617603deb, type: 3}
       propertyPath: m_Size.x
-      value: 0.80601376
+      value: 0.6085011
       objectReference: {fileID: 0}
     - target: {fileID: 8082453088041548684, guid: f341b320bd26ec94c9904e2617603deb, type: 3}
       propertyPath: m_Offset.x
-      value: -0.15300694
+      value: -0.054250613
       objectReference: {fileID: 0}
     - target: {fileID: 8919631477990933310, guid: f341b320bd26ec94c9904e2617603deb, type: 3}
       propertyPath: LevelToLoad
@@ -10823,7 +10823,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3957908497551273895, guid: 7d12ae8dcef5dc7438f85b66cfcf84da, type: 3}
       propertyPath: m_Size.y
-      value: 0.6068967
+      value: 0.5355752
       objectReference: {fileID: 0}
     - target: {fileID: 3957908497551273895, guid: 7d12ae8dcef5dc7438f85b66cfcf84da, type: 3}
       propertyPath: m_Enabled
@@ -10835,7 +10835,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3957908497551273895, guid: 7d12ae8dcef5dc7438f85b66cfcf84da, type: 3}
       propertyPath: m_Offset.y
-      value: 0.29655167
+      value: 0.40353486
       objectReference: {fileID: 0}
     - target: {fileID: 4333270908590246798, guid: 7d12ae8dcef5dc7438f85b66cfcf84da, type: 3}
       propertyPath: m_LocalScale.x

@@ -15189,11 +15189,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8082453088041548684, guid: f341b320bd26ec94c9904e2617603deb, type: 3}
       propertyPath: m_Size.x
-      value: 0.50632405
+      value: 0.41685125
       objectReference: {fileID: 0}
     - target: {fileID: 8082453088041548684, guid: f341b320bd26ec94c9904e2617603deb, type: 3}
       propertyPath: m_Offset.x
-      value: -0.28729445
+      value: -0.24255799
       objectReference: {fileID: 0}
     - target: {fileID: 8919631477990933310, guid: f341b320bd26ec94c9904e2617603deb, type: 3}
       propertyPath: LevelToLoad
