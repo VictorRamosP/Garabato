@@ -17437,6 +17437,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PostProcessing
       objectReference: {fileID: 0}
+    - target: {fileID: 5126380162457608293, guid: 98cc3ddd06398664aa4382eeb7433602, type: 3}
+      propertyPath: weight
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5126380162457608293, guid: 98cc3ddd06398664aa4382eeb7433602, type: 3}
+      propertyPath: m_IsGlobal
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6379999910462556729, guid: 98cc3ddd06398664aa4382eeb7433602, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
