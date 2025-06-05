@@ -26,7 +26,7 @@ public class ChangeCam : MonoBehaviour
     {
         if (playerCam == null || mapCam == null)
         {
-            Debug.LogError("No hay cámaras asignadas");
+            Debug.LogError("No hay cï¿½maras asignadas");
             return;
         }
 
@@ -47,14 +47,15 @@ public class ChangeCam : MonoBehaviour
         if (rotateMap != null && rotateMap.IsRotating)
             return;
 
-        if (InputManager.Instance.GetMap() && (collisionDetection.IsGrounded || isMapActive) &&
-            GameManager.Instance.mapAnimationActivated &&
-            canChangeMap)
+        if (InputManager.Instance.GetMap() && (collisionDetection.IsGrounded || isMapActive) && canChangeMap)
         {
             StartCoroutine(SwitchCamera());
         }
     }
-
+    public void Change()
+    {
+        StartCoroutine(SwitchCamera());
+    }
     IEnumerator SwitchCamera()
     {
         isReturning = true;
