@@ -19,39 +19,36 @@ public class MapIntroChange : MonoBehaviour
         // playerCam = playerCamObj.GetComponent<CinemachineVirtualCamera>();
         mapCam = mapCamObj.GetComponent<CinemachineVirtualCamera>();
         gameplayCam = gameplayCamObj.GetComponent<CinemachineVirtualCamera>();
-
         // Verifica si la animaci�n ya fue mostrada
-        if (GameManager.Instance != null && !activateAnimationmap)
+        if (GameManager.Instance.mapAnimationActivated)
         {
-            gameplayCam.Priority = 11;
             mapCam.Priority = 0;
-            
-            Hand.SetActive(false);
-            Book.SetActive(false);
+            gameplayCam.Priority = 11;
         }
         else
         {
-            //playerCam.Priority = 0;
-            gameplayCam.Priority = 0;
             mapCam.Priority = 10;
+            gameplayCam.Priority = 0;
         }
     }
     void Update()
     {
-       
+
     }
     public void OnMapAnimationEnd()
     {
-        //playerCam.Priority = 10;
         gameplayCam.Priority = 11;
         mapCam.Priority = 0;
-        //gameObject.SetActive(false);
-        // Marcar que la animaci�n ya se mostr�
+
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.mapAnimationActivated = true;
+        }
     }
 
-    void EndTransition()
+    public void EndTransition()
     {
-        if (activateAnimationmap)
+        if (activateAnimationmap && !GameManager.Instance.mapAnimationActivated)
         {
             animator.SetTrigger("Map");
             gameplayCam.Priority = 0;
@@ -63,6 +60,11 @@ public class MapIntroChange : MonoBehaviour
                 AudioSource.PlayClipAtPoint(drawingClip, Camera.main.transform.position);
             }
         }
+    }
+
+    public void ExitingScene()
+    {
+        GameManager.Instance.mapAnimationActivated = false;
     }
 }
 

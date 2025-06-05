@@ -86,7 +86,7 @@ public class PlayerShoot : MonoBehaviour
 
     void RotateShoot()
     {
-        if (_collisionDetection == null || !_collisionDetection.IsGrounded)
+        if (_collisionDetection == null || !_collisionDetection.IsGrounded || !GameManager.Instance.mapAnimationActivated)
             return;
 
         bool Shot = false;
