@@ -47,8 +47,13 @@ public class EnemyLife : MonoBehaviour
     {
         animator.SetTrigger("Die");
         OnDeath?.Invoke();
-        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
+
+        yield return null;
+
+        float animLength = animator.GetCurrentAnimatorStateInfo(0).length;
+        yield return new WaitForSeconds(animLength);
+
         gameObject.SetActive(false);
-        
+
     }
 }

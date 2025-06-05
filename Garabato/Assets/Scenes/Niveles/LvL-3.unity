@@ -2052,6 +2052,10 @@ PrefabInstance:
       value: GameManager
       objectReference: {fileID: 0}
     - target: {fileID: 7649681999755672935, guid: 830fb53d0dea9b546ae5c428e33f7ddd, type: 3}
+      propertyPath: playerIntroPlayed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7649681999755672935, guid: 830fb53d0dea9b546ae5c428e33f7ddd, type: 3}
       propertyPath: mapAnimationActivated
       value: 1
       objectReference: {fileID: 0}
