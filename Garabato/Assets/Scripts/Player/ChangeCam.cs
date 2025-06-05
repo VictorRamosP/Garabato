@@ -43,12 +43,15 @@ public class ChangeCam : MonoBehaviour
 
     void Update()
     {
+        GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
         RotateMap rotateMap = FindObjectOfType<RotateMap>();
         if (rotateMap != null && rotateMap.IsRotating)
             return;
 
         if (InputManager.Instance.GetMap() && (collisionDetection.IsGrounded || isMapActive) && canChangeMap)
         {
+            GetComponent<Animator>().SetBool("IsRunning", false);
+            GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
             StartCoroutine(SwitchCamera());
         }
     }

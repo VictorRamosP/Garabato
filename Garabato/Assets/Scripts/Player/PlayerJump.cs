@@ -31,7 +31,7 @@ public class PlayerJumper : MonoBehaviour
 
     void Update()
     {
-        if (ChangeCam.isMapActive || !canJump) return;
+        if (ChangeCam.isMapActive || !canJump || !GameManager.Instance.mapAnimationActivated) return;
         if (InputManager.Instance.GetJumpDown() && _collisionDetection.IsGrounded)
         {
             JumpStarted();
