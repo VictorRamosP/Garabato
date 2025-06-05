@@ -60,6 +60,12 @@ public class MapIntroChange : MonoBehaviour
                 AudioSource.PlayClipAtPoint(drawingClip, Camera.main.transform.position);
             }
         }
+        else
+        {
+            gameplayCam.Priority = 11;
+            mapCam.Priority = 0;
+            GameManager.Instance.mapAnimationActivated = true;
+        }
     }
 
     public void ExitingScene()
