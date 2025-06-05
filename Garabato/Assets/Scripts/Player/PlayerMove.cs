@@ -8,7 +8,7 @@ public class PlayerMove : MonoBehaviour
 {
     private GameObject _weapon;
     private Rigidbody2D _rigidbody;
-    private Animator _animator;
+    public Animator _animator;
     public float speed;
     //public float jumpForce;
     public LayerMask floorlayerMask;
@@ -189,6 +189,7 @@ public class PlayerMove : MonoBehaviour
     private IEnumerator ReloadAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
+        GameObject.Find("MapAnimation").GetComponent<Animator>().SetTrigger("Start");
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 
     }
