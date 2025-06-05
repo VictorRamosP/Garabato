@@ -11,13 +11,9 @@ public class MainMenuController : MonoBehaviour
 
     void Start()
     {
-        GameManager.Instance.AllowCursorLock = false; 
-        CursorManager.UnlockCursor();
-        StartCoroutine(SelectFirstButtonNextFrame());
-    }
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.None;
 
-    void Awake()
-    {
         StartCoroutine(SelectFirstButtonNextFrame());
     }
 
@@ -30,20 +26,10 @@ public class MainMenuController : MonoBehaviour
 
     public void PlayGame()
     {
-        FindObjectOfType<UICursorController>()?.ShowSystemCursor();
-
+        Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
-        GameManager.Instance.AllowCursorLock = true;
+
         SceneManager.LoadScene("Intro");
-    }
-
-
-    public void LevelSelector()
-    {
-        GameManager.Instance.AllowCursorLock = true;
-        GameObject.FindAnyObjectByType<CursorManager>().showMouse = false;
-        CursorManager.LockCursor();
-        SceneManager.LoadScene("LevelSelector");
     }
 
     public void QuitGame()
@@ -54,9 +40,9 @@ public class MainMenuController : MonoBehaviour
 
     public void LoadLevel(string levelName)
     {
-        GameManager.Instance.AllowCursorLock = true;
-        GameObject.FindAnyObjectByType<CursorManager>().showMouse = false;
-        CursorManager.LockCursor();
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+
         SceneManager.LoadScene(levelName);
     }
 }

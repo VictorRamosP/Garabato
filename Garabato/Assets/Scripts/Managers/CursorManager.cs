@@ -8,7 +8,19 @@ public class CursorManager : MonoBehaviour
     {
         ApplyCursorState();
     }
-  
+    void Update()
+    {
+        if (!GameManager.Instance.AllowCursorLock || GameManager.Instance.IsPaused || showMouse)
+        {
+            Cursor.visible = false; 
+            Cursor.lockState = CursorLockMode.None;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
+    }
 
     public void ApplyCursorState()
     {
