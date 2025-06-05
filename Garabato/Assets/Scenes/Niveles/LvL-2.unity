@@ -396,7 +396,7 @@ MonoBehaviour:
   dialogs:
   - Esto se ha puesto peor de lo que imaginaba.
   - Ha invocado a sus siervos oscuros para acabar contigo.
-  - Ves con mucho cuidado, todos contamos contigo.
+  - Ve con mucho cuidado, todos contamos contigo.
 --- !u!61 &39689767
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16340,3 +16340,4 @@ SceneRoots:
   - {fileID: 1063953367}
   - {fileID: 429816899}
   - {fileID: 375182154}
+  - {fileID: 596359320}
