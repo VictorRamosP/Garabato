@@ -5700,6 +5700,14 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8082453088041548684, guid: f341b320bd26ec94c9904e2617603deb, type: 3}
+      propertyPath: m_Size.x
+      value: 0.5212048
+      objectReference: {fileID: 0}
+    - target: {fileID: 8082453088041548684, guid: f341b320bd26ec94c9904e2617603deb, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.25801128
+      objectReference: {fileID: 0}
     - target: {fileID: 8919631477990933310, guid: f341b320bd26ec94c9904e2617603deb, type: 3}
       propertyPath: LevelToLoad
       value: LvL-1
