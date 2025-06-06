@@ -179,11 +179,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Aqui va el texto de los creditos\nPara a\xF1adir Fotos Lo suyo seria Poner
-    foto y luego Poner mas cuadro de texto\nSi Lees esto es que eres tonto payaso"
+  m_text: "A GAME MADE BY\n\n\nIZAN D\xCDAZ\n\nV\xEDCTOR RAMOS\n\nJOEL PACHECO\n\nARNAU
+    SEGU\xCD\n\nBERNAT NOHERAS\n\nISAAC URE\xD1A\n\nALEX PUJOL\n\nSPECIAL THANKS
+    TO\n\n\xC8lia Prat\nEnzo Hamblot\nNikolas Cantero\n\n\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: fd4b34b86f2d8cb438aee6e48f658e85, type: 2}
+  m_sharedMaterial: {fileID: 2030398737921365375, guid: fd4b34b86f2d8cb438aee6e48f658e85, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
