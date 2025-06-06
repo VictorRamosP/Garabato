@@ -41471,6 +41471,34 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
+  - time: 0.5
+    functionName: PlaySoundEffectByName
+    data: sleep
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 3.0166667
+    functionName: PlaySoundEffectByName
+    data: book
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 10.016666
+    functionName: PlaySoundEffectByName
+    data: suck
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 16.683332
+    functionName: PlaySoundEffectByName
+    data: laugh
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
   - time: 25
     functionName: OnEndAnimation
     data: 
