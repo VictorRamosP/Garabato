@@ -5170,46 +5170,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1319388577}
-    - target: {fileID: 954178202679358418, guid: 54be2cd39b5a6b74584aeaed45b33069, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ResumeGame
-      objectReference: {fileID: 0}
     - target: {fileID: 2295155761094061108, guid: 54be2cd39b5a6b74584aeaed45b33069, type: 3}
       propertyPath: m_Name
       value: PauseCanvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 2295155761094061108, guid: 54be2cd39b5a6b74584aeaed45b33069, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2620848192220237187, guid: 54be2cd39b5a6b74584aeaed45b33069, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2620848192220237187, guid: 54be2cd39b5a6b74584aeaed45b33069, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2620848192220237187, guid: 54be2cd39b5a6b74584aeaed45b33069, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1319388577}
-    - target: {fileID: 2620848192220237187, guid: 54be2cd39b5a6b74584aeaed45b33069, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2620848192220237187, guid: 54be2cd39b5a6b74584aeaed45b33069, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: MainMenu
-      objectReference: {fileID: 0}
-    - target: {fileID: 2620848192220237187, guid: 54be2cd39b5a6b74584aeaed45b33069, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: PauseManager, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 2620848192220237187, guid: 54be2cd39b5a6b74584aeaed45b33069, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 3567295484056386003, guid: 54be2cd39b5a6b74584aeaed45b33069, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -5294,70 +5262,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1319388577}
-    - target: {fileID: 4128440127390837722, guid: 54be2cd39b5a6b74584aeaed45b33069, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: QuitGame
-      objectReference: {fileID: 0}
-    - target: {fileID: 4477998154798008445, guid: 54be2cd39b5a6b74584aeaed45b33069, type: 3}
-      propertyPath: m_text
-      value: SALIR
-      objectReference: {fileID: 0}
-    - target: {fileID: 4477998154798008445, guid: 54be2cd39b5a6b74584aeaed45b33069, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: fd4b34b86f2d8cb438aee6e48f658e85, type: 2}
-    - target: {fileID: 4477998154798008445, guid: 54be2cd39b5a6b74584aeaed45b33069, type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 2030398737921365375, guid: fd4b34b86f2d8cb438aee6e48f658e85, type: 2}
-    - target: {fileID: 4477998154798008445, guid: 54be2cd39b5a6b74584aeaed45b33069, type: 3}
-      propertyPath: m_hasFontAssetChanged
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5295728656042343566, guid: 54be2cd39b5a6b74584aeaed45b33069, type: 3}
-      propertyPath: m_text
-      value: MENU
-      objectReference: {fileID: 0}
-    - target: {fileID: 5295728656042343566, guid: 54be2cd39b5a6b74584aeaed45b33069, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: fd4b34b86f2d8cb438aee6e48f658e85, type: 2}
-    - target: {fileID: 5295728656042343566, guid: 54be2cd39b5a6b74584aeaed45b33069, type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 2030398737921365375, guid: fd4b34b86f2d8cb438aee6e48f658e85, type: 2}
-    - target: {fileID: 5295728656042343566, guid: 54be2cd39b5a6b74584aeaed45b33069, type: 3}
-      propertyPath: m_hasFontAssetChanged
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8028211010499722384, guid: 54be2cd39b5a6b74584aeaed45b33069, type: 3}
-      propertyPath: m_text
-      value: RESUME
-      objectReference: {fileID: 0}
-    - target: {fileID: 8028211010499722384, guid: 54be2cd39b5a6b74584aeaed45b33069, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: fd4b34b86f2d8cb438aee6e48f658e85, type: 2}
-    - target: {fileID: 8028211010499722384, guid: 54be2cd39b5a6b74584aeaed45b33069, type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 2030398737921365375, guid: fd4b34b86f2d8cb438aee6e48f658e85, type: 2}
-    - target: {fileID: 8028211010499722384, guid: 54be2cd39b5a6b74584aeaed45b33069, type: 3}
-      propertyPath: m_hasFontAssetChanged
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8643434469374662072, guid: 54be2cd39b5a6b74584aeaed45b33069, type: 3}
-      propertyPath: m_Color.b
-      value: 0.92941177
-      objectReference: {fileID: 0}
-    - target: {fileID: 8643434469374662072, guid: 54be2cd39b5a6b74584aeaed45b33069, type: 3}
-      propertyPath: m_Color.g
-      value: 0.9882353
-      objectReference: {fileID: 0}
-    - target: {fileID: 8643434469374662072, guid: 54be2cd39b5a6b74584aeaed45b33069, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6250,6 +6154,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6268237235420246851, guid: 8063ca1900cc1114cbf7f9590726e493, type: 3}
   m_PrefabInstance: {fileID: 1147168626}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1166136664 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8928992547491954914, guid: 54be2cd39b5a6b74584aeaed45b33069, type: 3}
+  m_PrefabInstance: {fileID: 1015778061}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1180752974
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7139,9 +7048,17 @@ PrefabInstance:
       propertyPath: pauseMenuUI
       value: 
       objectReference: {fileID: 1747116890}
+    - target: {fileID: 3849141901718476025, guid: 3cfa1a50fff0b7a4d98e3ed7c0f82c3e, type: 3}
+      propertyPath: firstSelectedButton
+      value: 
+      objectReference: {fileID: 1166136664}
     - target: {fileID: 5316107634352246251, guid: 3cfa1a50fff0b7a4d98e3ed7c0f82c3e, type: 3}
       propertyPath: m_Name
       value: PauseSystem (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316107634352246251, guid: 3cfa1a50fff0b7a4d98e3ed7c0f82c3e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8499280304036163530, guid: 3cfa1a50fff0b7a4d98e3ed7c0f82c3e, type: 3}
       propertyPath: m_LocalPosition.x
