@@ -8,7 +8,7 @@ public class EndAnimation : MonoBehaviour
     public string nameScene;
     void Update()
     {
-        if (InputManager.Instance.GetPause())
+        if (InputManager.Instance.GetJump())
         {
             SceneManager.LoadScene(nameScene);
         }
