@@ -9,6 +9,8 @@ public class LifeWall : MonoBehaviour
     private float initialHealth;
     private Animator animator;
     private bool isDead = false;
+ 
+    public AudioClip glassBreakSound;
 
     void Start()
     {
@@ -45,7 +47,13 @@ public class LifeWall : MonoBehaviour
 
     private IEnumerator DisableAfterDeath()
     {
+        if (glassBreakSound != null)
+        {
+            AudioSource.PlayClipAtPoint(glassBreakSound, transform.position);
+        }
+        
         yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length); 
+        
         gameObject.SetActive(false);
     }
 }

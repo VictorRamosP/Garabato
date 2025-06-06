@@ -28811,6 +28811,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 200
+  glassBreakSound: {fileID: 8300000, guid: 0be3177c50fad73479b19da547613fd0, type: 3}
 --- !u!4 &2027869344 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2761132111201791632, guid: f1f50254b3b858e40aae1de8adce4969, type: 3}
