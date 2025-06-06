@@ -523,9 +523,9 @@ MonoBehaviour:
   movementBounds:
     serializedVersion: 2
     x: 0
-    y: 108.55
-    width: 1772
-    height: 520
+    y: 45.4
+    width: 1813
+    height: 517.4
   cursorWidth: 821.5
   cursorHeight: 595.3
 --- !u!1 &288103921
@@ -2120,7 +2120,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 5f613677d87768945832854339db9505, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.014
+  m_Volume: 0.369
   m_Pitch: 1
   Loop: 1
   Mute: 0
