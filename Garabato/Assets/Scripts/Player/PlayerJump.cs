@@ -34,11 +34,11 @@ public class PlayerJumper : MonoBehaviour
         if (ChangeCam.isMapActive || !canJump || !GameManager.Instance.mapAnimationActivated) return;
         if (InputManager.Instance.GetJumpDown() && _collisionDetection.IsGrounded)
         {
-            JumpStarted();
             if (_audioSource && jumpSound)
             {
                 _audioSource.PlayOneShot(jumpSound);
             }
+            JumpStarted();
         }
 
         if (InputManager.Instance.GetJumpUp())

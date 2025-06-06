@@ -84,7 +84,10 @@ public class Dialog : MonoBehaviour
         {
             excalamacion.SetActive(true);
             player = collision.GetComponent<PlayerMove>();
-            collision.GetComponent<PlayerJumper>().canJump = false;
+            if (InputManager.Instance.currentInputSource == InputManager.InputSource.Joystick)
+            {
+                collision.GetComponent<PlayerJumper>().canJump = false;
+            }
             isPlayerRange = true;
         }
     }

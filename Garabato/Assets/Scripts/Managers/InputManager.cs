@@ -220,7 +220,6 @@ public class InputManager : MonoBehaviour
         }
         else if (Input.GetAxis("Vertical") > 0.5f)
         {
-            currentInputSource = InputSource.Joystick;
             inputDetected = true;
         }
         return inputDetected;
