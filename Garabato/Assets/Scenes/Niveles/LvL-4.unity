@@ -949,6 +949,7 @@ MonoBehaviour:
   excalamacion: {fileID: 1601028970}
   dialogueText: {fileID: 248147552}
   textPanel: {fileID: 369937108}
+  dialogSound: {fileID: 8300000, guid: 23b6e36a14d8c994db0f7eb4a20689be, type: 3}
   dialogs:
   - Ya queda poco.
   - "Un poco m\xE1s y podr\xE1s devolver a ese travieso duende a donde pertenece."

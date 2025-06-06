@@ -3766,6 +3766,7 @@ MonoBehaviour:
   excalamacion: {fileID: 446284644}
   dialogueText: {fileID: 244181988}
   textPanel: {fileID: 1827559773}
+  dialogSound: {fileID: 8300000, guid: 23b6e36a14d8c994db0f7eb4a20689be, type: 3}
   dialogs:
   - 'El duende ha logrado perfeccionar sus poderes y ha salido del cuaderno.
 

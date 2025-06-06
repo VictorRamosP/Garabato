@@ -2306,6 +2306,10 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 622269753736096978, guid: 98d421ee2232bfc4aaf4888bb64d9089, type: 3}
+      propertyPath: deathSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 270db7be021eed948bc1b20a9196e030, type: 3}
+    - target: {fileID: 622269753736096978, guid: 98d421ee2232bfc4aaf4888bb64d9089, type: 3}
       propertyPath: walkParticles
       value: 
       objectReference: {fileID: 1884054941}
@@ -9295,6 +9299,7 @@ MonoBehaviour:
   excalamacion: {fileID: 958261486}
   dialogueText: {fileID: 509588143}
   textPanel: {fileID: 1795147287}
+  dialogSound: {fileID: 8300000, guid: 23b6e36a14d8c994db0f7eb4a20689be, type: 3}
   dialogs:
   - "\xA1\xBFNoko?!"
   - "\xBFC\xF3mo has llegado hasta aqu\xED?"

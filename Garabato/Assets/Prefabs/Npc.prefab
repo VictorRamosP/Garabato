@@ -169,6 +169,7 @@ MonoBehaviour:
   excalamacion: {fileID: 7524497909221568615}
   dialogueText: {fileID: 0}
   textPanel: {fileID: 0}
+  dialogSound: {fileID: 8300000, guid: 23b6e36a14d8c994db0f7eb4a20689be, type: 3}
   dialogs:
   - Hola
   - Khe
