@@ -46,4 +46,9 @@ public class IntroAudioController : MonoBehaviour
             Debug.LogWarning("Sound effect not found: " + name);
         }
     }
+
+    public void StopMusic()
+    {
+        musicSource.Stop();
+    }
 }
