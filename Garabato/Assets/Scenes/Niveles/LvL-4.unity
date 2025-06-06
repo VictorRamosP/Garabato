@@ -6576,6 +6576,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1332625425}
     m_Modifications:
+    - target: {fileID: 2912902437533716450, guid: f341b320bd26ec94c9904e2617603deb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 42c18624f8e17f74ba3d7e07629ffcdd, type: 2}
+    - target: {fileID: 3352968903250720884, guid: f341b320bd26ec94c9904e2617603deb, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3352968903250720884, guid: f341b320bd26ec94c9904e2617603deb, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5809054634401755283, guid: f341b320bd26ec94c9904e2617603deb, type: 3}
       propertyPath: m_Name
       value: WinZoneWhite
