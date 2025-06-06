@@ -84,20 +84,7 @@ public class PlayerJumper : MonoBehaviour
         }
     }
 
-    private bool IsPeakReached()
-    {
-
-        bool reached = (_lastVelocityY * _rigidbody.velocity.y) < 0;
-        _lastVelocityY = _rigidbody.velocity.y;
-
-        return reached;
-    }
-
-    private void SetWallSlide()
-    {
-        _rigidbody.velocity = new Vector2(_rigidbody.velocity.x,
-            Mathf.Max(_rigidbody.velocity.y, -WallSlideSpeed));
-    }
+   
 
     private void SetGravity()
     {
@@ -105,10 +92,6 @@ public class PlayerJumper : MonoBehaviour
         _rigidbody.gravityScale = grav / 9.81f;
     }
 
-    private void TweakGravity()
-    {
-        _rigidbody.gravityScale *= 1.2f;
-    }
 
     private float GetJumpForce()
     {

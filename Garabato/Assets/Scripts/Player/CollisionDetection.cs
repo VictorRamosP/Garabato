@@ -73,12 +73,6 @@ public class CollisionDetection : MonoBehaviour
         _isTouchingFront = (colliders.Length > 0);
     }
 
-    private void CheckRoof()
-    {
-        var colliders = Physics2D.OverlapCircleAll(RoofCheckPoint.position, _checkRadius, WhatIsGround);
-
-        _isTouchingRoof = (colliders.Length > 0);
-    }
 
     private void CheckGrounded()
     {
@@ -103,10 +97,5 @@ public class CollisionDetection : MonoBehaviour
         _groundAngle = Vector2.Angle(hit.normal,new Vector2(1,0));
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        /*if (collision.collider.CompareTag("Enemy")) {
-            SceneManager.LoadScene("Gameplay");
-        }*/
-    }
+    
 }
