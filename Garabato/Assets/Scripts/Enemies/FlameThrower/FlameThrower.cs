@@ -18,7 +18,7 @@ public class FlameThrower : MonoBehaviour
 
     void Update()
     {
-        if (!isActive) {
+        if (!isActive || ChangeCam.isMapActive || ChangeCam.isReturning) {
             flame.SetActive(false);
             return;
         }
