@@ -518,6 +518,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cursorImage: {fileID: 1849796115}
   canvas: {fileID: 1640007844}
+  manoRaton: {fileID: 1849796114}
   cursorScale: 2
   limitMovement: 1
   movementBounds:
@@ -4183,7 +4184,7 @@ GameObject:
   - component: {fileID: 1849796117}
   - component: {fileID: 1849796116}
   m_Layer: 5
-  m_Name: Image
+  m_Name: ManoRaton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -16,7 +16,6 @@ public class MainMenuController : MonoBehaviour
 
         StartCoroutine(SelectFirstButtonNextFrame());
     }
-
     IEnumerator SelectFirstButtonNextFrame()
     {
         EventSystem.current.SetSelectedGameObject(null);

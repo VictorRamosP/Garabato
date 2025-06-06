@@ -6,6 +6,7 @@ public class UICursorController : MonoBehaviour
     [Header("Cursor Settings")]
     public RectTransform cursorImage;
     public Canvas canvas;
+    public GameObject manoRaton;
     public float cursorScale = 2f;
     public bool limitMovement = true;
     public Rect movementBounds = new Rect(0, 0, Screen.width, Screen.height);
@@ -30,6 +31,14 @@ public class UICursorController : MonoBehaviour
 
     void Update()
     {
+        InputManager.Instance.GetUp();
+        if (InputManager.Instance.currentInputSource == InputManager.InputSource.Joystick)
+        {
+            manoRaton.SetActive(false);
+            return;
+        }
+
+        manoRaton.SetActive(true);
         if (cursorImage == null || canvas == null) return;
 
         Vector2 screenMousePos = Input.mousePosition;
