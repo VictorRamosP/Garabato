@@ -254,10 +254,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "A GAME MADE BY\n\nPROGRAMERS\n\nIZAN D\xCDAZ\n\n\n\n\nV\xEDCTOR RAMOS\n\n\n\n\n\"DESIGNERS\"\n\nJOEL
+  m_text: "A GAME MADE BY\n\nPROGRAMERS\n\nIZAN D\xCDAZ\n\n\n\n\nV\xEDCTOR RAMOS\n\n\n\n\nDESIGNERS\n\nJOEL
     PACHECO\n\n\n\n\nARNAU SEGU\xCD\n\n\n\n\nBERNAT NOHERAS\n\n\n\n\nARTIST\n\nISAAC
     URE\xD1A\n\n\n\n\nALEX PUJOL\n\n\n\n\nSPECIAL THANKS TO\n\n\xC8lia Prat\nEnzo
-    Hamblot\nNikolas Cantero\nCarlos Reina\n\n"
+    Hamblot\nNikolas Cantero\nAndrea Cantero\nCarlos Reina\nRa\xFAl Castillo\nPatrick
+    Timpani"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fd4b34b86f2d8cb438aee6e48f658e85, type: 2}
   m_sharedMaterial: {fileID: 2030398737921365375, guid: fd4b34b86f2d8cb438aee6e48f658e85, type: 2}
