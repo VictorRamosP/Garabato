@@ -27747,70 +27747,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 702202625314917070, guid: 8e607d309f0d91840a779ee2a97217d4, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 702202625314917070, guid: 8e607d309f0d91840a779ee2a97217d4, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 702202625314917070, guid: 8e607d309f0d91840a779ee2a97217d4, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 702202625314917070, guid: 8e607d309f0d91840a779ee2a97217d4, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 702202625314917070, guid: 8e607d309f0d91840a779ee2a97217d4, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 234.0885
-      objectReference: {fileID: 0}
-    - target: {fileID: 702202625314917070, guid: 8e607d309f0d91840a779ee2a97217d4, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 242.1119
-      objectReference: {fileID: 0}
-    - target: {fileID: 702202625314917070, guid: 8e607d309f0d91840a779ee2a97217d4, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 125
-      objectReference: {fileID: 0}
-    - target: {fileID: 702202625314917070, guid: 8e607d309f0d91840a779ee2a97217d4, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -570
-      objectReference: {fileID: 0}
-    - target: {fileID: 1519900098125443261, guid: 8e607d309f0d91840a779ee2a97217d4, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1519900098125443261, guid: 8e607d309f0d91840a779ee2a97217d4, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1519900098125443261, guid: 8e607d309f0d91840a779ee2a97217d4, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1519900098125443261, guid: 8e607d309f0d91840a779ee2a97217d4, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1519900098125443261, guid: 8e607d309f0d91840a779ee2a97217d4, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: -1515.2844
-      objectReference: {fileID: 0}
-    - target: {fileID: 1519900098125443261, guid: 8e607d309f0d91840a779ee2a97217d4, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: -790.7126
-      objectReference: {fileID: 0}
-    - target: {fileID: 2000364014210703978, guid: 8e607d309f0d91840a779ee2a97217d4, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3533086258660890806, guid: 8e607d309f0d91840a779ee2a97217d4, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 429ecfa508aade24e95d232ab49982a0, type: 3}
     - target: {fileID: 4379645106846230641, guid: 8e607d309f0d91840a779ee2a97217d4, type: 3}
       propertyPath: m_Name
       value: MapAnimation
@@ -27893,26 +27829,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6826032315480442245, guid: 8e607d309f0d91840a779ee2a97217d4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6996129972549991982, guid: 8e607d309f0d91840a779ee2a97217d4, type: 3}
-      propertyPath: m_UiScaleMode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6996129972549991982, guid: 8e607d309f0d91840a779ee2a97217d4, type: 3}
-      propertyPath: m_ReferenceResolution.x
-      value: 1920
-      objectReference: {fileID: 0}
-    - target: {fileID: 6996129972549991982, guid: 8e607d309f0d91840a779ee2a97217d4, type: 3}
-      propertyPath: m_ReferenceResolution.y
-      value: 1080
-      objectReference: {fileID: 0}
-    - target: {fileID: 7862765529192496767, guid: 8e607d309f0d91840a779ee2a97217d4, type: 3}
-      propertyPath: activateAnimationmap
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8659922564033393360, guid: 8e607d309f0d91840a779ee2a97217d4, type: 3}
-      propertyPath: m_RaycastTarget
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
