@@ -19,11 +19,12 @@ public class PlayerMove : MonoBehaviour
     public ParticleSystem walkParticles;
 
     public CollisionDetection collisionDetection;
-
+   
     [HideInInspector] public bool shootingActive = false;
 
 
     private bool isDead = false;
+    public AudioClip deathSound;
 
     private bool isJumping = false;
     [HideInInspector] public float jumpDirection = 0f;
@@ -171,6 +172,10 @@ public class PlayerMove : MonoBehaviour
             _weapon.SetActive(false);
 
         _animator.SetTrigger("Die");
+        if (deathSound != null)
+        {
+            AudioSource.PlayClipAtPoint(deathSound, transform.position);
+        }
 
         _rigidbody.velocity = Vector2.zero;
         _rigidbody.angularVelocity = 0f;

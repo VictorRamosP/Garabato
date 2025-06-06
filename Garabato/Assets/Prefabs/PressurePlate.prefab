@@ -146,6 +146,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   door: {fileID: 0}
   keepOpen: 1
+  canBeActivatedByPlayer: 0
+  haveAnimation: 1
+  pressurePlateSound: {fileID: 8300000, guid: b034c01c90a07f242886d8c50768ea24, type: 3}
+  playerCam: {fileID: 0}
+  camDoorPresuure: {fileID: 0}
+  camSwitchDuration: 2
 --- !u!95 &2543868116158269844
 Animator:
   serializedVersion: 5

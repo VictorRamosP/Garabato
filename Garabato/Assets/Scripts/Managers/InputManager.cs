@@ -14,6 +14,7 @@ public class InputManager : MonoBehaviour
     private KeyCode mapKey = KeyCode.Tab;
     private KeyCode pauseKey = KeyCode.Escape;
     private KeyCode upKey = KeyCode.W;
+    private KeyCode downKey = KeyCode.S;
     private KeyCode interactKey = KeyCode.E;
 
     // Mando
@@ -25,6 +26,7 @@ public class InputManager : MonoBehaviour
     private KeyCode joystickRotateMapRightKey = KeyCode.JoystickButton5;
     private KeyCode joystickInteractKey = KeyCode.JoystickButton1;
 
+    private Vector3 lastMousePosition;
     public enum InputSource
     {
         None,
@@ -47,6 +49,28 @@ public class InputManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    void Update()
+    {
+        if (Input.mousePosition != lastMousePosition)
+        {
+            currentInputSource = InputSource.Keyboard;
+        }
+        else
+        {
+            float horizontal = Input.GetAxisRaw("Horizontal");
+            float vertical = Input.GetAxisRaw("Vertical");
+
+            bool isUsingKeyboardKeys = Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S);
+
+            if ((Mathf.Abs(horizontal) > 0.2f || Mathf.Abs(vertical) > 0.2f) && !isUsingKeyboardKeys)
+            {
+                currentInputSource = InputSource.Joystick;
+            }
+        }
+
+        lastMousePosition = Input.mousePosition;
     }
     public bool GetJump()
     {
@@ -241,6 +265,27 @@ public class InputManager : MonoBehaviour
         return inputDetected;
     }
 
+    public bool GetDown()
+    {
+        bool inputDetected = false;
+
+        if (Input.GetKey(downKey))
+        {
+            currentInputSource = InputSource.Keyboard;
+            inputDetected = true;
+        }
+        else
+        {
+            float verticalAxis = Input.GetAxisRaw("Vertical");
+            if (verticalAxis < 0.5f)
+            {
+                currentInputSource = InputSource.Joystick;
+                inputDetected = true;
+            }
+        }
+
+        return inputDetected;
+    }
     public float GetHorizontalAxis()
     {
         return Input.GetAxisRaw("Horizontal");
