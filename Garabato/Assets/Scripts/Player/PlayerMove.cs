@@ -195,6 +195,7 @@ public class PlayerMove : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
         GameObject.Find("MapAnimation").GetComponent<Animator>().SetTrigger("Start");
+        yield return new WaitForSeconds(2f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 
     }

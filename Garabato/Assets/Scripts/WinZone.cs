@@ -22,7 +22,7 @@ public class WinZone : MonoBehaviour
     {
         GameObject.FindAnyObjectByType<ChangeCam>().Change();
         GameObject.Find("MapAnimation").GetComponent<Animator>().SetTrigger("Start");
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f);
         SceneManager.LoadScene(level);
     }
 
