@@ -18,8 +18,7 @@ public class FlameThrower : MonoBehaviour
 
     void Update()
     {
-        if (!isActive) {
-            flame.SetActive(false);
+        if (!isActive || ChangeCam.isMapActive || ChangeCam.isReturning) {
             return;
         }
         cooldownTimer += Time.deltaTime;
