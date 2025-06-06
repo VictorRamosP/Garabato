@@ -20,7 +20,7 @@ public class Dialog : MonoBehaviour
     }
     void Update()
     {
-        if (isPlayerRange && InputManager.Instance.GetJumpDown())
+        if (isPlayerRange && InputManager.Instance.GetInteract())
         {
             if (!dialogueStart)
             {

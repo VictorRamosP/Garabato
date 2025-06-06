@@ -14,6 +14,7 @@ public class InputManager : MonoBehaviour
     private KeyCode mapKey = KeyCode.Tab;
     private KeyCode pauseKey = KeyCode.Escape;
     private KeyCode upKey = KeyCode.W;
+    private KeyCode interactKey = KeyCode.E;
 
     // Mando
     private KeyCode joystickJumpKey = KeyCode.JoystickButton1;
@@ -22,6 +23,7 @@ public class InputManager : MonoBehaviour
     private KeyCode joystickPauseKey = KeyCode.JoystickButton9;
     private KeyCode joystickRotateMapLeftKey = KeyCode.JoystickButton4;
     private KeyCode joystickRotateMapRightKey = KeyCode.JoystickButton5;
+    private KeyCode joystickInteractKey = KeyCode.JoystickButton1;
 
     public enum InputSource
     {
@@ -227,6 +229,22 @@ public class InputManager : MonoBehaviour
     public float GetHorizontalAxis()
     {
         return Input.GetAxisRaw("Horizontal");
+    }
+
+    public bool GetInteract()
+    {
+        bool inputDetected = false;
+        if (Input.GetKeyDown(interactKey))
+        {
+            currentInputSource = InputSource.Keyboard;
+            inputDetected = true;
+        }
+        else if (Input.GetKeyDown(joystickInteractKey))
+        {
+            currentInputSource = InputSource.Joystick;
+            inputDetected = true;
+        }
+        return inputDetected;
     }
 
     // Reasignación teclado
