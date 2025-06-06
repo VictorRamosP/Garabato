@@ -2281,50 +2281,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 453772799959522784, guid: 98d421ee2232bfc4aaf4888bb64d9089, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.09
-      objectReference: {fileID: 0}
-    - target: {fileID: 453772799959522784, guid: 98d421ee2232bfc4aaf4888bb64d9089, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.88
-      objectReference: {fileID: 0}
-    - target: {fileID: 453772799959522784, guid: 98d421ee2232bfc4aaf4888bb64d9089, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 484776522390229029, guid: 98d421ee2232bfc4aaf4888bb64d9089, type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 622269753736096978, guid: 98d421ee2232bfc4aaf4888bb64d9089, type: 3}
-      propertyPath: speed
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 622269753736096978, guid: 98d421ee2232bfc4aaf4888bb64d9089, type: 3}
-      propertyPath: jumpForce
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 622269753736096978, guid: 98d421ee2232bfc4aaf4888bb64d9089, type: 3}
-      propertyPath: deathSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 270db7be021eed948bc1b20a9196e030, type: 3}
-    - target: {fileID: 622269753736096978, guid: 98d421ee2232bfc4aaf4888bb64d9089, type: 3}
-      propertyPath: walkParticles
-      value: 
-      objectReference: {fileID: 1884054941}
-    - target: {fileID: 987982724478991015, guid: 98d421ee2232bfc4aaf4888bb64d9089, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 987982724478991015, guid: 98d421ee2232bfc4aaf4888bb64d9089, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 987982724478991015, guid: 98d421ee2232bfc4aaf4888bb64d9089, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 987982724478991015, guid: 98d421ee2232bfc4aaf4888bb64d9089, type: 3}
       propertyPath: m_LocalPosition.x
       value: -22.93
@@ -2365,30 +2321,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2371314325973124355, guid: 98d421ee2232bfc4aaf4888bb64d9089, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.883
-      objectReference: {fileID: 0}
-    - target: {fileID: 2371314325973124355, guid: 98d421ee2232bfc4aaf4888bb64d9089, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.171
-      objectReference: {fileID: 0}
-    - target: {fileID: 3571669120507308728, guid: 98d421ee2232bfc4aaf4888bb64d9089, type: 3}
-      propertyPath: shootSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 2332e9ba6982870439c6c3b581574001, type: 3}
-    - target: {fileID: 3571669120507308728, guid: 98d421ee2232bfc4aaf4888bb64d9089, type: 3}
-      propertyPath: coolDownShoot
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3571669120507308728, guid: 98d421ee2232bfc4aaf4888bb64d9089, type: 3}
-      propertyPath: weaponVisible
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3571669120507308728, guid: 98d421ee2232bfc4aaf4888bb64d9089, type: 3}
-      propertyPath: shootParticles
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 4720523441102825042, guid: 98d421ee2232bfc4aaf4888bb64d9089, type: 3}
       propertyPath: mapCam
       value: 
@@ -2397,42 +2329,10 @@ PrefabInstance:
       propertyPath: playerCam
       value: 
       objectReference: {fileID: 1976367963}
-    - target: {fileID: 4720523441102825042, guid: 98d421ee2232bfc4aaf4888bb64d9089, type: 3}
-      propertyPath: groundCheckRadius
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5402392561987612215, guid: 98d421ee2232bfc4aaf4888bb64d9089, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5421062744043363362, guid: 98d421ee2232bfc4aaf4888bb64d9089, type: 3}
-      propertyPath: jumpSound
-      value: 
-      objectReference: {fileID: 8300000, guid: eed1c35659df397479499adf6944d59e, type: 3}
-    - target: {fileID: 5421062744043363362, guid: 98d421ee2232bfc4aaf4888bb64d9089, type: 3}
-      propertyPath: SpeedHorizontal
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5421062744043363362, guid: 98d421ee2232bfc4aaf4888bb64d9089, type: 3}
-      propertyPath: PressTimeToMaxJump
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5421062744043363362, guid: 98d421ee2232bfc4aaf4888bb64d9089, type: 3}
-      propertyPath: DistanceToMaxHeight
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 6933798395593781726, guid: 98d421ee2232bfc4aaf4888bb64d9089, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 6933798395593781726, guid: 98d421ee2232bfc4aaf4888bb64d9089, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7755168351606946705, guid: 98d421ee2232bfc4aaf4888bb64d9089, type: 3}
-      propertyPath: rotateSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 14fad3097a0b2c143adc09f89151af6e, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9895,11 +9795,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 1183635278196548161, guid: 4a54154bd4416e7409d67be6c0baa352, type: 3}
   m_PrefabInstance: {fileID: 1876992220}
-  m_PrefabAsset: {fileID: 0}
---- !u!198 &1884054941 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 951804422302707932, guid: 98d421ee2232bfc4aaf4888bb64d9089, type: 3}
-  m_PrefabInstance: {fileID: 489543395}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1929516970
 PrefabInstance:

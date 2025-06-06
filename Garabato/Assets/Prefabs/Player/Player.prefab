@@ -204,7 +204,7 @@ Transform:
   m_GameObject: {fileID: 4975315269853136307}
   serializedVersion: 2
   m_LocalRotation: {x: -0.50242835, y: -0.4975597, z: 0.49755985, w: 0.5024284}
-  m_LocalPosition: {x: 0.06, y: -0.89, z: 0.15}
+  m_LocalPosition: {x: 0.09, y: -0.88, z: 0.15}
   m_LocalScale: {x: 0.1149, y: 0.1149, z: 2.59702}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5318,6 +5318,7 @@ MonoBehaviour:
   walkParticles: {fileID: 951804422302707932}
   collisionDetection: {fileID: 8061562121256561879}
   shootingActive: 0
+  deathSound: {fileID: 8300000, guid: 270db7be021eed948bc1b20a9196e030, type: 3}
   jumpDirection: 0
   airSpeed: 0.5
 --- !u!114 &4720523441102825042
@@ -5339,7 +5340,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   groundCheck: {fileID: 8289241468714966224}
-  groundCheckRadius: 0.1
+  groundCheckRadius: 0.5
 --- !u!114 &3571669120507308728
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5354,11 +5355,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 4983018387622394943, guid: 402a35d662ea31f49a621ae35d2aaaa2, type: 3}
   firePoint: {fileID: 2371314325973124355}
-  coolDownShoot: 0.5
+  coolDownShoot: 0.2
   shooting: {fileID: 5402392561987612215}
   _playermove: {fileID: 622269753736096978}
   shootSound: {fileID: 8300000, guid: 2332e9ba6982870439c6c3b581574001, type: 3}
-  weaponVisible: 0.2
+  weaponVisible: 0.5
   sideShootSprite: {fileID: 21300000, guid: 9ec74ce8e8bc4d84794c06f18f41166f, type: 3}
   upShootSprite: {fileID: 21300000, guid: c93bf38ff09b5024c8666c09f41a735a, type: 3}
   diagonalShootSprite: {fileID: -53219583, guid: 6ae7fddf23757fd4590d29dcc1206208, type: 3}
