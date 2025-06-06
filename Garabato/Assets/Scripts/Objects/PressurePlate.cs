@@ -15,6 +15,7 @@ public class PressurePlate : MonoBehaviour
 
     public bool haveAnimation = true;
 
+    public AudioClip pressurePlateSound;
 
     [Header("Camaras")]
     public CinemachineVirtualCamera playerCam;
@@ -37,6 +38,10 @@ public class PressurePlate : MonoBehaviour
                 door.Open();
                 hasActivated = true;
                 _animatior.SetBool("isPressed", true);
+                if (pressurePlateSound != null)
+                {
+                    AudioSource.PlayClipAtPoint(pressurePlateSound, transform.position);
+                }
             }
             else if (!keepOpen && !isPlayerOnPlate)
             {
@@ -47,7 +52,10 @@ public class PressurePlate : MonoBehaviour
                 door.Open();
                 isPlayerOnPlate = true;
                 _animatior.SetBool("isPressed", true);
-
+                if (pressurePlateSound != null)
+                {
+                    AudioSource.PlayClipAtPoint(pressurePlateSound, transform.position);
+                }
             }
         }
     }
