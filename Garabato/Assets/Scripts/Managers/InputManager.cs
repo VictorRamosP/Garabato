@@ -57,6 +57,19 @@ public class InputManager : MonoBehaviour
         {
             currentInputSource = InputSource.Keyboard;
         }
+        else
+        {
+            float horizontal = Input.GetAxisRaw("Horizontal");
+            float vertical = Input.GetAxisRaw("Vertical");
+
+            bool isUsingKeyboardKeys = Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S);
+
+            if ((Mathf.Abs(horizontal) > 0.2f || Mathf.Abs(vertical) > 0.2f) && !isUsingKeyboardKeys)
+            {
+                currentInputSource = InputSource.Joystick;
+            }
+        }
+
         lastMousePosition = Input.mousePosition;
     }
     public bool GetJump()

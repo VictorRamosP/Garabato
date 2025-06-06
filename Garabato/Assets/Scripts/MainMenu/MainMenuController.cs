@@ -9,17 +9,44 @@ public class MainMenuController : MonoBehaviour
     public string LevelToLoad;
     public Button firstSelected;
 
+    private InputManager.InputSource lastInputSource;
+
     void Start()
     {
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.None;
 
-        StartCoroutine(SelectFirstButtonNextFrame());
+        lastInputSource = InputManager.Instance.currentInputSource;
+
+        if (lastInputSource == InputManager.InputSource.Joystick)
+        {
+            StartCoroutine(SelectFirstButtonNextFrame());
+        }
     }
+
+    void Update()
+    {
+        var currentInput = InputManager.Instance.currentInputSource;
+
+        if (currentInput != lastInputSource)
+        {
+            lastInputSource = currentInput;
+
+            if (currentInput == InputManager.InputSource.Joystick)
+            {
+                StartCoroutine(SelectFirstButtonNextFrame());
+            }
+            else
+            {
+                EventSystem.current.SetSelectedGameObject(null);
+            }
+        }
+    }
+
     IEnumerator SelectFirstButtonNextFrame()
     {
-        EventSystem.current.SetSelectedGameObject(null);
         yield return null;
+        EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(firstSelected.gameObject);
     }
 

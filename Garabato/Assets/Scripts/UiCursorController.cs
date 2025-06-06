@@ -31,7 +31,6 @@ public class UICursorController : MonoBehaviour
 
     void Update()
     {
-        InputManager.Instance.GetUp();
         if (InputManager.Instance.currentInputSource == InputManager.InputSource.Joystick)
         {
             manoRaton.SetActive(false);

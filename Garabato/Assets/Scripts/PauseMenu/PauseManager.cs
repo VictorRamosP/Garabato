@@ -26,7 +26,7 @@ public class PauseManager : MonoBehaviour
         {
             Time.timeScale = 0;
 
-            // Seleccionar el primer botón para navegación con mando
+            // Seleccionar el primer botï¿½n para navegaciï¿½n con mando
             EventSystem.current.SetSelectedGameObject(null);
             EventSystem.current.SetSelectedGameObject(firstSelectedButton);
         }
