@@ -502,7 +502,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 676a497ec80356e45974081c46db77de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelToLoad: LvL-1
+  LevelToLoad: AnimIntro
   firstSelected: {fileID: 1791243878}
 --- !u!114 &247841791
 MonoBehaviour:

@@ -29,7 +29,7 @@ public class MainMenuController : MonoBehaviour
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
 
-        SceneManager.LoadScene("Intro");
+        SceneManager.LoadScene(LevelToLoad);
     }
 
     public void QuitGame()
