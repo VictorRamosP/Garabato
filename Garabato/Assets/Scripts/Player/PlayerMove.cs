@@ -40,7 +40,7 @@ public class PlayerMove : MonoBehaviour
 
     void Update()
     {
-        if (!canMove || !GameManager.Instance.mapAnimationActivated || ChangeCam.isReturning)
+        if (!canMove || !GameManager.Instance.mapAnimationActivated || ChangeCam.isReturning || GameManager.Instance.IsPaused)
         {
             _rigidbody.constraints = RigidbodyConstraints2D.FreezeAll;
             return;

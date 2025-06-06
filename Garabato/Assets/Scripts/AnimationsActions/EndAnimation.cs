@@ -6,7 +6,14 @@ using UnityEngine.SceneManagement;
 public class EndAnimation : MonoBehaviour
 {
     public string nameScene;
-   void OnEndAnimation()
+    void Update()
+    {
+        if (InputManager.Instance.GetPause())
+        {
+            SceneManager.LoadScene(nameScene);
+        }
+    }
+    void OnEndAnimation()
     {
         SceneManager.LoadScene(nameScene);
     }

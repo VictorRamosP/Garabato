@@ -31,8 +31,6 @@ public class InputManager : MonoBehaviour
         Keyboard,
         Joystick
     }
-
-    // Variable to track the current input source
     public InputSource currentInputSource { get; private set; } = InputSource.None;
 
     private void Awake()
@@ -65,7 +63,6 @@ public class InputManager : MonoBehaviour
 
         return false;
     }
-    // Modified methods to update currentInputSource
     public bool GetJumpDown()
     {
         bool inputDetected = false;
@@ -117,32 +114,44 @@ public class InputManager : MonoBehaviour
     public bool GetMoveLeft()
     {
         bool inputDetected = false;
+
         if (Input.GetKey(moveLeftKey))
         {
             currentInputSource = InputSource.Keyboard;
             inputDetected = true;
         }
-        else if (GetHorizontalAxis() < -0.1f)
+        else
         {
-            currentInputSource = InputSource.Joystick;
-            inputDetected = true;
+            float horizontalAxis = GetHorizontalAxis();
+            if (horizontalAxis < -0.1f)
+            {
+                currentInputSource = InputSource.Joystick;
+                inputDetected = true;
+            }
         }
+
         return inputDetected;
     }
 
     public bool GetMoveRight()
     {
         bool inputDetected = false;
+
         if (Input.GetKey(moveRightKey))
         {
             currentInputSource = InputSource.Keyboard;
             inputDetected = true;
         }
-        else if (GetHorizontalAxis() > 0.1f)
+        else
         {
-            currentInputSource = InputSource.Joystick;
-            inputDetected = true;
+            float horizontalAxis = GetHorizontalAxis();
+            if (horizontalAxis > 0.1f)
+            {
+                currentInputSource = InputSource.Joystick;
+                inputDetected = true;
+            }
         }
+
         return inputDetected;
     }
 
@@ -213,15 +222,22 @@ public class InputManager : MonoBehaviour
     public bool GetUp()
     {
         bool inputDetected = false;
+
         if (Input.GetKey(upKey))
         {
             currentInputSource = InputSource.Keyboard;
             inputDetected = true;
         }
-        else if (Input.GetAxis("Vertical") > 0.5f)
+        else
         {
-            inputDetected = true;
+            float verticalAxis = Input.GetAxisRaw("Vertical");
+            if (verticalAxis > 0.5f)
+            {
+                currentInputSource = InputSource.Joystick;
+                inputDetected = true;
+            }
         }
+
         return inputDetected;
     }
 

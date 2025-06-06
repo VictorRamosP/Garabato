@@ -59,7 +59,7 @@ public class PlayerShoot : MonoBehaviour
 
     void Update()
     {
-        if (!canShoot) return;
+        if (!canShoot || GameManager.Instance.IsPaused) return;
         coolDownTimer -= Time.deltaTime;
 
         if (!ChangeCam.isMapActive && coolDownTimer <= 0)

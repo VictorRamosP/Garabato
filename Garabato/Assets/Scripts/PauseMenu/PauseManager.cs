@@ -21,12 +21,10 @@ public class PauseManager : MonoBehaviour
 
         if (newPauseState)
         {
-            CursorManager.UnlockCursor();
             Time.timeScale = 0;
         }
         else
         {
-            CursorManager.LockCursor();
             Time.timeScale = 1;
         }
     }
