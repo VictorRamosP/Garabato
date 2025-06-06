@@ -409,6 +409,7 @@ MonoBehaviour:
   excalamacion: {fileID: 833132869}
   dialogueText: {fileID: 1483495087}
   textPanel: {fileID: 1692631355}
+  dialogSound: {fileID: 8300000, guid: 23b6e36a14d8c994db0f7eb4a20689be, type: 3}
   dialogs:
   - Esto se ha puesto peor de lo que imaginaba.
   - Ha invocado a sus siervos oscuros para acabar contigo.

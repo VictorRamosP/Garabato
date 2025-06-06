@@ -8,6 +8,7 @@ public class Dialog : MonoBehaviour
     public GameObject excalamacion;
     public TMP_Text dialogueText;
     public GameObject textPanel;
+    public AudioClip dialogSound;
     [SerializeField, TextArea(3, 4)] private string[] dialogs;
 
     private bool dialogueStart;
@@ -46,7 +47,7 @@ public class Dialog : MonoBehaviour
         lineText = 0;
         excalamacion.SetActive(false);
         player.canMove = false;
-
+        
         Time.timeScale = 0;
         StartCoroutine(ShowLine());
     }
@@ -71,6 +72,10 @@ public class Dialog : MonoBehaviour
     private IEnumerator ShowLine()
     {
         dialogueText.text = string.Empty;
+        if (dialogSound != null)
+        {
+            AudioSource.PlayClipAtPoint(dialogSound, transform.position);
+        }
         foreach (char c in dialogs[lineText])
         {
             dialogueText.text += c;

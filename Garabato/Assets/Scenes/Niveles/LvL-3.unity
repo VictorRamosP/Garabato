@@ -5145,6 +5145,7 @@ MonoBehaviour:
   excalamacion: {fileID: 1061416887}
   dialogueText: {fileID: 1554746556}
   textPanel: {fileID: 730930885}
+  dialogSound: {fileID: 8300000, guid: 23b6e36a14d8c994db0f7eb4a20689be, type: 3}
   dialogs:
   - Hemos llegado a la cueva. Este lugar siempre me ha dado mala espina.
   - Tengo un mal presentimiento Noko.
