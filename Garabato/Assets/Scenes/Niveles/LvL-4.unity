@@ -4005,6 +4005,10 @@ PrefabInstance:
       propertyPath: pauseMenuUI
       value: 
       objectReference: {fileID: 1705734306}
+    - target: {fileID: 3849141901718476025, guid: 3cfa1a50fff0b7a4d98e3ed7c0f82c3e, type: 3}
+      propertyPath: firstSelectedButton
+      value: 
+      objectReference: {fileID: 1705734307}
     - target: {fileID: 5316107634352246251, guid: 3cfa1a50fff0b7a4d98e3ed7c0f82c3e, type: 3}
       propertyPath: m_Name
       value: PauseSystem (1)
@@ -6576,6 +6580,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1332625425}
     m_Modifications:
+    - target: {fileID: 2912902437533716450, guid: f341b320bd26ec94c9904e2617603deb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 42c18624f8e17f74ba3d7e07629ffcdd, type: 2}
+    - target: {fileID: 3352968903250720884, guid: f341b320bd26ec94c9904e2617603deb, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3352968903250720884, guid: f341b320bd26ec94c9904e2617603deb, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5809054634401755283, guid: f341b320bd26ec94c9904e2617603deb, type: 3}
       propertyPath: m_Name
       value: WinZoneWhite
@@ -7958,6 +7974,11 @@ PrefabInstance:
 --- !u!1 &1705734306 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2295155761094061108, guid: 54be2cd39b5a6b74584aeaed45b33069, type: 3}
+  m_PrefabInstance: {fileID: 1705734305}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1705734307 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8928992547491954914, guid: 54be2cd39b5a6b74584aeaed45b33069, type: 3}
   m_PrefabInstance: {fileID: 1705734305}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1721125987 stripped

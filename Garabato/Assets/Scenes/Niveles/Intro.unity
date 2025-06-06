@@ -1161,6 +1161,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6268237235420246851, guid: 8063ca1900cc1114cbf7f9590726e493, type: 3}
   m_PrefabInstance: {fileID: 174098086}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &233916268 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8928992547491954914, guid: 54be2cd39b5a6b74584aeaed45b33069, type: 3}
+  m_PrefabInstance: {fileID: 1015778061}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &234087332
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6837,6 +6842,10 @@ PrefabInstance:
       propertyPath: pauseMenuUI
       value: 
       objectReference: {fileID: 1747116890}
+    - target: {fileID: 3849141901718476025, guid: 3cfa1a50fff0b7a4d98e3ed7c0f82c3e, type: 3}
+      propertyPath: firstSelectedButton
+      value: 
+      objectReference: {fileID: 233916268}
     - target: {fileID: 5316107634352246251, guid: 3cfa1a50fff0b7a4d98e3ed7c0f82c3e, type: 3}
       propertyPath: m_Name
       value: PauseSystem (1)

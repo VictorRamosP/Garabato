@@ -1,8 +1,11 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class PauseManager : MonoBehaviour
 {
     public GameObject pauseMenuUI;
+    public GameObject firstSelectedButton;
 
     void Update()
     {
@@ -22,10 +25,15 @@ public class PauseManager : MonoBehaviour
         if (newPauseState)
         {
             Time.timeScale = 0;
+
+            // Seleccionar el primer botón para navegación con mando
+            EventSystem.current.SetSelectedGameObject(null);
+            EventSystem.current.SetSelectedGameObject(firstSelectedButton);
         }
         else
         {
             Time.timeScale = 1;
+            EventSystem.current.SetSelectedGameObject(null);
         }
     }
 
@@ -34,6 +42,7 @@ public class PauseManager : MonoBehaviour
         GameManager.Instance.SetPause(false);
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1;
+        EventSystem.current.SetSelectedGameObject(null);
         CursorManager.LockCursor();
     }
 
@@ -46,7 +55,7 @@ public class PauseManager : MonoBehaviour
     {
         Time.timeScale = 1;
         GameManager.Instance.SetPause(false);
-        GameManager.Instance.AllowCursorLock = false; 
+        GameManager.Instance.AllowCursorLock = false;
         pauseMenuUI.SetActive(false);
 
         CursorManager cm = FindObjectOfType<CursorManager>();
